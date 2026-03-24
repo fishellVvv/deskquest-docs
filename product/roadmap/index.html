@@ -1,0 +1,6688 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentacion viva del proyecto DeskQuest">
+      
+      
+      
+      
+        <link rel="prev" href="../beta-release-operations/">
+      
+      
+        <link rel="next" href="../deferred-improvements/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Roadmap - DeskQuest</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#roadmap-tecnico" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DeskQuest" class="md-header__button md-logo" aria-label="DeskQuest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DeskQuest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Roadmap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DeskQuest" class="md-nav__button md-logo" aria-label="DeskQuest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DeskQuest
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empezar
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Empezar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/repo-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapa del repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/reading-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ruta de lectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/dev-presets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets de desarrollo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/install-and-user-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalacion y datos de usuario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/tester-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia corta para testers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Producto
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Producto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dii-vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision DII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../early-game-onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding temprano
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ruta a beta 0.1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-qa-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist QA beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-build-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validacion de build beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-distribution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrategia de distribucion beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-release-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-estado-actual-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Estado actual del proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Estado actual del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#situacion-actual-de-la-arquitectura-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Situacion actual de la arquitectura de dimensiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridad-absoluta-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad absoluta actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-previa-inmediata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase previa inmediata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-para-no-desviarnos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla para no desviarnos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-vision-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Vision del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-decision-tecnica-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Decision tecnica recomendada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Decision tecnica recomendada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-esta-combinacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que esta combinacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-evitamos-con-esta-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que evitamos con esta decision
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-principios-tecnicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Principios tecnicos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-cambio-critico-en-curso-migracion-a-dimensiones-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Cambio critico en curso: migracion a dimensiones externas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Cambio critico en curso: migracion a dimensiones externas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-del-bloque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo del bloque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-de-cierre-del-bloque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterio de cierre del bloque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-cerrada-de-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secuencia cerrada de pasos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secuencia cerrada de pasos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-congelar-el-contrato-del-paquete-de-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1. Congelar el contrato del paquete de dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-adaptador-interno-de-dimensiones-integradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2. Adaptador interno de dimensiones integradas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-separacion-entre-core-i18n-y-skin-i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3. Separacion entre core i18n y skin i18n
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-registro-runtime-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4. Registro runtime de dimensiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-refactor-del-idle-a-metadatos-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 5. Refactor del idle a metadatos + assets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-integracion-del-dashboard-con-dimensiones-resueltas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 6. Integracion del dashboard con dimensiones resueltas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-loader-de-carpetas-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 7. Loader de carpetas externas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8-loader-de-archivos-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 8. Loader de archivos .dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-9-endurecimiento-y-version-estable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 9. Endurecimiento y version estable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modelo-de-ventanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modelo de ventanas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Modelo de ventanas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventana-1-idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventana 1: idle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventana-2-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventana 2: dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-3-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa 3: game
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-arquitectura-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Arquitectura general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Capas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-escritorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de escritorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-interfaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de interfaz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de dominio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-estado-compartido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Estado compartido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Estado compartido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea practica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-carga-diferida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Carga diferida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Carga diferida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estructura-de-carpetas-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Estructura de carpetas propuesta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Estructura de carpetas propuesta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterio-de-separacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterio de separacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-decisiones-tecnicas-importantes-desde-el-principio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Decisiones tecnicas importantes desde el principio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-sistema-de-skins-y-ambientaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Sistema de skins y ambientaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Sistema de skins y ambientaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelo-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelo objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cada-dimension-debe-agrupar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cada dimension debe agrupar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cada-dimension-no-debe-cambiar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cada dimension no debe cambiar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contrato-minimo-de-una-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contrato minimo de una dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-ya-tomada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision ya tomada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-animacion-de-la-estructura-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Animacion de la estructura principal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Animacion de la estructura principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mejor-enfoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mejor enfoque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-vocabulario-desacoplado-del-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Vocabulario desacoplado del dominio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Vocabulario desacoplado del dominio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-enfoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo de enfoque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-registro-de-interacciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Registro de interacciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 Registro de interacciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-a-interacciones-dentro-de-la-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso A: interacciones dentro de la app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-b-interacciones-globales-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso B: interacciones globales del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-actualizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision actualizada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Persistencia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Persistencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase posterior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-navegacion-entre-niveles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Navegacion entre niveles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 Navegacion entre niveles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-fases-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Fases del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-0-preparacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 0 - Preparacion del proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 0 - Preparacion del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-1-vertical-slice-del-modo-idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1 - Vertical slice del modo idle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 1 - Vertical slice del modo idle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-de-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reglas de rendimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-15-direccion-visual-del-idle-y-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1.5 - Direccion visual del idle y dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 1.5 - Direccion visual del idle y dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencia-actual-de-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencia actual de diseno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-2-dashboard-jugable-como-centro-de-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 2 - Dashboard jugable como centro de gestion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 2 - Dashboard jugable como centro de gestion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-3-dominio-compartido-del-mundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 3 - Dominio compartido del mundo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 3 - Dominio compartido del mundo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entidades-minimas-sugeridas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entidades minimas sugeridas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-4-persistencia-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 4 - Persistencia real
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 4 - Persistencia real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-5-shell-del-modo-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 5 - Shell del modo game
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 5 - Shell del modo game">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primer-objetivo-del-nivel-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primer objetivo del nivel game
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-6-senales-vivas-entre-niveles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 6 - Señales vivas entre niveles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 6 - Señales vivas entre niveles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-7-optimizacion-y-ahorro-de-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 7 - Optimizacion y ahorro de recursos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 7 - Optimizacion y ahorro de recursos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-de-oro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla de oro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-8-ux-arte-y-sensacion-de-mundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 8 - UX, arte y sensacion de mundo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 8 - UX, arte y sensacion de mundo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-9-distribucion-y-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 9 - Distribucion y mantenimiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 9 - Distribucion y mantenimiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-roadmap-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Roadmap de aprendizaje
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Roadmap de aprendizaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orden-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden recomendado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-riesgos-tecnicos-y-mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Riesgos tecnicos y mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-1-el-nivel-game-contamina-el-arranque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 1: el nivel game contamina el arranque
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 1: el nivel game contamina el arranque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-2-el-estado-se-duplica-entre-ventanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 2: el estado se duplica entre ventanas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 2: el estado se duplica entre ventanas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-3-demasiada-complejidad-demasiado-pronto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 3: demasiada complejidad demasiado pronto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 3: demasiada complejidad demasiado pronto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-4-la-estructura-principal-deja-de-ser-ligera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 4: la estructura principal deja de ser ligera
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 4: la estructura principal deja de ser ligera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-5-acoplar-la-logica-a-la-ambientacion-medieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 5: acoplar la logica a la ambientacion medieval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 5: acoplar la logica a la ambientacion medieval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-criterios-de-exito-del-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Criterios de exito del MVP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-backlog-historico-del-bloque-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Backlog historico del bloque de dimensiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Backlog historico del bloque de dimensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estado-del-backlog-a-2026-03-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado del backlog a 2026-03-17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-backlog-diferido-centralizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Backlog diferido centralizado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-direccion-confirmada-para-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Direccion confirmada para dimensiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Direccion confirmada para dimensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implicaciones-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implicaciones practicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-limpieza-de-nomenclatura-del-sistema-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Limpieza de nomenclatura del sistema de dimensiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Limpieza de nomenclatura del sistema de dimensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-base_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-por-fases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado por fases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documento-de-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documento de referencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-qa-a-2026-03-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado QA a 2026-03-17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-siguiente-paso-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Siguiente paso recomendado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#161-ruta-activa-hacia-la-beta-010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1 Ruta activa hacia la beta 0.1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-estado-del-sistema-documental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Estado del sistema documental
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Estado del sistema documental">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fases-completadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fases completadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica-a-partir-de-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla practica a partir de aqui
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documento-de-referencia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documento de referencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deferred-improvements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendientes diferidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worklog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worklog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arquitectura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vista general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/application-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidad de aplicacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/application-identity-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan de migracion a DeskQuest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/idle-window-sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibracion del idle raster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/dimension-naming-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nomenclatura de dimensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/typescript-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia TypeScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../maintenance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maintenance/documentation-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica documental
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/balance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balance
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Balance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/game/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/game/dirigir-tala-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dirigir tala v1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/dimensions/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensiones
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dimensiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/package-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato de paquete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/official-lunar-demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo oficial lunar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/modding-quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/qa-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/qa-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-estado-actual-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Estado actual del proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Estado actual del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#situacion-actual-de-la-arquitectura-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Situacion actual de la arquitectura de dimensiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridad-absoluta-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad absoluta actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-previa-inmediata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase previa inmediata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-para-no-desviarnos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla para no desviarnos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-vision-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Vision del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-decision-tecnica-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Decision tecnica recomendada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Decision tecnica recomendada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-esta-combinacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que esta combinacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-evitamos-con-esta-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que evitamos con esta decision
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-principios-tecnicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Principios tecnicos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-cambio-critico-en-curso-migracion-a-dimensiones-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Cambio critico en curso: migracion a dimensiones externas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Cambio critico en curso: migracion a dimensiones externas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-del-bloque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo del bloque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-de-cierre-del-bloque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterio de cierre del bloque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-cerrada-de-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secuencia cerrada de pasos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secuencia cerrada de pasos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-congelar-el-contrato-del-paquete-de-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1. Congelar el contrato del paquete de dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-adaptador-interno-de-dimensiones-integradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2. Adaptador interno de dimensiones integradas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-separacion-entre-core-i18n-y-skin-i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3. Separacion entre core i18n y skin i18n
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-registro-runtime-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4. Registro runtime de dimensiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-refactor-del-idle-a-metadatos-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 5. Refactor del idle a metadatos + assets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-integracion-del-dashboard-con-dimensiones-resueltas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 6. Integracion del dashboard con dimensiones resueltas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-loader-de-carpetas-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 7. Loader de carpetas externas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8-loader-de-archivos-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 8. Loader de archivos .dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-9-endurecimiento-y-version-estable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 9. Endurecimiento y version estable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modelo-de-ventanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modelo de ventanas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Modelo de ventanas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventana-1-idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventana 1: idle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventana-2-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventana 2: dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-3-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa 3: game
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-arquitectura-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Arquitectura general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Capas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-escritorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de escritorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-interfaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de interfaz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de dominio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-estado-compartido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Estado compartido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Estado compartido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea practica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-carga-diferida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Carga diferida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Carga diferida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estructura-de-carpetas-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Estructura de carpetas propuesta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Estructura de carpetas propuesta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterio-de-separacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterio de separacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-decisiones-tecnicas-importantes-desde-el-principio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Decisiones tecnicas importantes desde el principio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-sistema-de-skins-y-ambientaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Sistema de skins y ambientaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Sistema de skins y ambientaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelo-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelo objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cada-dimension-debe-agrupar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cada dimension debe agrupar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cada-dimension-no-debe-cambiar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cada dimension no debe cambiar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contrato-minimo-de-una-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contrato minimo de una dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-ya-tomada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision ya tomada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-animacion-de-la-estructura-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Animacion de la estructura principal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Animacion de la estructura principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mejor-enfoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mejor enfoque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-vocabulario-desacoplado-del-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Vocabulario desacoplado del dominio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Vocabulario desacoplado del dominio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-enfoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo de enfoque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-registro-de-interacciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Registro de interacciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 Registro de interacciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-a-interacciones-dentro-de-la-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso A: interacciones dentro de la app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-b-interacciones-globales-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso B: interacciones globales del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-actualizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision actualizada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Persistencia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Persistencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase posterior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-navegacion-entre-niveles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Navegacion entre niveles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 Navegacion entre niveles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-fases-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Fases del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-0-preparacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 0 - Preparacion del proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 0 - Preparacion del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-1-vertical-slice-del-modo-idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1 - Vertical slice del modo idle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 1 - Vertical slice del modo idle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-de-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reglas de rendimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-15-direccion-visual-del-idle-y-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1.5 - Direccion visual del idle y dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 1.5 - Direccion visual del idle y dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencia-actual-de-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencia actual de diseno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-2-dashboard-jugable-como-centro-de-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 2 - Dashboard jugable como centro de gestion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 2 - Dashboard jugable como centro de gestion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-3-dominio-compartido-del-mundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 3 - Dominio compartido del mundo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 3 - Dominio compartido del mundo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entidades-minimas-sugeridas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entidades minimas sugeridas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-4-persistencia-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 4 - Persistencia real
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 4 - Persistencia real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-5-shell-del-modo-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 5 - Shell del modo game
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 5 - Shell del modo game">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primer-objetivo-del-nivel-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primer objetivo del nivel game
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-6-senales-vivas-entre-niveles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 6 - Señales vivas entre niveles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 6 - Señales vivas entre niveles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-7-optimizacion-y-ahorro-de-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 7 - Optimizacion y ahorro de recursos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 7 - Optimizacion y ahorro de recursos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-de-oro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla de oro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-8-ux-arte-y-sensacion-de-mundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 8 - UX, arte y sensacion de mundo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 8 - UX, arte y sensacion de mundo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-9-distribucion-y-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 9 - Distribucion y mantenimiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 9 - Distribucion y mantenimiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregable_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-roadmap-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Roadmap de aprendizaje
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Roadmap de aprendizaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orden-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden recomendado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-riesgos-tecnicos-y-mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Riesgos tecnicos y mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-1-el-nivel-game-contamina-el-arranque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 1: el nivel game contamina el arranque
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 1: el nivel game contamina el arranque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-2-el-estado-se-duplica-entre-ventanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 2: el estado se duplica entre ventanas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 2: el estado se duplica entre ventanas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-3-demasiada-complejidad-demasiado-pronto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 3: demasiada complejidad demasiado pronto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 3: demasiada complejidad demasiado pronto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-4-la-estructura-principal-deja-de-ser-ligera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 4: la estructura principal deja de ser ligera
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 4: la estructura principal deja de ser ligera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgo-5-acoplar-la-logica-a-la-ambientacion-medieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgo 5: acoplar la logica a la ambientacion medieval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riesgo 5: acoplar la logica a la ambientacion medieval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mitigacion_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-criterios-de-exito-del-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Criterios de exito del MVP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-backlog-historico-del-bloque-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Backlog historico del bloque de dimensiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Backlog historico del bloque de dimensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estado-del-backlog-a-2026-03-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado del backlog a 2026-03-17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-backlog-diferido-centralizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Backlog diferido centralizado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-direccion-confirmada-para-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Direccion confirmada para dimensiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Direccion confirmada para dimensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implicaciones-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implicaciones practicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-limpieza-de-nomenclatura-del-sistema-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Limpieza de nomenclatura del sistema de dimensiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Limpieza de nomenclatura del sistema de dimensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-base_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-por-fases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado por fases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documento-de-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documento de referencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-qa-a-2026-03-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado QA a 2026-03-17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-siguiente-paso-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Siguiente paso recomendado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#161-ruta-activa-hacia-la-beta-010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1 Ruta activa hacia la beta 0.1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-estado-del-sistema-documental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Estado del sistema documental
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Estado del sistema documental">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fases-completadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fases completadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica-a-partir-de-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla practica a partir de aqui
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documento-de-referencia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documento de referencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="roadmap-tecnico">Roadmap Tecnico<a class="headerlink" href="#roadmap-tecnico" title="Permanent link">&para;</a></h1>
+<h2 id="0-estado-actual-del-proyecto">0. Estado actual del proyecto<a class="headerlink" href="#0-estado-actual-del-proyecto" title="Permanent link">&para;</a></h2>
+<p>La base tecnica inicial ya no esta en fase de arranque. A dia de hoy el proyecto ya tiene:</p>
+<ul>
+<li>ventana <code>idle</code> funcional en escritorio</li>
+<li>ventana <code>dashboard</code> separada</li>
+<li>configuracion persistente</li>
+<li>telemetria basica de <code>pulsaciones</code></li>
+<li>selector de dimension sincronizado entre ventanas</li>
+<li>soporte real para tamano, monitor, esquina y <code>always on top</code> del <code>idle</code></li>
+<li>una <code>Danger Zone</code> funcional para reset protegido</li>
+</ul>
+<h3 id="situacion-actual-de-la-arquitectura-de-dimensiones">Situacion actual de la arquitectura de dimensiones<a class="headerlink" href="#situacion-actual-de-la-arquitectura-de-dimensiones" title="Permanent link">&para;</a></h3>
+<p>El sistema ya no depende de dos dimensiones integradas compiladas. A dia de hoy:</p>
+<ul>
+<li><code>builtin:medieval</code> es la unica dimension integrada</li>
+<li>el resto de dimensiones viven como <code>dimensiones instaladas</code></li>
+<li>los paquetes <code>.dimension</code> se importan manualmente y se descomprimen en la carpeta interna runtime</li>
+<li><code>lunar-base.dimension</code> actua como demo oficial de modding</li>
+</ul>
+<p>Eso significa que la migracion funcional principal ya esta cerrada y el frente
+actual ya no es documental, sino funcional: abrir el siguiente sistema critico
+del producto sin desviarnos de la fantasia desktop/idle/incremental.</p>
+<h3 id="prioridad-absoluta-actual">Prioridad absoluta actual<a class="headerlink" href="#prioridad-absoluta-actual" title="Permanent link">&para;</a></h3>
+<p>La captura global ya ha quedado cerrada como base tecnica suficientemente
+estable. A partir de aqui, la prioridad vuelve a ser crecer en producto:
+<code>dashboard</code>, dominio compartido y primer slice real de <code>game</code>.</p>
+<h3 id="fase-previa-inmediata">Fase previa inmediata<a class="headerlink" href="#fase-previa-inmediata" title="Permanent link">&para;</a></h3>
+<p>Antes de conectar el primer loop economico completo, se crea una capa de
+balance editable en tablas para evitar que los primeros costes y tiempos nazcan
+como constantes dispersas por el codigo.</p>
+<h3 id="regla-para-no-desviarnos">Regla para no desviarnos<a class="headerlink" href="#regla-para-no-desviarnos" title="Permanent link">&para;</a></h3>
+<p>Mientras abrimos ese siguiente slice, evitaremos:</p>
+<ul>
+<li>reabrir grandes refactors ya cerrados sin un motivo real de producto</li>
+<li>convertir pequeños pulidos en foco principal si ya estan recogidos como
+  pendientes diferidos</li>
+<li>crecer UI sin acercarnos a economia, progreso o jugabilidad</li>
+<li>perder de vista la fantasia desktop/idle/incremental que guia el proyecto</li>
+</ul>
+<hr />
+<h2 id="1-vision-del-proyecto">1. Vision del proyecto<a class="headerlink" href="#1-vision-del-proyecto" title="Permanent link">&para;</a></h2>
+<p>Construir una app-juego de escritorio en la que "el mundo vive en el escritorio y a veces se abre a jugar".</p>
+<p>Documento de referencia de producto:</p>
+<ul>
+<li><a href="../dii-vision/">Vision DII</a></li>
+</ul>
+<p>El producto tendra tres niveles claramente separados pero conectados:</p>
+<ol>
+<li><code>idle</code>: una estructura principal pequena en una esquina del escritorio, siempre visible, con feedback minimo.</li>
+<li><code>dashboard</code>: una vista ampliada para consultar el estado del mundo, misiones, progreso, recursos y sistemas internos.</li>
+<li><code>game</code>: una capa activa de juego lanzada desde edificios concretos e integrada dentro del mismo esquema <code>mapa + pergamino</code>.</li>
+</ol>
+<p>El objetivo tecnico principal es que el modo <code>idle</code> sea muy ligero y no cargue logica, assets o renderizados pesados cuando no sean necesarios.</p>
+<p>La primera ambientacion sera medieval y usara un castillo como skin principal, pero el nucleo del proyecto debe permitir sustituir esa ambientacion por otras sin rehacer la logica del juego.</p>
+<hr />
+<h2 id="2-decision-tecnica-recomendada">2. Decision tecnica recomendada<a class="headerlink" href="#2-decision-tecnica-recomendada" title="Permanent link">&para;</a></h2>
+<h3 id="stack-base">Stack base<a class="headerlink" href="#stack-base" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Tauri v2</code></li>
+<li><code>Vite</code></li>
+<li><code>React</code></li>
+<li><code>TypeScript</code></li>
+<li><code>React Context</code> y almacenamiento local para la base actual</li>
+<li><code>Zustand</code> solo si el estado compartido crece lo suficiente como para justificarlo</li>
+<li><code>PixiJS</code> como renderer previsto para el nivel <code>game</code></li>
+</ul>
+<h3 id="por-que-esta-combinacion">Por que esta combinacion<a class="headerlink" href="#por-que-esta-combinacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Tauri</code> permite construir una app de escritorio ligera, con ventanas nativas y buen control del comportamiento en escritorio.</li>
+<li><code>React</code> encaja muy bien para <code>idle</code> y <code>dashboard</code>, donde la UI es mas "app" que "juego".</li>
+<li><code>PixiJS</code> se puede cargar solo cuando haga falta y encaja mejor en actividades 2D integradas dentro del <code>dashboard</code>.</li>
+<li>Todo el proyecto puede vivir en una sola app, con una sola base de codigo y un solo empaquetado.</li>
+</ul>
+<h3 id="lo-que-evitamos-con-esta-decision">Lo que evitamos con esta decision<a class="headerlink" href="#lo-que-evitamos-con-esta-decision" title="Permanent link">&para;</a></h3>
+<ul>
+<li>No dividir el proyecto entre "app por un lado" y "juego por otro".</li>
+<li>No forzar un motor pesado para una experiencia que en su nucleo debe ser pequena y persistente.</li>
+<li>No cargar el runtime del nivel <code>game</code> mientras el usuario solo esta viendo la estructura principal en una esquina.</li>
+</ul>
+<hr />
+<h2 id="3-principios-tecnicos">3. Principios tecnicos<a class="headerlink" href="#3-principios-tecnicos" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>idle</code> debe arrancar rapido.</li>
+<li><code>idle</code> no debe cargar PixiJS ni ningun runtime del <code>game</code>.</li>
+<li><code>dashboard</code> y <code>game</code> solo deben abrirse bajo demanda.</li>
+<li>El estado del mundo debe ser comun para los tres niveles.</li>
+<li>Los assets deben cargarse de forma diferida.</li>
+<li>La persistencia debe existir desde pronto, aunque al principio sea simple.</li>
+<li>Las metricas del sistema deben hacerse con cuidado para no convertir el proyecto en algo intrusivo o costoso.</li>
+<li>El dominio del juego no debe depender del skin activo.</li>
+<li>Textos, colores, tipografias y assets tematicos deben salir de una capa de tema o skin.</li>
+</ol>
+<hr />
+<h2 id="31-cambio-critico-en-curso-migracion-a-dimensiones-externas">3.1 Cambio critico en curso: migracion a dimensiones externas<a class="headerlink" href="#31-cambio-critico-en-curso-migracion-a-dimensiones-externas" title="Permanent link">&para;</a></h2>
+<p>Este es el bloque de trabajo principal del proyecto hasta tener una version estable y firme del cambio.</p>
+<h3 id="objetivo-del-bloque">Objetivo del bloque<a class="headerlink" href="#objetivo-del-bloque" title="Permanent link">&para;</a></h3>
+<p>Pasar del sistema actual de dimensiones compiladas a un sistema mixto y luego plenamente runtime con estas propiedades:</p>
+<ul>
+<li><code>builtin:medieval</code> permanece como dimension integrada por defecto y fallback universal</li>
+<li>las dimensiones externas pueden cargarse desde carpeta o archivo <code>.dimension</code></li>
+<li>los textos <code>core</code> y los textos de skin se resuelven por capas distintas</li>
+<li>el <code>idle</code> deja de depender de ramas de React hardcodeadas por dimension</li>
+<li>los usuarios pueden compartir dimensiones sin recompilar la app</li>
+</ul>
+<h3 id="criterio-de-cierre-del-bloque">Criterio de cierre del bloque<a class="headerlink" href="#criterio-de-cierre-del-bloque" title="Permanent link">&para;</a></h3>
+<p>Este cambio solo se considerara estable cuando se cumplan todos estos puntos:</p>
+<ol>
+<li>la app puede arrancar usando una dimension integrada o una externa</li>
+<li>si falta cualquier token, texto o asset, la resolucion cae limpiamente a <code>builtin:medieval</code></li>
+<li>el <code>idle</code> usa assets y metadatos en vez de ramas por dimension</li>
+<li>el <code>dashboard</code> consume una dimension resuelta en runtime</li>
+<li>una dimension externa puede aportar idiomas propios</li>
+<li>el sistema sigue siendo seguro y no ejecuta codigo de terceros</li>
+</ol>
+<h3 id="secuencia-cerrada-de-pasos">Secuencia cerrada de pasos<a class="headerlink" href="#secuencia-cerrada-de-pasos" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-congelar-el-contrato-del-paquete-de-dimension">Paso 1. Congelar el contrato del paquete de dimension<a class="headerlink" href="#paso-1-congelar-el-contrato-del-paquete-de-dimension" title="Permanent link">&para;</a></h4>
+<p>Objetivo:</p>
+<ul>
+<li>fijar el formato tecnico antes de seguir tocando runtime</li>
+</ul>
+<p>Estado:</p>
+<ul>
+<li>completado</li>
+</ul>
+<p>Entregables:</p>
+<ul>
+<li><code>docs/systems/dimensions/package-format.md</code></li>
+<li><code>src/themes/shared/dimension-package.ts</code></li>
+</ul>
+<p>No seguimos al siguiente paso si:</p>
+<ul>
+<li>el formato de paquete sigue siendo ambiguo</li>
+<li>no estan claras las reglas de fallback, ids reservados o separacion entre <code>core</code> y <code>skin</code></li>
+</ul>
+<h4 id="paso-2-adaptador-interno-de-dimensiones-integradas">Paso 2. Adaptador interno de dimensiones integradas<a class="headerlink" href="#paso-2-adaptador-interno-de-dimensiones-integradas" title="Permanent link">&para;</a></h4>
+<p>Estado:</p>
+<ul>
+<li>completado</li>
+</ul>
+<p>Objetivo:</p>
+<ul>
+<li>hacer que <code>medieval</code> y <code>lunar-base</code> puedan verse como paquetes internos equivalentes, sin depender todavia de loader externo</li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>crear un adaptador que convierta las dimensiones integradas actuales a <code>SkinPackageDefinition</code> o <code>ResolvedSkinPackageDefinition</code></li>
+<li>dejar de asumir que el sistema de runtime trabaja solo con <code>ThemeId</code> cerrado</li>
+<li>mantener compatibilidad con <code>ThemeProvider</code> mientras dure la migracion</li>
+<li>fijar claramente <code>builtin:medieval</code> como dimension integrada canonical</li>
+</ul>
+<p>Criterio de salida:</p>
+<ul>
+<li>las dos dimensiones actuales pueden representarse mediante el nuevo contrato runtime sin romper la app</li>
+</ul>
+<h4 id="paso-3-separacion-entre-core-i18n-y-skin-i18n">Paso 3. Separacion entre <code>core i18n</code> y <code>skin i18n</code><a class="headerlink" href="#paso-3-separacion-entre-core-i18n-y-skin-i18n" title="Permanent link">&para;</a></h4>
+<p>Estado:</p>
+<ul>
+<li>completado</li>
+</ul>
+<p>Objetivo:</p>
+<ul>
+<li>dejar de mezclar textos generales de la app con textos diegeticos de la dimension</li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>sacar los textos generales de configuracion, danger zone, errores y acciones comunes a un sistema <code>core locales</code></li>
+<li>mantener en la dimension solo los textos tematicos</li>
+<li>conectar la preferencia <code>idioma</code> a una capa real de resolucion de textos</li>
+<li>definir fallback de idiomas del core y fallback de idiomas de skin por separado</li>
+</ul>
+<p>Criterio de salida:</p>
+<ul>
+<li>cambiar idioma afecta al <code>core</code></li>
+<li>cambiar dimension afecta a los textos tematicos</li>
+<li>ambas capas pueden coexistir aunque no tengan exactamente los mismos idiomas</li>
+</ul>
+<h4 id="paso-4-registro-runtime-de-dimensiones">Paso 4. Registro runtime de dimensiones<a class="headerlink" href="#paso-4-registro-runtime-de-dimensiones" title="Permanent link">&para;</a></h4>
+<p>Estado:</p>
+<ul>
+<li>completado</li>
+</ul>
+<p>Objetivo:</p>
+<ul>
+<li>sustituir el registro estatico de dimensiones por una abstraccion de biblioteca de dimensiones</li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>crear un registro runtime que mezcle dimensiones integradas y externas</li>
+<li>resolver ids como <code>string</code>, no como union cerrada</li>
+<li>adaptar almacenamiento y seleccion de dimension a ese modelo</li>
+<li>garantizar que si una dimension seleccionada desaparece se vuelve limpiamente a <code>builtin:medieval</code></li>
+</ul>
+<p>Criterio de salida:</p>
+<ul>
+<li>el selector ya no depende de una lista compilada fija</li>
+</ul>
+<h4 id="paso-5-refactor-del-idle-a-metadatos-assets">Paso 5. Refactor del <code>idle</code> a metadatos + assets<a class="headerlink" href="#paso-5-refactor-del-idle-a-metadatos-assets" title="Permanent link">&para;</a></h4>
+<p>Estado:</p>
+<ul>
+<li>completado</li>
+</ul>
+<p>Objetivo:</p>
+<ul>
+<li>eliminar el mayor bloqueo actual: el <code>idle</code> hardcodeado por rama de dimension</li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>sustituir <code>IdleStructureArt.tsx</code> basado en ramas por un renderer data-driven</li>
+<li>leer <code>layout.json</code></li>
+<li>cargar <code>idleStructure</code> desde assets</li>
+<li>calcular <code>gateHitbox</code>, <code>gateFeedback</code>, <code>atmosphere</code> y <code>artworkLabel</code> desde metadatos</li>
+<li>conservar accesibilidad, escalado, monitor, esquina y posicionamiento ya resueltos</li>
+</ul>
+<p>Criterio de salida:</p>
+<ul>
+<li>el <code>idle</code> puede renderizar una dimension nueva sin tocar JSX especifico de esa dimension</li>
+</ul>
+<h4 id="paso-6-integracion-del-dashboard-con-dimensiones-resueltas">Paso 6. Integracion del <code>dashboard</code> con dimensiones resueltas<a class="headerlink" href="#paso-6-integracion-del-dashboard-con-dimensiones-resueltas" title="Permanent link">&para;</a></h4>
+<p>Estado:</p>
+<ul>
+<li>completado</li>
+</ul>
+<p>Objetivo:</p>
+<ul>
+<li>hacer que el panel consuma la misma resolucion runtime que el <code>idle</code></li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>aplicar tokens y textos desde la dimension resuelta</li>
+<li>revisar elementos del dashboard que todavia asumen solo <code>medieval</code> y <code>lunar-base</code></li>
+<li>dejar el selector de dimension preparado para bibliotecas dinamicas</li>
+</ul>
+<p>Criterio de salida:</p>
+<ul>
+<li><code>dashboard</code> e <code>idle</code> ya no dependen de dos sistemas distintos de dimension</li>
+</ul>
+<h4 id="paso-7-loader-de-carpetas-externas">Paso 7. Loader de carpetas externas<a class="headerlink" href="#paso-7-loader-de-carpetas-externas" title="Permanent link">&para;</a></h4>
+<p>Estado:</p>
+<ul>
+<li>completado</li>
+</ul>
+<p>Objetivo:</p>
+<ul>
+<li>abrir la puerta al modding sin entrar todavia en empaquetado</li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>definir carpeta de usuario <code>skins/</code></li>
+<li>leer carpetas descomprimidas con <code>manifest.json</code></li>
+<li>validar esquema, rutas, locales y layout</li>
+<li>mostrar en UI solo dimensiones validas</li>
+<li>registrar errores de carga sin tirar la app abajo</li>
+</ul>
+<p>Criterio de salida:</p>
+<ul>
+<li>un usuario puede copiar una carpeta de dimension y verla aparecer en la app</li>
+</ul>
+<h4 id="paso-8-loader-de-archivos-dimension">Paso 8. Loader de archivos <code>.dimension</code><a class="headerlink" href="#paso-8-loader-de-archivos-dimension" title="Permanent link">&para;</a></h4>
+<p>Estado:</p>
+<ul>
+<li>completado</li>
+</ul>
+<p>Objetivo:</p>
+<ul>
+<li>completar el formato de intercambio entre usuarios</li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>leer archivos <code>.dimension</code> como <code>zip</code></li>
+<li>validar contenido interno</li>
+<li>resolver conflictos entre ids</li>
+<li>definir politica de importacion, actualizacion y eliminacion</li>
+</ul>
+<p>Criterio de salida:</p>
+<ul>
+<li>un usuario puede importar una dimension empaquetada y seleccionarla sin recompilar</li>
+</ul>
+<h4 id="paso-9-endurecimiento-y-version-estable">Paso 9. Endurecimiento y version estable<a class="headerlink" href="#paso-9-endurecimiento-y-version-estable" title="Permanent link">&para;</a></h4>
+<p>Objetivo:</p>
+<ul>
+<li>cerrar el cambio sin deuda tecnica critica</li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>pruebas manuales completas con fallback roto a proposito</li>
+<li>pruebas de idiomas incompletos</li>
+<li>pruebas de assets faltantes</li>
+<li>pruebas de cambio en caliente entre integrada y externa</li>
+<li>limpiar APIs temporales heredadas del sistema antiguo</li>
+<li>documentar el flujo para creadores de dimensiones</li>
+</ul>
+<p>Criterio de salida:</p>
+<ul>
+<li>podemos declarar estable el nuevo sistema de dimensiones y retomar crecimiento de <code>dashboard</code> y <code>game</code></li>
+</ul>
+<hr />
+<h2 id="4-modelo-de-ventanas">4. Modelo de ventanas<a class="headerlink" href="#4-modelo-de-ventanas" title="Permanent link">&para;</a></h2>
+<p>La app se planteara como una aplicacion Tauri con multiples ventanas.</p>
+<h3 id="ventana-1-idle">Ventana 1: <code>idle</code><a class="headerlink" href="#ventana-1-idle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tamano pequeno</li>
+<li>Sin bordes</li>
+<li>Siempre visible</li>
+<li>Posicionada en una esquina</li>
+<li>Transparente o casi transparente</li>
+<li>Muestra solo la estructura principal del skin activo y pequenas senales visuales</li>
+<li>Permite click en el punto interactivo principal para abrir el dashboard</li>
+</ul>
+<h3 id="ventana-2-dashboard">Ventana 2: <code>dashboard</code><a class="headerlink" href="#ventana-2-dashboard" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Se abre bajo demanda</li>
+<li>Tamano medio</li>
+<li>UI de gestion del mundo o asentamiento activo</li>
+<li>Presenta datos, misiones, inventario, progreso, logs y acciones simples</li>
+<li>Puede cerrarse o minimizarse sin afectar al <code>idle</code></li>
+</ul>
+<h3 id="capa-3-game">Capa 3: <code>game</code><a class="headerlink" href="#capa-3-game" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Se activa bajo demanda desde <code>dashboard</code></li>
+<li>Reutiliza la zona izquierda del reino para mostrar la escena jugable</li>
+<li>Mantiene el pergamino derecho como panel de mision o control</li>
+<li>Debe destruirse o suspenderse cuando no se use</li>
+</ul>
+<h3 id="regla-clave">Regla clave<a class="headerlink" href="#regla-clave" title="Permanent link">&para;</a></h3>
+<p>Al arrancar la app solo debe existir la ventana <code>idle</code>. <code>dashboard</code> no debe
+inicializarse si el usuario no lo ha abierto, y el runtime de <code>game</code> no debe
+cargarse mientras no se lance una actividad manual.</p>
+<hr />
+<h2 id="5-arquitectura-general">5. Arquitectura general<a class="headerlink" href="#5-arquitectura-general" title="Permanent link">&para;</a></h2>
+<h2 id="51-capas">5.1 Capas<a class="headerlink" href="#51-capas" title="Permanent link">&para;</a></h2>
+<h3 id="capa-de-escritorio">Capa de escritorio<a class="headerlink" href="#capa-de-escritorio" title="Permanent link">&para;</a></h3>
+<p>Responsable de:</p>
+<ul>
+<li>crear y posicionar ventanas</li>
+<li>gestionar ciclo de vida</li>
+<li>persistir datos locales</li>
+<li>emitir eventos entre ventanas</li>
+</ul>
+<p>Esta capa vivira en <code>src-tauri/</code>.</p>
+<h3 id="capa-de-interfaz">Capa de interfaz<a class="headerlink" href="#capa-de-interfaz" title="Permanent link">&para;</a></h3>
+<p>Responsable de:</p>
+<ul>
+<li>renderizar <code>idle</code></li>
+<li>renderizar <code>dashboard</code></li>
+<li>montar la experiencia <code>game</code></li>
+</ul>
+<p>Esta capa vivira en <code>src/</code>.</p>
+<h3 id="capa-de-dominio">Capa de dominio<a class="headerlink" href="#capa-de-dominio" title="Permanent link">&para;</a></h3>
+<p>Responsable de:</p>
+<ul>
+<li>estado del mundo</li>
+<li>recursos</li>
+<li>progreso</li>
+<li>misiones</li>
+<li>eventos del usuario</li>
+<li>reglas de desbloqueo</li>
+</ul>
+<p>Esta capa debe ser compartida por los tres niveles.</p>
+<hr />
+<h2 id="52-estado-compartido">5.2 Estado compartido<a class="headerlink" href="#52-estado-compartido" title="Permanent link">&para;</a></h2>
+<p>El proyecto necesita una fuente de verdad clara.</p>
+<h3 id="recomendacion">Recomendacion<a class="headerlink" href="#recomendacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Estado ligero en frontend con <code>Context</code> mientras el proyecto siga pequeno</li>
+<li>Persistencia local simple en esta fase</li>
+<li>Sincronizacion entre ventanas mediante almacenamiento compartido, eventos y capacidades Tauri</li>
+</ul>
+<h3 id="idea-practica">Idea practica<a class="headerlink" href="#idea-practica" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Al arrancar <code>idle</code>, <code>WorldProvider</code> carga el estado persistido.</li>
+<li>Las escrituras del mundo pasan por helpers de dominio y almacenamiento comun.</li>
+<li>Cuando <code>dashboard</code> o <code>game</code> modifican algo importante, se persiste y se emite un evento.</li>
+<li><code>idle</code> escucha esos eventos y actualiza su feedback visual.</li>
+</ol>
+<p>Esto evita depender de hacks entre ventanas y deja una base robusta para crecer.</p>
+<hr />
+<h2 id="53-carga-diferida">5.3 Carga diferida<a class="headerlink" href="#53-carga-diferida" title="Permanent link">&para;</a></h2>
+<p>Para que <code>idle</code> sea ligero:</p>
+<ul>
+<li><code>dashboard</code> y <code>game</code> deben cargarse de forma lazy</li>
+<li><code>PixiJS</code> debe importarse dinamicamente cuando una actividad lo necesite</li>
+<li>los assets grandes no deben precargarse en el arranque</li>
+<li>las animaciones de la estructura principal deben ser simples y baratas</li>
+</ul>
+<h3 id="regla">Regla<a class="headerlink" href="#regla" title="Permanent link">&para;</a></h3>
+<p>Nada del nivel <code>game</code> debe entrar en el bundle inicial del modo <code>idle</code> salvo interfaces minimas de comunicacion.</p>
+<hr />
+<h2 id="6-estructura-de-carpetas-propuesta">6. Estructura de carpetas propuesta<a class="headerlink" href="#6-estructura-de-carpetas-propuesta" title="Permanent link">&para;</a></h2>
+<pre><code class="language-text">deskquest/
+  README.md
+  docs/
+    index.md
+    product/
+      roadmap.md
+      versioning.md
+      worklog.md
+    architecture/
+      dimension-naming-plan.md
+    systems/
+      dimensions/
+        package-format.md
+        modding-quickstart.md
+        qa-checklist.md
+        qa-report.md
+  package.json
+  vite.config.ts
+  tsconfig.json
+  src/
+    app/
+      router/
+      providers/
+      windows/
+    features/
+      idle/
+        components/
+        hooks/
+        state/
+      dashboard/
+        components/
+        views/
+        state/
+      game/
+        scenes/
+        systems/
+        ui/
+    domain/
+      world/
+      progression/
+      missions/
+      telemetry/
+    themes/
+      shared/
+      medieval/
+        assets/
+        tokens/
+        lexicon/
+    shared/
+      hooks/
+      styles/
+      utils/
+  src-tauri/
+    src/
+      main.rs
+      commands/
+      state/
+      windows/
+      persistence/
+      telemetry/
+    tauri.conf.json
+</code></pre>
+<h3 id="criterio-de-separacion">Criterio de separacion<a class="headerlink" href="#criterio-de-separacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>features/idle</code>: todo lo especifico de la estructura pequena en esquina</li>
+<li><code>features/dashboard</code>: toda la interfaz de gestion</li>
+<li><code>features/game</code>: renderer activo, simulacion de mision y gameplay manual</li>
+<li><code>domain/</code>: logica compartida del mundo</li>
+<li><code>themes/</code>: todo lo visual, textual y nominal de cada skin</li>
+<li><code>src-tauri/</code>: integracion nativa, ventanas y persistencia</li>
+</ul>
+<hr />
+<h2 id="7-decisiones-tecnicas-importantes-desde-el-principio">7. Decisiones tecnicas importantes desde el principio<a class="headerlink" href="#7-decisiones-tecnicas-importantes-desde-el-principio" title="Permanent link">&para;</a></h2>
+<h2 id="71-sistema-de-skins-y-ambientaciones">7.1 Sistema de skins y ambientaciones<a class="headerlink" href="#71-sistema-de-skins-y-ambientaciones" title="Permanent link">&para;</a></h2>
+<p>La ambientacion no debe vivir mezclada con la logica del juego.</p>
+<h3 id="regla-base">Regla base<a class="headerlink" href="#regla-base" title="Permanent link">&para;</a></h3>
+<p>La dimension medieval del castillo es solo la primera presentacion del sistema y tambien el fallback universal del proyecto.</p>
+<h3 id="modelo-objetivo">Modelo objetivo<a class="headerlink" href="#modelo-objetivo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>builtin:medieval</code> vive dentro de la app y nunca desaparece</li>
+<li>las dimensiones externas viven fuera del bundle</li>
+<li>una dimension externa puede distribuirse como carpeta o <code>.dimension</code></li>
+<li>toda dimension externa se resuelve contra <code>builtin:medieval</code></li>
+</ul>
+<h3 id="cada-dimension-debe-agrupar">Cada dimension debe agrupar<a class="headerlink" href="#cada-dimension-debe-agrupar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>assets visuales</li>
+<li>tokens de color</li>
+<li>tipografias</li>
+<li>nombres y textos tematicos</li>
+<li>iconografia</li>
+<li>pequenas variantes de sonido si en el futuro existen</li>
+</ul>
+<h3 id="cada-dimension-no-debe-cambiar">Cada dimension no debe cambiar<a class="headerlink" href="#cada-dimension-no-debe-cambiar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>reglas del juego</li>
+<li>estructura del estado</li>
+<li>ids internos</li>
+<li>contratos de eventos</li>
+</ul>
+<h3 id="contrato-minimo-de-una-dimension">Contrato minimo de una dimension<a class="headerlink" href="#contrato-minimo-de-una-dimension" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>schemaVersion</code></li>
+<li><code>id</code></li>
+<li><code>label</code></li>
+<li><code>description</code></li>
+<li><code>version</code></li>
+<li><code>defaultLocale</code></li>
+<li><code>tokens</code></li>
+<li><code>locales</code></li>
+<li><code>idleLayout</code></li>
+<li><code>assets</code></li>
+<li><code>uiHints</code> opcional</li>
+</ul>
+<h3 id="decision-ya-tomada">Decision ya tomada<a class="headerlink" href="#decision-ya-tomada" title="Permanent link">&para;</a></h3>
+<p>La segunda dimension placeholder ya sirvio para validar el desacoplamiento inicial. A partir de aqui, el siguiente paso correcto no es anadir mas dimensiones integradas, sino migrar el sistema a paquetes externos siguiendo <code>../systems/dimensions/package-format.md</code>.</p>
+<hr />
+<h2 id="72-animacion-de-la-estructura-principal">7.2 Animacion de la estructura principal<a class="headerlink" href="#72-animacion-de-la-estructura-principal" title="Permanent link">&para;</a></h2>
+<p>No usar un GIF como solucion final salvo para una prueba inicial.</p>
+<h3 id="mejor-enfoque">Mejor enfoque<a class="headerlink" href="#mejor-enfoque" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>sprite sheet</code></li>
+<li><code>webp</code> animado</li>
+<li>pequenas capas HTML/CSS</li>
+<li>o un canvas muy simple si hace falta</li>
+</ul>
+<h3 id="motivo">Motivo<a class="headerlink" href="#motivo" title="Permanent link">&para;</a></h3>
+<p>Necesitamos poder encender pequenas senales de estado sin regenerar un archivo completo cada vez.</p>
+<hr />
+<h2 id="73-vocabulario-desacoplado-del-dominio">7.3 Vocabulario desacoplado del dominio<a class="headerlink" href="#73-vocabulario-desacoplado-del-dominio" title="Permanent link">&para;</a></h2>
+<p>La logica interna no debe usar nombres medievales como base del modelo.</p>
+<h3 id="recomendacion_1">Recomendacion<a class="headerlink" href="#recomendacion_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>usar ids y nombres neutrales en el dominio</li>
+<li>resolver el texto visible mediante <code>lexicon</code> del skin activo</li>
+<li>evitar hardcodear palabras como <code>castillo</code>, <code>reino</code> o <code>taberna</code> en componentes compartidos</li>
+</ul>
+<h3 id="ejemplo-de-enfoque">Ejemplo de enfoque<a class="headerlink" href="#ejemplo-de-enfoque" title="Permanent link">&para;</a></h3>
+<ul>
+<li>dominio: <code>WorldState</code>, <code>MissionState</code>, <code>ResourceState</code>, <code>PrimaryStructure</code></li>
+<li>skin medieval: <code>WorldState</code> se presenta como <code>Reino</code></li>
+<li>skin espacial: <code>WorldState</code> se presenta como <code>Base</code></li>
+</ul>
+<h3 id="regla_1">Regla<a class="headerlink" href="#regla_1" title="Permanent link">&para;</a></h3>
+<p>Si un concepto solo existe por ambientacion, debe vivir en la skin y no en el nucleo.</p>
+<hr />
+<h2 id="74-registro-de-interacciones">7.4 Registro de interacciones<a class="headerlink" href="#74-registro-de-interacciones" title="Permanent link">&para;</a></h2>
+<p>Separar dos casos:</p>
+<h3 id="caso-a-interacciones-dentro-de-la-app">Caso A: interacciones dentro de la app<a class="headerlink" href="#caso-a-interacciones-dentro-de-la-app" title="Permanent link">&para;</a></h3>
+<ul>
+<li>tiempo de ejecucion</li>
+<li>clicks dentro de las ventanas</li>
+<li>teclas pulsadas mientras la app tiene foco</li>
+</ul>
+<p>Esto se puede implementar pronto y con poco riesgo.</p>
+<h3 id="caso-b-interacciones-globales-del-sistema">Caso B: interacciones globales del sistema<a class="headerlink" href="#caso-b-interacciones-globales-del-sistema" title="Permanent link">&para;</a></h3>
+<ul>
+<li>clicks fuera de la app</li>
+<li>teclas del sistema entero</li>
+</ul>
+<p>Esto debe dejarse para mas adelante y solo si de verdad aporta valor, porque complica permisos, privacidad y mantenimiento.</p>
+<h3 id="decision-actualizada">Decision actualizada<a class="headerlink" href="#decision-actualizada" title="Permanent link">&para;</a></h3>
+<p>El proyecto ya ha abierto un primer corte del caso B, pero con una regla muy
+estricta: solo se agregan <code>pulsaciones</code> totales y no se guarda contenido, teclas
+concretas ni secuencias del usuario.</p>
+<hr />
+<h2 id="75-persistencia">7.5 Persistencia<a class="headerlink" href="#75-persistencia" title="Permanent link">&para;</a></h2>
+<p>Empezar simple.</p>
+<h3 id="fase-inicial">Fase inicial<a class="headerlink" href="#fase-inicial" title="Permanent link">&para;</a></h3>
+<ul>
+<li>guardar estado en almacenamiento local sencillo</li>
+<li>snapshots del mundo</li>
+<li>configuracion de ventanas</li>
+</ul>
+<h3 id="fase-posterior">Fase posterior<a class="headerlink" href="#fase-posterior" title="Permanent link">&para;</a></h3>
+<ul>
+<li>migrar a <code>SQLite</code> si aparecen sistemas complejos</li>
+<li>historico de misiones</li>
+<li>inventario grande</li>
+<li>estadisticas acumuladas</li>
+</ul>
+<h3 id="regla_2">Regla<a class="headerlink" href="#regla_2" title="Permanent link">&para;</a></h3>
+<p>No introducir base de datos relacional el primer dia si aun no sabemos el volumen real del dominio.</p>
+<hr />
+<h2 id="76-navegacion-entre-niveles">7.6 Navegacion entre niveles<a class="headerlink" href="#76-navegacion-entre-niveles" title="Permanent link">&para;</a></h2>
+<p>La navegacion no debe depender solo de rutas web. Debe existir un modelo explicito de ventanas.</p>
+<h3 id="flujo-esperado">Flujo esperado<a class="headerlink" href="#flujo-esperado" title="Permanent link">&para;</a></h3>
+<ol>
+<li>La app arranca en <code>idle</code>.</li>
+<li>Click en el punto de entrada principal del skin.</li>
+<li>Se abre <code>dashboard</code>.</li>
+<li>Desde <code>dashboard</code>, el usuario puede lanzar <code>game</code>.</li>
+<li>Al cerrar <code>game</code>, se conserva el estado del mundo y <code>idle</code> refleja cambios.</li>
+</ol>
+<hr />
+<h2 id="8-fases-del-proyecto">8. Fases del proyecto<a class="headerlink" href="#8-fases-del-proyecto" title="Permanent link">&para;</a></h2>
+<h2 id="fase-0-preparacion-del-proyecto">Fase 0 - Preparacion del proyecto<a class="headerlink" href="#fase-0-preparacion-del-proyecto" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h3>
+<p>Dejar lista la base de trabajo.</p>
+<h3 id="tareas">Tareas<a class="headerlink" href="#tareas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Inicializar proyecto con <code>Tauri + Vite + React + TypeScript</code></li>
+<li>Configurar scripts de desarrollo</li>
+<li>Definir estructura de carpetas</li>
+<li>Configurar linting y formateo</li>
+<li>Definir contrato tecnico de skin</li>
+<li>Crear tema visual base</li>
+<li>Crear una skin medieval inicial</li>
+<li>Crear una segunda skin placeholder para validar desacoplamiento</li>
+</ul>
+<h3 id="entregable">Entregable<a class="headerlink" href="#entregable" title="Permanent link">&para;</a></h3>
+<p>Proyecto arrancando en local con una ventana Tauri simple.</p>
+<hr />
+<h2 id="fase-1-vertical-slice-del-modo-idle">Fase 1 - Vertical slice del modo idle<a class="headerlink" href="#fase-1-vertical-slice-del-modo-idle" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_1">Objetivo<a class="headerlink" href="#objetivo_1" title="Permanent link">&para;</a></h3>
+<p>Conseguir la primera estructura funcional en una esquina del escritorio.</p>
+<h3 id="tareas_1">Tareas<a class="headerlink" href="#tareas_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Crear ventana <code>idle</code></li>
+<li>Configurar tamano, transparencia, posicion y siempre visible</li>
+<li>Renderizar estructura principal segun el skin activo</li>
+<li>Definir zona clicable del acceso principal</li>
+<li>Crear micro feedback visual</li>
+<li>Registrar tiempo de ejecucion local</li>
+<li>Registrar clicks dentro de <code>idle</code></li>
+<li>Registrar pulsaciones con foco en la app</li>
+</ul>
+<h3 id="reglas-de-rendimiento">Reglas de rendimiento<a class="headerlink" href="#reglas-de-rendimiento" title="Permanent link">&para;</a></h3>
+<ul>
+<li>sin runtime de <code>game</code> en el arranque</li>
+<li>sin polling agresivo</li>
+<li>sin assets pesados</li>
+<li>sin loops complejos</li>
+</ul>
+<h3 id="entregable_1">Entregable<a class="headerlink" href="#entregable_1" title="Permanent link">&para;</a></h3>
+<p>Una app que vive en una esquina, reacciona minimamente y abre el siguiente nivel con la primera skin medieval ya montada.</p>
+<hr />
+<h2 id="fase-15-direccion-visual-del-idle-y-dashboard">Fase 1.5 - Direccion visual del idle y dashboard<a class="headerlink" href="#fase-15-direccion-visual-del-idle-y-dashboard" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_2">Objetivo<a class="headerlink" href="#objetivo_2" title="Permanent link">&para;</a></h3>
+<p>Convertir el prototipo tecnico actual en una base visual alineada con la fantasia del proyecto antes de seguir anadiendo mas sistemas.</p>
+<h3 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h3>
+<p>El primer cambio <code>idle -&gt; dashboard</code> ya esta validado tecnicamente, pero su presentacion actual solo debe entenderse como una prueba de flujo y no como la solucion visual final.</p>
+<h3 id="tareas_2">Tareas<a class="headerlink" href="#tareas_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>definir la metafora visual de apertura del <code>dashboard</code></li>
+<li>decidir si el <code>dashboard</code> emerge desde la puerta, se despliega sobre la estructura o se abre como pieza independiente</li>
+<li>fijar una composicion base del <code>idle</code> menos "tarjeta" y mas "objeto vivo en escritorio"</li>
+<li>fijar como objetivo del <code>idle</code> una huella aproximada de <code>320x160</code> px, anclada en la esquina inferior derecha</li>
+<li>priorizar que el <code>idle</code> muestre solo la estructura principal y senales minimas, sin UI de panel clasica</li>
+<li>orientar la primera skin medieval hacia un castillo pixelart sencillo, legible en tamano pequeno y mirando hacia la izquierda</li>
+<li>separar mejor arte de escena, zonas clicables y capas de interfaz</li>
+<li>crear una version wireframe o mock funcional del <code>idle</code></li>
+<li>crear una version wireframe o mock funcional del <code>dashboard</code></li>
+<li>validar que el lenguaje visual elegido funcione tambien para otras skins</li>
+</ul>
+<h3 id="regla_3">Regla<a class="headerlink" href="#regla_3" title="Permanent link">&para;</a></h3>
+<p>No seguir creciendo en contenido del <code>dashboard</code> hasta que exista una direccion visual clara para el binomio <code>idle/dashboard</code>.</p>
+<h3 id="entregable_2">Entregable<a class="headerlink" href="#entregable_2" title="Permanent link">&para;</a></h3>
+<p>Una maqueta funcional que ya se parezca a la experiencia deseada, aunque todavia use datos placeholder.</p>
+<h3 id="referencia-actual-de-diseno">Referencia actual de diseno<a class="headerlink" href="#referencia-actual-de-diseno" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>idle</code>: castillo pequeno apoyado abajo a la derecha, con un ancho cercano al reloj de Windows</li>
+<li>tamano orientativo: <code>320x160</code></li>
+<li>estilo buscado: <code>pixelart</code> sencillo, legible y con silueta clara</li>
+<li>la ambientacion medieval debe priorizar lectura de volumen, almenas, torres y puerta antes que detalle fino</li>
+</ul>
+<hr />
+<h2 id="fase-2-dashboard-jugable-como-centro-de-gestion">Fase 2 - Dashboard jugable como centro de gestion<a class="headerlink" href="#fase-2-dashboard-jugable-como-centro-de-gestion" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_3">Objetivo<a class="headerlink" href="#objetivo_3" title="Permanent link">&para;</a></h3>
+<p>Abrir una vista mayor donde el mundo ya se pueda leer y manipular.</p>
+<h3 id="tareas_3">Tareas<a class="headerlink" href="#tareas_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Crear ventana <code>dashboard</code></li>
+<li>Mostrar datos base del mundo</li>
+<li>Implementar recursos iniciales</li>
+<li>Implementar niveles o progreso base</li>
+<li>Implementar misiones placeholder</li>
+<li>Crear layout estable para crecer</li>
+<li>Conectar <code>idle</code> y <code>dashboard</code> mediante eventos</li>
+<li>Resolver labels, iconos y textos desde la skin activa</li>
+</ul>
+<h3 id="entregable_3">Entregable<a class="headerlink" href="#entregable_3" title="Permanent link">&para;</a></h3>
+<p>Un panel funcional donde el usuario ya sienta que hay "tripas" del sistema.</p>
+<hr />
+<h2 id="fase-3-dominio-compartido-del-mundo">Fase 3 - Dominio compartido del mundo<a class="headerlink" href="#fase-3-dominio-compartido-del-mundo" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_4">Objetivo<a class="headerlink" href="#objetivo_4" title="Permanent link">&para;</a></h3>
+<p>Separar bien la logica del mundo de la interfaz y de la ambientacion.</p>
+<h3 id="tareas_4">Tareas<a class="headerlink" href="#tareas_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Definir entidades principales</li>
+<li>Definir sistema de progreso</li>
+<li>Definir economia minima</li>
+<li>Definir sistema de misiones</li>
+<li>Definir timers del mundo</li>
+<li>Definir reglas de desbloqueo</li>
+<li>Definir ids y nombres internos neutrales</li>
+<li>Definir contrato entre dominio y skin</li>
+</ul>
+<h3 id="entidades-minimas-sugeridas">Entidades minimas sugeridas<a class="headerlink" href="#entidades-minimas-sugeridas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>WorldState</code></li>
+<li><code>ResourceState</code></li>
+<li><code>MissionState</code></li>
+<li><code>PlayerProgress</code></li>
+<li><code>IdleSignals</code></li>
+<li><code>SessionStats</code></li>
+<li><code>ThemeId</code></li>
+</ul>
+<h3 id="entregable_4">Entregable<a class="headerlink" href="#entregable_4" title="Permanent link">&para;</a></h3>
+<p>Una capa de dominio independiente de las vistas.</p>
+<hr />
+<h2 id="fase-4-persistencia-real">Fase 4 - Persistencia real<a class="headerlink" href="#fase-4-persistencia-real" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_5">Objetivo<a class="headerlink" href="#objetivo_5" title="Permanent link">&para;</a></h3>
+<p>Evitar perder el estado del mundo entre sesiones.</p>
+<h3 id="tareas_5">Tareas<a class="headerlink" href="#tareas_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Guardar y cargar snapshots</li>
+<li>Versionar el formato de guardado</li>
+<li>Definir migraciones sencillas si cambia el modelo</li>
+<li>Guardar posicion y estado de ventanas</li>
+<li>Guardar configuraciones del usuario</li>
+</ul>
+<h3 id="entregable_5">Entregable<a class="headerlink" href="#entregable_5" title="Permanent link">&para;</a></h3>
+<p>La app puede cerrarse y volver a abrirse sin perder progreso.</p>
+<hr />
+<h2 id="fase-5-shell-del-modo-game">Fase 5 - Shell del modo game<a class="headerlink" href="#fase-5-shell-del-modo-game" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_6">Objetivo<a class="headerlink" href="#objetivo_6" title="Permanent link">&para;</a></h3>
+<p>Montar la tercera capa sin romper la ligereza del <code>idle</code>.</p>
+<h3 id="tareas_6">Tareas<a class="headerlink" href="#tareas_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fijar la shell de <code>game</code> dentro del <code>dashboard</code></li>
+<li>Preparar <code>PixiJS</code> con carga lazy cuando el slice ya lo justifique</li>
+<li>Montar escena minima</li>
+<li>Definir puente entre el renderer activo y el estado del mundo</li>
+<li>Comprobar que <code>idle</code> no carga dependencias del juego</li>
+</ul>
+<h3 id="primer-objetivo-del-nivel-game">Primer objetivo del nivel game<a class="headerlink" href="#primer-objetivo-del-nivel-game" title="Permanent link">&para;</a></h3>
+<p>No hacer "el juego completo", sino un minijuego vertical slice que pruebe:</p>
+<ul>
+<li>apertura de la ventana</li>
+<li>entrada de usuario</li>
+<li>modificacion del estado del mundo</li>
+<li>retorno al <code>dashboard</code> e impacto visible en <code>idle</code></li>
+</ul>
+<h3 id="entregable_6">Entregable<a class="headerlink" href="#entregable_6" title="Permanent link">&para;</a></h3>
+<p>Una primera experiencia interactiva real conectada con el resto del sistema.</p>
+<hr />
+<h2 id="fase-6-senales-vivas-entre-niveles">Fase 6 - Señales vivas entre niveles<a class="headerlink" href="#fase-6-senales-vivas-entre-niveles" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_7">Objetivo<a class="headerlink" href="#objetivo_7" title="Permanent link">&para;</a></h3>
+<p>Hacer que el mundo se sienta coherente entre sus tres escalas.</p>
+<h3 id="tareas_7">Tareas<a class="headerlink" href="#tareas_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>reflejar en <code>idle</code> misiones pendientes</li>
+<li>reflejar en <code>idle</code> recompensas disponibles</li>
+<li>reflejar en <code>dashboard</code> resultados de <code>game</code></li>
+<li>desbloquear contenido del <code>game</code> desde el progreso del mundo</li>
+</ul>
+<h3 id="entregable_7">Entregable<a class="headerlink" href="#entregable_7" title="Permanent link">&para;</a></h3>
+<p>El usuario percibe que todo forma parte del mismo mundo.</p>
+<hr />
+<h2 id="fase-7-optimizacion-y-ahorro-de-recursos">Fase 7 - Optimizacion y ahorro de recursos<a class="headerlink" href="#fase-7-optimizacion-y-ahorro-de-recursos" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_8">Objetivo<a class="headerlink" href="#objetivo_8" title="Permanent link">&para;</a></h3>
+<p>Controlar consumo de CPU, RAM y carga percibida.</p>
+<h3 id="tareas_8">Tareas<a class="headerlink" href="#tareas_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>medir tiempos de arranque</li>
+<li>medir uso de memoria en <code>idle</code></li>
+<li>suspender tareas cuando las ventanas esten ocultas</li>
+<li>destruir escenas de juego al cerrar</li>
+<li>hacer code splitting</li>
+<li>comprimir assets</li>
+<li>limitar frecuencia de actualizaciones no criticas</li>
+</ul>
+<h3 id="regla-de-oro">Regla de oro<a class="headerlink" href="#regla-de-oro" title="Permanent link">&para;</a></h3>
+<p>Si una funcionalidad no aporta valor directo al modo <code>idle</code>, no debe ejecutarse de fondo por defecto.</p>
+<hr />
+<h2 id="fase-8-ux-arte-y-sensacion-de-mundo">Fase 8 - UX, arte y sensacion de mundo<a class="headerlink" href="#fase-8-ux-arte-y-sensacion-de-mundo" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_9">Objetivo<a class="headerlink" href="#objetivo_9" title="Permanent link">&para;</a></h3>
+<p>Convertir la base tecnica en una experiencia con personalidad.</p>
+<h3 id="tareas_9">Tareas<a class="headerlink" href="#tareas_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>reemplazar assets temporales</li>
+<li>definir lenguaje visual de la skin medieval</li>
+<li>mejorar feedback de la estructura principal</li>
+<li>crear transiciones entre niveles</li>
+<li>introducir audio ambiental opcional</li>
+<li>refinar microanimaciones</li>
+<li>montar una segunda skin jugable de prueba aunque sea parcial</li>
+</ul>
+<h3 id="entregable_8">Entregable<a class="headerlink" href="#entregable_8" title="Permanent link">&para;</a></h3>
+<p>Una primera experiencia con identidad clara.</p>
+<hr />
+<h2 id="fase-9-distribucion-y-mantenimiento">Fase 9 - Distribucion y mantenimiento<a class="headerlink" href="#fase-9-distribucion-y-mantenimiento" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo_10">Objetivo<a class="headerlink" href="#objetivo_10" title="Permanent link">&para;</a></h3>
+<p>Preparar el proyecto para salir del entorno local.</p>
+<h3 id="tareas_10">Tareas<a class="headerlink" href="#tareas_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>empaquetar builds</li>
+<li>definir versionado</li>
+<li>documentar instalacion y desarrollo</li>
+<li>revisar permisos</li>
+<li>preparar telemetria interna no intrusiva si hace falta</li>
+<li>preparar estrategia de updates futuras</li>
+</ul>
+<h3 id="entregable_9">Entregable<a class="headerlink" href="#entregable_9" title="Permanent link">&para;</a></h3>
+<p>Una app instalable y mantenible.</p>
+<hr />
+<h2 id="9-roadmap-de-aprendizaje">9. Roadmap de aprendizaje<a class="headerlink" href="#9-roadmap-de-aprendizaje" title="Permanent link">&para;</a></h2>
+<p>No hace falta aprender todo a la vez.</p>
+<h3 id="etapa-1">Etapa 1<a class="headerlink" href="#etapa-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>TypeScript basico</li>
+<li>React basico</li>
+<li>eventos de UI</li>
+<li>estado sencillo</li>
+</ul>
+<h3 id="etapa-2">Etapa 2<a class="headerlink" href="#etapa-2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tauri basico</li>
+<li>ventanas</li>
+<li>comandos backend</li>
+<li>persistencia local</li>
+</ul>
+<h3 id="etapa-3">Etapa 3<a class="headerlink" href="#etapa-3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>arquitectura de estado compartido</li>
+<li>eventos entre ventanas</li>
+<li>carga lazy</li>
+<li>separacion entre dominio y skin</li>
+</ul>
+<h3 id="etapa-4">Etapa 4<a class="headerlink" href="#etapa-4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PixiJS basico</li>
+<li>escenas</li>
+<li>input</li>
+<li>game loop</li>
+</ul>
+<h3 id="orden-recomendado">Orden recomendado<a class="headerlink" href="#orden-recomendado" title="Permanent link">&para;</a></h3>
+<p>Primero dominar <code>idle</code>, despues <code>dashboard</code>, y solo cuando eso este firme abrir la puerta al nivel <code>game</code>.</p>
+<hr />
+<h2 id="10-riesgos-tecnicos-y-mitigacion">10. Riesgos tecnicos y mitigacion<a class="headerlink" href="#10-riesgos-tecnicos-y-mitigacion" title="Permanent link">&para;</a></h2>
+<h2 id="riesgo-1-el-nivel-game-contamina-el-arranque">Riesgo 1: el nivel game contamina el arranque<a class="headerlink" href="#riesgo-1-el-nivel-game-contamina-el-arranque" title="Permanent link">&para;</a></h2>
+<h3 id="mitigacion">Mitigacion<a class="headerlink" href="#mitigacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>import dinamico</li>
+<li>integracion embebida en <code>dashboard</code></li>
+<li>bundle separado</li>
+</ul>
+<h2 id="riesgo-2-el-estado-se-duplica-entre-ventanas">Riesgo 2: el estado se duplica entre ventanas<a class="headerlink" href="#riesgo-2-el-estado-se-duplica-entre-ventanas" title="Permanent link">&para;</a></h2>
+<h3 id="mitigacion_1">Mitigacion<a class="headerlink" href="#mitigacion_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>fuente de verdad clara</li>
+<li>comandos backend</li>
+<li>eventos tipados</li>
+</ul>
+<h2 id="riesgo-3-demasiada-complejidad-demasiado-pronto">Riesgo 3: demasiada complejidad demasiado pronto<a class="headerlink" href="#riesgo-3-demasiada-complejidad-demasiado-pronto" title="Permanent link">&para;</a></h2>
+<h3 id="mitigacion_2">Mitigacion<a class="headerlink" href="#mitigacion_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>empezar con placeholders</li>
+<li>priorizar vertical slices</li>
+<li>evitar sistemas "definitivos" en la primera iteracion</li>
+</ul>
+<h2 id="riesgo-4-la-estructura-principal-deja-de-ser-ligera">Riesgo 4: la estructura principal deja de ser ligera<a class="headerlink" href="#riesgo-4-la-estructura-principal-deja-de-ser-ligera" title="Permanent link">&para;</a></h2>
+<h3 id="mitigacion_3">Mitigacion<a class="headerlink" href="#mitigacion_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>medir</li>
+<li>no ejecutar logica innecesaria</li>
+<li>no cargar librerias de juego en <code>idle</code></li>
+</ul>
+<h2 id="riesgo-5-acoplar-la-logica-a-la-ambientacion-medieval">Riesgo 5: acoplar la logica a la ambientacion medieval<a class="headerlink" href="#riesgo-5-acoplar-la-logica-a-la-ambientacion-medieval" title="Permanent link">&para;</a></h2>
+<h3 id="mitigacion_4">Mitigacion<a class="headerlink" href="#mitigacion_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>usar nombres internos neutrales</li>
+<li>crear contrato de skin desde el inicio</li>
+<li>probar pronto una segunda skin placeholder</li>
+<li>no hardcodear textos tematicos en componentes compartidos</li>
+</ul>
+<hr />
+<h2 id="11-criterios-de-exito-del-mvp">11. Criterios de exito del MVP<a class="headerlink" href="#11-criterios-de-exito-del-mvp" title="Permanent link">&para;</a></h2>
+<p>El MVP debe considerarse valido cuando cumpla esto:</p>
+<ol>
+<li>La app arranca solo con <code>idle</code>.</li>
+<li>La estructura principal aparece en una esquina y responde visualmente.</li>
+<li>El punto de entrada principal abre <code>dashboard</code>.</li>
+<li><code>dashboard</code> muestra datos reales del mundo, aunque sean pocos.</li>
+<li>Existe guardado y carga del progreso.</li>
+<li>Se puede abrir un primer <code>game</code> muy simple.</li>
+<li>Lo que ocurre en <code>game</code> impacta en <code>dashboard</code> y <code>idle</code>.</li>
+<li>El consumo del modo <code>idle</code> se mantiene bajo.</li>
+<li>Existe al menos una segunda skin placeholder que cambia nombres, colores y assets sin tocar la logica central.</li>
+</ol>
+<hr />
+<h2 id="12-backlog-historico-del-bloque-de-dimensiones">12. Backlog historico del bloque de dimensiones<a class="headerlink" href="#12-backlog-historico-del-bloque-de-dimensiones" title="Permanent link">&para;</a></h2>
+<p>Este bloque ya no marca el foco activo del proyecto. Se conserva como
+referencia historica del cierre del sistema de dimensiones:</p>
+<ol>
+<li>Separar conceptualmente <code>dimensiones instaladas</code> de <code>paquetes .dimension</code> importables.</li>
+<li>Crear carpeta runtime de dimensiones instaladas.</li>
+<li>Hacer que la app cargue automaticamente las dimensiones instaladas al arrancar.</li>
+<li>Sustituir el flujo de <code>biblioteca escaneable</code> por <code>importacion manual</code>.</li>
+<li>Implementar alta de una dimension desde archivo <code>.dimension</code>.</li>
+<li>Resolver conflictos por <code>manifest.id</code> y avisos por nombre visible duplicado.</li>
+<li>Descomprimir e instalar cada dimension en una carpeta interna propia.</li>
+<li>Reemplazar el selector desplegable por una lista vertical de dimensiones instaladas.</li>
+<li>Anadir acciones por fila: <code>Viajar</code> y <code>Quitar</code>.</li>
+<li>Al quitar una dimension activa, volver automaticamente a <code>builtin:medieval</code>.</li>
+<li>Distribuir <code>lunar-base.dimension</code> como demo oficial instalable, no como built-in ni como instalada por defecto.</li>
+<li>Documentar el flujo final para modders y para gestion futura de un repositorio online.</li>
+</ol>
+<h3 id="estado-del-backlog-a-2026-03-17">Estado del backlog a 2026-03-17<a class="headerlink" href="#estado-del-backlog-a-2026-03-17" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>1</code> completado</li>
+<li><code>2</code> completado</li>
+<li><code>3</code> completado</li>
+<li><code>4</code> completado</li>
+<li><code>5</code> completado</li>
+<li><code>6</code> completado</li>
+<li><code>7</code> completado</li>
+<li><code>8</code> completado</li>
+<li><code>9</code> completado</li>
+<li><code>10</code> completado</li>
+<li><code>11</code> completado</li>
+<li><code>12</code> pendiente</li>
+</ul>
+<h2 id="13-backlog-diferido-centralizado">13. Backlog diferido centralizado<a class="headerlink" href="#13-backlog-diferido-centralizado" title="Permanent link">&para;</a></h2>
+<p>Los flecos no bloqueantes del proyecto ya no deben quedarse repartidos entre
+<code>roadmap</code>, <code>status</code> y <code>worklog</code>.</p>
+<p>Su fuente de verdad pasa a ser:</p>
+<ul>
+<li><a href="../deferred-improvements/">Pendientes diferidos</a></li>
+</ul>
+<p>Ese backlog recoge mejoras tecnicas y de producto que siguen vivas, pero que no
+forman parte del foco activo inmediato.</p>
+<h2 id="14-direccion-confirmada-para-dimensiones">14. Direccion confirmada para dimensiones<a class="headerlink" href="#14-direccion-confirmada-para-dimensiones" title="Permanent link">&para;</a></h2>
+<p>Se fija esta direccion para no desviar la migracion:</p>
+<ol>
+<li><code>builtin:medieval</code> sera la unica dimension integrada y el fallback absoluto del sistema.</li>
+<li><code>lunar-base</code> dejara de tratarse como built-in permanente y pasara a convertirse en una dimension opcional distribuida como <code>.dimension</code>.</li>
+<li>El resto de dimensiones opcionales se distribuiran tambien como un unico archivo <code>.dimension</code>.</li>
+<li>Las dimensiones opcionales cargadas por la app viviran descomprimidas en una carpeta interna de <code>dimensiones instaladas</code>.</li>
+<li>Los archivos <code>.dimension</code> funcionaran como paquetes importables y compartibles, no como carpeta runtime escaneada permanentemente.</li>
+<li><code>lunar-base.dimension</code> funcionara como demo oficial de modding y debera incluir documentacion suficiente para que un usuario pueda usarla como referencia.</li>
+</ol>
+<h3 id="implicaciones-practicas">Implicaciones practicas<a class="headerlink" href="#implicaciones-practicas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>no debemos seguir anadiendo nuevas dimensiones opcionales como built-in</li>
+<li>el runtime debe pensar en <code>dimensiones instaladas</code>, no en carpetas arbitrarias que se escanean continuamente</li>
+<li>importar una dimension sera una accion explicita del usuario</li>
+<li>cargar las dimensiones ya instaladas sera automatico al arrancar</li>
+<li><code>lunar-base.dimension</code> se tratara como demo oficial instalable, no como dimension preactivada</li>
+</ul>
+<h2 id="15-limpieza-de-nomenclatura-del-sistema-de-dimensiones">15. Limpieza de nomenclatura del sistema de dimensiones<a class="headerlink" href="#15-limpieza-de-nomenclatura-del-sistema-de-dimensiones" title="Permanent link">&para;</a></h2>
+<p>Esta fase existe para cerrar la migracion sin dejar un vocabulario confuso entre
+producto, importacion y runtime visual.</p>
+<h3 id="regla-base_1">Regla base<a class="headerlink" href="#regla-base_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>dimension</code> se usa para identidad, instalacion, importacion y UX</li>
+<li><code>theme</code> se mantiene solo donde siga describiendo el tema visual resuelto</li>
+</ul>
+<h3 id="estado-por-fases">Estado por fases<a class="headerlink" href="#estado-por-fases" title="Permanent link">&para;</a></h3>
+<ol>
+<li><code>glosario y auditoria</code></li>
+<li><code>completado</code></li>
+<li><code>renombre y division de modulos TS de importacion/instalacion</code></li>
+<li><code>completado</code></li>
+<li><code>renombre de la capa nativa de Rust y comandos Tauri</code></li>
+<li><code>completado</code></li>
+<li><code>limpieza final de copy y docs</code></li>
+<li><code>completado</code></li>
+<li><code>checklist QA del sistema de dimensiones</code></li>
+<li><code>completado</code></li>
+</ol>
+<h3 id="documento-de-referencia">Documento de referencia<a class="headerlink" href="#documento-de-referencia" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../../architecture/dimension-naming-plan/">Plan de nomenclatura de dimensiones</a></li>
+<li><a href="../../systems/dimensions/qa-report/">Informe QA de dimensiones</a></li>
+</ul>
+<h3 id="estado-qa-a-2026-03-17">Estado QA a 2026-03-17<a class="headerlink" href="#estado-qa-a-2026-03-17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>existe ya un informe consolidado en <code>docs/systems/dimensions/qa-report.md</code></li>
+<li>todos los puntos del checklist quedan validados manualmente</li>
+<li>se conservan fixtures empaquetadas en <code>examples/archives/</code> para futuras regresiones</li>
+</ul>
+<h2 id="16-siguiente-paso-recomendado">16. Siguiente paso recomendado<a class="headerlink" href="#16-siguiente-paso-recomendado" title="Permanent link">&para;</a></h2>
+<p>Con el primer slice jugable de <code>game</code> ya abierto y la ruta de beta
+practicamente cerrada, el siguiente paso recomendado pasa a ser:</p>
+<ol>
+<li>cerrar una QA beta corta sobre onboarding, patio y <code>Dirigir tala</code></li>
+<li>validar una build compartible fuera del entorno <code>dev</code></li>
+<li>corregir solo errores de coherencia, persistencia o legibilidad que bloqueen
+   testers</li>
+</ol>
+<h2 id="161-ruta-activa-hacia-la-beta-010">16.1 Ruta activa hacia la beta 0.1.0<a class="headerlink" href="#161-ruta-activa-hacia-la-beta-010" title="Permanent link">&para;</a></h2>
+<p>La hoja de ruta ejecutable hacia la primera beta compartible ya queda fijada en:</p>
+<ul>
+<li><a href="../beta-0.1.0/">Ruta a beta 0.1.0</a></li>
+</ul>
+<p>Resumen operativo:</p>
+<ol>
+<li><code>madera -&gt; viviendas -&gt; crecimiento de poblacion</code></li>
+<li><code>cantera -&gt; piedra</code></li>
+<li><code>mejoras reutilizables de edificio</code> con <code>Viviendas</code> como primer caso</li>
+<li><code>shell fija del reino</code> con ventana, layout y proporciones cerradas</li>
+<li>consolidar el pergamino lateral como ficha canonica</li>
+<li>abrir el primer slice real de <code>game</code></li>
+<li>ordenar visualmente el patio antes del arte final</li>
+</ol>
+<h2 id="17-estado-del-sistema-documental">17. Estado del sistema documental<a class="headerlink" href="#17-estado-del-sistema-documental" title="Permanent link">&para;</a></h2>
+<p>El portal documental ya no esta en fase de montaje, sino en fase de
+mantenimiento estable.</p>
+<h3 id="fases-completadas">Fases completadas<a class="headerlink" href="#fases-completadas" title="Permanent link">&para;</a></h3>
+<ol>
+<li>reorganizacion de archivos y taxonomia dentro de <code>docs/</code></li>
+<li>portal navegable con <code>MkDocs</code></li>
+<li>onboarding y mapa del proyecto</li>
+<li>referencia TypeScript curada con <code>TypeDoc</code></li>
+<li>politica de mantenimiento documental</li>
+</ol>
+<h3 id="regla-practica-a-partir-de-aqui">Regla practica a partir de aqui<a class="headerlink" href="#regla-practica-a-partir-de-aqui" title="Permanent link">&para;</a></h3>
+<ul>
+<li>el portal es la fuente principal de documentacion humana</li>
+<li><code>README</code> se mantiene corto y de entrada</li>
+<li>la referencia de codigo se genera desde <code>TypeDoc</code></li>
+<li><code>worklog</code>, <code>versioning</code> y <code>roadmap</code> deben moverse junto al desarrollo real</li>
+</ul>
+<h3 id="documento-de-referencia_1">Documento de referencia<a class="headerlink" href="#documento-de-referencia_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../../maintenance/documentation-policy/">Politica de mantenimiento documental</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

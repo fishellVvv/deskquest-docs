@@ -1,0 +1,3139 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentacion viva del proyecto DeskQuest">
+      
+      
+      
+      
+        <link rel="prev" href="../idle-window-sizing/">
+      
+      
+        <link rel="next" href="../../api/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Nomenclatura de dimensiones - DeskQuest</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plan-de-nomenclatura-y-limpieza-del-sistema-de-dimensiones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DeskQuest" class="md-header__button md-logo" aria-label="DeskQuest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DeskQuest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nomenclatura de dimensiones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DeskQuest" class="md-nav__button md-logo" aria-label="DeskQuest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DeskQuest
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empezar
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Empezar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/repo-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapa del repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/reading-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ruta de lectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/dev-presets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets de desarrollo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/install-and-user-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalacion y datos de usuario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/tester-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia corta para testers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../product/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Producto
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Producto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/dii-vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision DII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/early-game-onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding temprano
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/beta-0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ruta a beta 0.1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/beta-qa-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist QA beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/beta-build-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validacion de build beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/beta-distribution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrategia de distribucion beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/beta-release-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/deferred-improvements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendientes diferidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/worklog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worklog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arquitectura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vista general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidad de aplicacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application-identity-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan de migracion a DeskQuest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../idle-window-sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibracion del idle raster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nomenclatura de dimensiones
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nomenclatura de dimensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosario-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario oficial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Glosario oficial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-integrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension integrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-instalada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension instalada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paquete-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paquete .dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo oficial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-runtime-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registro runtime de dimensiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tema-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tema resuelto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallback-absoluto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallback absoluto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limites-entre-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites entre capas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limites entre capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-1-producto-y-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa 1. Producto y UX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-2-paquete-e-importacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa 2. Paquete e importacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-3-resolucion-visual-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa 3. Resolucion visual interna
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones-de-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisiones de limpieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decisiones de limpieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modulos-que-mantenemos-por-ahora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulos que mantenemos por ahora
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulos-que-mantenemos-como-compatibilidad-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulos que mantenemos como compatibilidad temporal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renombres-ejecutados-en-fase-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renombres ejecutados en Fase B
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Renombres ejecutados en Fase B">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-srcthemessharedskin-packagets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. src/themes/shared/skin-package.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-srcthemessharedexternal-skin-loaderts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. src/themes/shared/external-skin-loader.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-srcthemessharedtheme-library-storagets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. src/themes/shared/theme-library-storage.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-srcthemessharedtheme-storagets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. src/themes/shared/theme-storage.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renombre-ejecutado-en-fase-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renombre ejecutado en Fase C
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Renombre ejecutado en Fase C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src-taurisrcskinsrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        src-tauri/src/skins.rs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renombres-de-tipos-y-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renombres de tipos y comandos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Renombres de tipos y comandos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rust
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-tauri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos Tauri
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-de-ejecucion-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden de ejecucion recomendado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orden de ejecucion recomendado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-a-glosario-y-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase A. Glosario y auditoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-b-capa-frontend-de-importacion-e-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase B. Capa frontend de importacion e instalacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-c-capa-nativa-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase C. Capa nativa de dimensiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-d-ui-y-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase D. UI y copy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-e-qa-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase E. QA manual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-para-los-siguientes-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla para los siguientes cambios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-actual-tras-fase-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado actual tras Fase C
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/typescript-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia TypeScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../maintenance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maintenance/documentation-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica documental
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/balance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balance
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Balance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/game/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/game/dirigir-tala-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dirigir tala v1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/dimensions/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensiones
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dimensiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/package-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato de paquete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/official-lunar-demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo oficial lunar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/modding-quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/qa-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/dimensions/qa-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosario-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario oficial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Glosario oficial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-integrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension integrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-instalada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension instalada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paquete-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paquete .dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo oficial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-runtime-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registro runtime de dimensiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tema-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tema resuelto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallback-absoluto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallback absoluto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limites-entre-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites entre capas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limites entre capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-1-producto-y-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa 1. Producto y UX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-2-paquete-e-importacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa 2. Paquete e importacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-3-resolucion-visual-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa 3. Resolucion visual interna
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones-de-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisiones de limpieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decisiones de limpieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modulos-que-mantenemos-por-ahora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulos que mantenemos por ahora
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulos-que-mantenemos-como-compatibilidad-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulos que mantenemos como compatibilidad temporal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renombres-ejecutados-en-fase-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renombres ejecutados en Fase B
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Renombres ejecutados en Fase B">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-srcthemessharedskin-packagets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. src/themes/shared/skin-package.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-srcthemessharedexternal-skin-loaderts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. src/themes/shared/external-skin-loader.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-srcthemessharedtheme-library-storagets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. src/themes/shared/theme-library-storage.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-srcthemessharedtheme-storagets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. src/themes/shared/theme-storage.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renombre-ejecutado-en-fase-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renombre ejecutado en Fase C
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Renombre ejecutado en Fase C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src-taurisrcskinsrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        src-tauri/src/skins.rs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renombres-de-tipos-y-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renombres de tipos y comandos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Renombres de tipos y comandos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rust
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-tauri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos Tauri
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-de-ejecucion-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden de ejecucion recomendado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orden de ejecucion recomendado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-a-glosario-y-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase A. Glosario y auditoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-b-capa-frontend-de-importacion-e-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase B. Capa frontend de importacion e instalacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-c-capa-nativa-de-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase C. Capa nativa de dimensiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-d-ui-y-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase D. UI y copy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-e-qa-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase E. QA manual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-para-los-siguientes-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla para los siguientes cambios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-actual-tras-fase-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado actual tras Fase C
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="plan-de-nomenclatura-y-limpieza-del-sistema-de-dimensiones">Plan de nomenclatura y limpieza del sistema de dimensiones<a class="headerlink" href="#plan-de-nomenclatura-y-limpieza-del-sistema-de-dimensiones" title="Permanent link">&para;</a></h1>
+<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
+<p>Fijar un vocabulario estable y un mapa de limpieza por fases para que el
+proyecto deje de mezclar <code>skin</code>, <code>theme</code>, <code>library</code> y <code>dimension</code> sin perder
+claridad interna ni romper la arquitectura que ya funciona.</p>
+<p>Este documento no ejecuta aun los renombres delicados. Su funcion es dejar
+cerrado:</p>
+<ul>
+<li>que termino usamos en cada capa</li>
+<li>que modulos conviene mantener tal y como estan</li>
+<li>que modulos conviene renombrar o dividir</li>
+<li>en que orden debe hacerse la limpieza</li>
+</ul>
+<h2 id="glosario-oficial">Glosario oficial<a class="headerlink" href="#glosario-oficial" title="Permanent link">&para;</a></h2>
+<h3 id="dimension">Dimension<a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h3>
+<p>Concepto de producto visible para el usuario.</p>
+<p>Una dimension es algo que el usuario puede:</p>
+<ul>
+<li>anadir</li>
+<li>instalar</li>
+<li>ver en una lista</li>
+<li>viajar</li>
+<li>quitar</li>
+</ul>
+<p>Ejemplos:</p>
+<ul>
+<li><code>Medieval</code></li>
+<li><code>Base lunar</code></li>
+<li><code>Fortaleza de vapor</code></li>
+</ul>
+<h3 id="dimension-integrada">Dimension integrada<a class="headerlink" href="#dimension-integrada" title="Permanent link">&para;</a></h3>
+<p>Dimension que vive dentro del codigo nativo y no puede desaparecer.</p>
+<p>Regla actual:</p>
+<ul>
+<li>la unica dimension integrada es <code>builtin:medieval</code></li>
+</ul>
+<h3 id="dimension-instalada">Dimension instalada<a class="headerlink" href="#dimension-instalada" title="Permanent link">&para;</a></h3>
+<p>Dimension ya importada e instalada dentro de la carpeta runtime interna de la
+app.</p>
+<p>Ruta conceptual:</p>
+<pre><code class="language-text">&lt;app-data&gt;/installed-dimensions/&lt;dimension-id&gt;/
+</code></pre>
+<h3 id="paquete-dimension">Paquete <code>.dimension</code><a class="headerlink" href="#paquete-dimension" title="Permanent link">&para;</a></h3>
+<p>Formato de intercambio y distribucion.</p>
+<p>El archivo <code>.dimension</code> no es la dimension en ejecucion, sino el paquete que se
+importa para convertirla en una dimension instalada.</p>
+<h3 id="demo-oficial">Demo oficial<a class="headerlink" href="#demo-oficial" title="Permanent link">&para;</a></h3>
+<p>Paquete mantenido por el propio proyecto para documentar el sistema y servir de
+referencia a modders.</p>
+<p>Regla actual:</p>
+<ul>
+<li><code>io.github.fishellvvv.lunar-base.dimension</code> es la demo oficial</li>
+</ul>
+<h3 id="registro-runtime-de-dimensiones">Registro runtime de dimensiones<a class="headerlink" href="#registro-runtime-de-dimensiones" title="Permanent link">&para;</a></h3>
+<p>Coleccion de dimensiones que la app conoce en memoria en un momento dado:</p>
+<ul>
+<li><code>builtin:medieval</code></li>
+<li>dimensiones instaladas</li>
+</ul>
+<p>Su responsabilidad es resolver ids, fallback y orden de disponibilidad.</p>
+<h3 id="tema-resuelto">Tema resuelto<a class="headerlink" href="#tema-resuelto" title="Permanent link">&para;</a></h3>
+<p>Resultado interno de aplicar:</p>
+<ul>
+<li>dimension activa</li>
+<li>fallback a <code>builtin:medieval</code></li>
+<li>idioma</li>
+<li>tokens</li>
+<li>textos</li>
+<li>assets</li>
+</ul>
+<p>Este termino sigue teniendo sentido dentro de la capa visual y de render.</p>
+<p>Por eso, en esta fase, no conviene renombrar a ciegas todo lo que hoy se llama
+<code>theme</code>.</p>
+<h3 id="fallback-absoluto">Fallback absoluto<a class="headerlink" href="#fallback-absoluto" title="Permanent link">&para;</a></h3>
+<p>Si algo falla o falta, la app debe volver siempre a:</p>
+<ul>
+<li><code>builtin:medieval</code></li>
+</ul>
+<h2 id="limites-entre-capas">Limites entre capas<a class="headerlink" href="#limites-entre-capas" title="Permanent link">&para;</a></h2>
+<h3 id="capa-1-producto-y-ux">Capa 1. Producto y UX<a class="headerlink" href="#capa-1-producto-y-ux" title="Permanent link">&para;</a></h3>
+<p>Aqui siempre debemos hablar de:</p>
+<ul>
+<li><code>dimension</code></li>
+<li><code>dimension instalada</code></li>
+<li><code>archivo .dimension</code></li>
+<li><code>anadir</code></li>
+<li><code>viajar</code></li>
+<li><code>quitar</code></li>
+</ul>
+<p>Esta capa incluye:</p>
+<ul>
+<li>copys visibles</li>
+<li>botones</li>
+<li>listas</li>
+<li>mensajes de importacion</li>
+<li>documentacion para usuario/modder</li>
+</ul>
+<h3 id="capa-2-paquete-e-importacion">Capa 2. Paquete e importacion<a class="headerlink" href="#capa-2-paquete-e-importacion" title="Permanent link">&para;</a></h3>
+<p>Aqui debemos hablar de:</p>
+<ul>
+<li><code>dimension package</code></li>
+<li><code>dimension archive</code></li>
+<li><code>installed dimensions</code></li>
+</ul>
+<p>Esta capa incluye:</p>
+<ul>
+<li>validacion del <code>manifest</code></li>
+<li>importacion desde archivo</li>
+<li>inspeccion previa</li>
+<li>instalacion en carpeta interna</li>
+<li>eliminacion</li>
+</ul>
+<h3 id="capa-3-resolucion-visual-interna">Capa 3. Resolucion visual interna<a class="headerlink" href="#capa-3-resolucion-visual-interna" title="Permanent link">&para;</a></h3>
+<p>Aqui todavia es razonable mantener <code>theme</code> mientras siga describiendo el tema ya
+resuelto que usan el <code>idle</code> y el <code>dashboard</code>.</p>
+<p>Esta capa incluye:</p>
+<ul>
+<li><code>ThemeProvider</code></li>
+<li><code>ThemeDefinition</code></li>
+<li><code>applyThemeToDocument</code></li>
+<li>registro runtime que mezcla tokens, lexicon y assets</li>
+</ul>
+<p>Regla:</p>
+<ul>
+<li><code>dimension</code> para la identidad del paquete y del producto</li>
+<li><code>theme</code> para el resultado visual resuelto</li>
+</ul>
+<h2 id="decisiones-de-limpieza">Decisiones de limpieza<a class="headerlink" href="#decisiones-de-limpieza" title="Permanent link">&para;</a></h2>
+<h3 id="modulos-que-mantenemos-por-ahora">Modulos que mantenemos por ahora<a class="headerlink" href="#modulos-que-mantenemos-por-ahora" title="Permanent link">&para;</a></h3>
+<p>Estos nombres siguen siendo aceptables en esta fase:</p>
+<ul>
+<li><code>src/app/providers/ThemeProvider.tsx</code></li>
+<li><code>src/themes/shared/theme-definition.ts</code></li>
+<li><code>src/themes/shared/runtime-theme-registry.ts</code></li>
+<li><code>src/themes/shared/apply-theme.ts</code></li>
+</ul>
+<p>Motivo:</p>
+<ul>
+<li>describen la capa visual resuelta</li>
+<li>renombrarlos ahora aportaria poco y moveria demasiado codigo</li>
+</ul>
+<h3 id="modulos-que-mantenemos-como-compatibilidad-temporal">Modulos que mantenemos como compatibilidad temporal<a class="headerlink" href="#modulos-que-mantenemos-como-compatibilidad-temporal" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>src/themes/shared/theme-registry.ts</code></li>
+</ul>
+<p>Motivo:</p>
+<ul>
+<li>hoy sigue funcionando como adaptador fino sobre el registro runtime</li>
+<li>conviene revisarlo despues de la limpieza principal</li>
+</ul>
+<p>Objetivo posterior:</p>
+<ul>
+<li>decidir si se elimina o si se convierte en un alias muy pequeno</li>
+</ul>
+<h3 id="renombres-ejecutados-en-fase-b">Renombres ejecutados en Fase B<a class="headerlink" href="#renombres-ejecutados-en-fase-b" title="Permanent link">&para;</a></h3>
+<h4 id="1-srcthemessharedskin-packagets">1. <code>src/themes/shared/skin-package.ts</code><a class="headerlink" href="#1-srcthemessharedskin-packagets" title="Permanent link">&para;</a></h4>
+<p>Resultado:</p>
+<ul>
+<li><code>src/themes/shared/dimension-package.ts</code></li>
+</ul>
+<p>Motivo:</p>
+<ul>
+<li>describe el contrato del paquete <code>.dimension</code></li>
+<li>ya no deberia usar <code>skin</code> como termino principal</li>
+</ul>
+<h4 id="2-srcthemessharedexternal-skin-loaderts">2. <code>src/themes/shared/external-skin-loader.ts</code><a class="headerlink" href="#2-srcthemessharedexternal-skin-loaderts" title="Permanent link">&para;</a></h4>
+<p>Resultado:</p>
+<ul>
+<li>se divide en:</li>
+<li><code>src/themes/shared/installed-dimensions-client.ts</code></li>
+<li><code>src/themes/shared/dimension-package-client.ts</code></li>
+</ul>
+<p>Responsabilidad de cada uno:</p>
+<ul>
+<li><code>installed-dimensions-client.ts</code></li>
+<li>cargar dimensiones instaladas</li>
+<li>instalar demo oficial</li>
+<li>quitar dimension instalada</li>
+<li><code>dimension-package-client.ts</code></li>
+<li>inspeccionar archivo <code>.dimension</code></li>
+<li>importar archivo <code>.dimension</code></li>
+</ul>
+<h4 id="3-srcthemessharedtheme-library-storagets">3. <code>src/themes/shared/theme-library-storage.ts</code><a class="headerlink" href="#3-srcthemessharedtheme-library-storagets" title="Permanent link">&para;</a></h4>
+<p>Resultado:</p>
+<ul>
+<li><code>src/themes/shared/installed-dimensions-events.ts</code></li>
+</ul>
+<p>Motivo:</p>
+<ul>
+<li>ya no sincroniza una biblioteca escaneable</li>
+<li>sincroniza cambios sobre dimensiones instaladas</li>
+</ul>
+<h4 id="4-srcthemessharedtheme-storagets">4. <code>src/themes/shared/theme-storage.ts</code><a class="headerlink" href="#4-srcthemessharedtheme-storagets" title="Permanent link">&para;</a></h4>
+<p>Resultado:</p>
+<ul>
+<li><code>src/themes/shared/active-dimension-storage.ts</code></li>
+</ul>
+<p>Motivo:</p>
+<ul>
+<li>esta capa guarda la seleccion de la dimension activa del usuario</li>
+<li>aqui pesa mas el lenguaje de producto que el de tema resuelto</li>
+</ul>
+<h3 id="renombre-ejecutado-en-fase-c">Renombre ejecutado en Fase C<a class="headerlink" href="#renombre-ejecutado-en-fase-c" title="Permanent link">&para;</a></h3>
+<h4 id="src-taurisrcskinsrs"><code>src-tauri/src/skins.rs</code><a class="headerlink" href="#src-taurisrcskinsrs" title="Permanent link">&para;</a></h4>
+<p>Resultado:</p>
+<ul>
+<li><code>src-tauri/src/dimensions.rs</code></li>
+</ul>
+<p>Motivo:</p>
+<ul>
+<li>la capa nativa ya no trabaja con una carpeta generica de skins</li>
+<li>trabaja con importacion, instalacion y lectura de dimensiones</li>
+</ul>
+<h2 id="renombres-de-tipos-y-comandos">Renombres de tipos y comandos<a class="headerlink" href="#renombres-de-tipos-y-comandos" title="Permanent link">&para;</a></h2>
+<h3 id="rust">Rust<a class="headerlink" href="#rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>ExternalSkinScanSnapshot</code> -&gt; <code>InstalledDimensionsSnapshotPayload</code></li>
+<li><code>ExternalSkinDirectoryPackage</code> -&gt; <code>DimensionPackagePayload</code></li>
+<li><code>ExternalSkinLocaleFile</code> -&gt; <code>DimensionLocaleFilePayload</code></li>
+<li><code>ExternalSkinAssetFiles</code> -&gt; <code>DimensionAssetFilesPayload</code></li>
+<li><code>ExternalSkinScanError</code> -&gt; <code>InstalledDimensionLoadErrorPayload</code></li>
+<li><code>SkinArchiveInspection</code> -&gt; <code>DimensionPackageInspection</code></li>
+<li><code>InstalledSkinImportResult</code> -&gt; <code>InstalledDimensionImportResult</code></li>
+</ul>
+<h3 id="comandos-tauri">Comandos Tauri<a class="headerlink" href="#comandos-tauri" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>scan_installed_skin_packages</code> -&gt; <code>load_installed_dimensions_snapshot</code></li>
+<li><code>install_official_skin_package</code> -&gt; <code>install_official_dimension</code></li>
+<li><code>inspect_skin_archive</code> -&gt; <code>inspect_dimension_package</code></li>
+<li><code>install_skin_archive</code> -&gt; <code>install_dimension_package</code></li>
+<li><code>remove_installed_skin_package</code> -&gt; <code>remove_installed_dimension</code></li>
+<li><code>read_external_skin_svg_asset</code> -&gt; <code>read_dimension_svg_asset</code></li>
+</ul>
+<h3 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>loadExternalSkinLibrarySnapshot</code> -&gt; <code>loadInstalledDimensionsSnapshot</code></li>
+<li><code>installOfficialSkinPackage</code> -&gt; <code>installOfficialDimension</code></li>
+<li><code>inspectSkinArchive</code> -&gt; <code>inspectDimensionPackage</code></li>
+<li><code>installSkinArchive</code> -&gt; <code>installDimensionPackage</code></li>
+<li><code>removeInstalledSkinPackage</code> -&gt; <code>removeInstalledDimension</code></li>
+</ul>
+<h2 id="orden-de-ejecucion-recomendado">Orden de ejecucion recomendado<a class="headerlink" href="#orden-de-ejecucion-recomendado" title="Permanent link">&para;</a></h2>
+<h3 id="fase-a-glosario-y-auditoria">Fase A. Glosario y auditoria<a class="headerlink" href="#fase-a-glosario-y-auditoria" title="Permanent link">&para;</a></h3>
+<p>Estado:</p>
+<ul>
+<li>completada en este documento</li>
+</ul>
+<p>Entregable:</p>
+<ul>
+<li>vocabulario oficial</li>
+<li>mapa de modulos a mantener y renombrar</li>
+</ul>
+<h3 id="fase-b-capa-frontend-de-importacion-e-instalacion">Fase B. Capa frontend de importacion e instalacion<a class="headerlink" href="#fase-b-capa-frontend-de-importacion-e-instalacion" title="Permanent link">&para;</a></h3>
+<p>Objetivo:</p>
+<ul>
+<li>limpiar la capa de clientes TS sin tocar aun la resolucion visual</li>
+</ul>
+<p>Estado:</p>
+<ul>
+<li>completada</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li><code>dimension-package.ts</code> sustituye a <code>skin-package.ts</code></li>
+<li><code>installed-dimensions-client.ts</code> y <code>dimension-package-client.ts</code> sustituyen a <code>external-skin-loader.ts</code></li>
+<li><code>installed-dimensions-events.ts</code> sustituye a <code>theme-library-storage.ts</code></li>
+<li><code>active-dimension-storage.ts</code> sustituye a <code>theme-storage.ts</code></li>
+<li><code>ThemeProvider</code> y la UI de configuracion ya consumen la nueva nomenclatura</li>
+</ul>
+<h3 id="fase-c-capa-nativa-de-dimensiones">Fase C. Capa nativa de dimensiones<a class="headerlink" href="#fase-c-capa-nativa-de-dimensiones" title="Permanent link">&para;</a></h3>
+<p>Objetivo:</p>
+<ul>
+<li>alinear Rust y los comandos Tauri con el modelo final</li>
+</ul>
+<p>Estado:</p>
+<ul>
+<li>completada</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li><code>skins.rs</code> pasa a <code>dimensions.rs</code></li>
+<li>los structs nativos adoptan ya nomenclatura de <code>dimension</code></li>
+<li>los comandos Tauri dejan de hablar de <code>skin</code> y quedan alineados con los clientes TS</li>
+<li>el <code>idle</code> lee SVG externos por <code>read_dimension_svg_asset</code></li>
+</ul>
+<h3 id="fase-d-ui-y-copy">Fase D. UI y copy<a class="headerlink" href="#fase-d-ui-y-copy" title="Permanent link">&para;</a></h3>
+<p>Objetivo:</p>
+<ul>
+<li>eliminar restos visibles de <code>skin</code>, <code>library</code> o naming heredado</li>
+</ul>
+<p>Estado:</p>
+<ul>
+<li>completada</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li>el copy visible del panel se alinea con <code>dimension</code> e <code>instalada</code></li>
+<li>la especificacion principal se consolida como <code>DIMENSION_PACKAGE_FORMAT</code></li>
+<li>existe una guia rapida de modding</li>
+<li>existe un checklist QA especifico del sistema de dimensiones</li>
+</ul>
+<h3 id="fase-e-qa-manual">Fase E. QA manual<a class="headerlink" href="#fase-e-qa-manual" title="Permanent link">&para;</a></h3>
+<p>Objetivo:</p>
+<ul>
+<li>cerrar la limpieza con una verificacion real de producto</li>
+</ul>
+<p>Checklist minima:</p>
+<ul>
+<li>importar una dimension nueva</li>
+<li>sobrescribir una dimension con el mismo <code>id</code></li>
+<li>avisar cuando coincida el nombre visible</li>
+<li>quitar una dimension inactiva</li>
+<li>quitar una dimension activa y volver a <code>Medieval</code></li>
+<li>cerrar y reabrir la app</li>
+<li>comprobar que lo instalado sigue ahi</li>
+<li>comprobar que <code>idle</code> y <code>dashboard</code> siguen alineados</li>
+</ul>
+<h2 id="regla-para-los-siguientes-cambios">Regla para los siguientes cambios<a class="headerlink" href="#regla-para-los-siguientes-cambios" title="Permanent link">&para;</a></h2>
+<p>En adelante:</p>
+<ul>
+<li>no renombrar por estetica</li>
+<li>renombrar solo cuando el nombre este describiendo mal la capa</li>
+<li>mantener <code>theme</code> donde siga significando "tema visual resuelto"</li>
+<li>usar <code>dimension</code> donde hablemos de identidad, instalacion, importacion o UX</li>
+</ul>
+<h2 id="estado-actual-tras-fase-c">Estado actual tras Fase C<a class="headerlink" href="#estado-actual-tras-fase-c" title="Permanent link">&para;</a></h2>
+<p>La capa de importacion e instalacion queda ahora dividida asi:</p>
+<ul>
+<li><code>dimension-package.ts</code></li>
+<li>contrato del paquete <code>.dimension</code></li>
+<li><code>dimension-package-client.ts</code></li>
+<li>inspeccion e importacion de archivos <code>.dimension</code></li>
+<li><code>installed-dimensions-client.ts</code></li>
+<li>carga, instalacion oficial y eliminacion de dimensiones instaladas</li>
+<li><code>active-dimension-storage.ts</code></li>
+<li>persistencia de la dimension activa</li>
+<li><code>installed-dimensions-events.ts</code></li>
+<li>sincronizacion entre ventanas cuando cambian las dimensiones instaladas</li>
+<li><code>src-tauri/src/dimensions.rs</code></li>
+<li>carga de dimensiones instaladas</li>
+<li>instalacion oficial</li>
+<li>inspeccion e importacion de paquetes <code>.dimension</code></li>
+<li>eliminacion de dimensiones instaladas</li>
+<li>lectura segura de SVGs de dimension</li>
+</ul>
+<p>El siguiente frente correcto ya no es la nomenclatura base, sino la limpieza
+final de copy, docs y checklist QA.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
