@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://fishellvvv.github.io/deskquest-docs/systems/dimensions/modding-quickstart/">
+      
       
         <link rel="prev" href="../official-lunar-demo/">
       
@@ -479,6 +481,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -710,6 +718,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../product/public-licensing-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de licencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/public-privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de privacidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../product/beta-release-operations/" class="md-nav__link">
         
   
@@ -718,6 +782,34 @@
     
   
     Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-share-polish-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polish previo a compartir la beta
   
 
     
@@ -1990,11 +2082,12 @@
 
 
 <h1 id="modding-quickstart">Modding Quickstart<a class="headerlink" href="#modding-quickstart" title="Permanent link">&para;</a></h1>
-<p>Guia corta para crear una dimension nueva a partir de la demo oficial.</p>
+<p>Guia corta para crear una dimension nueva a partir de la demo oficial y probarla
+en la beta actual de <code>DeskQuest</code>.</p>
 <h2 id="punto-de-partida-recomendado">Punto de partida recomendado<a class="headerlink" href="#punto-de-partida-recomendado" title="Permanent link">&para;</a></h2>
 <p>Usa esta carpeta como plantilla:</p>
 <ul>
-<li><a href="c:/Users/victo/OneDrive/Documentos/Repositorios/deskquest/examples/skins/io.github.fishellvvv.lunar-base">io.github.fishellvvv.lunar-base</a></li>
+<li><code>examples/skins/io.github.fishellvvv.lunar-base</code></li>
 </ul>
 <h2 id="flujo-rapido">Flujo rapido<a class="headerlink" href="#flujo-rapido" title="Permanent link">&para;</a></h2>
 <ol>
@@ -2005,8 +2098,11 @@
 <li>Sustituye <code>assets/idle/structure.svg</code> por tu arte.</li>
 <li>Si cambian puerta, halo o tamano del arte, corrige <code>assets/idle/layout.json</code>.</li>
 <li>Comprime la carpeta como <code>.dimension</code>.</li>
+<li>Deja el archivo <code>.dimension</code> en tu carpeta publica de dimensiones.
+   Windows: <code>Documentos/DeskQuest/dimensions</code></li>
 <li>Abre la app y usa <code>Anadir dimension...</code> en configuracion.</li>
-<li>Comprueba que aparece en la lista instalada y pulsa <code>Viajar</code>.</li>
+<li>Selecciona el paquete <code>.dimension</code> que quieres importar.</li>
+<li>Comprueba que aparece en <code>Instaladas</code> y pulsa su boton para activarla.</li>
 </ol>
 <h2 id="archivos-importantes">Archivos importantes<a class="headerlink" href="#archivos-importantes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2028,6 +2124,8 @@
 <li>El <code>id</code> debe ser estable y unico.</li>
 <li>Si importas una dimension con el mismo <code>id</code>, la app pedira confirmacion para sobrescribirla.</li>
 <li>Si el nombre visible coincide pero el <code>id</code> no, la app avisara pero permitira continuar.</li>
+<li>Importar una dimension nueva no la activa automaticamente: aparecera en <code>Instaladas</code>
+  y podras aplicarla pulsandola.</li>
 </ul>
 <h2 id="antes-de-importar">Antes de importar<a class="headerlink" href="#antes-de-importar" title="Permanent link">&para;</a></h2>
 <p>Comprueba al menos esto:</p>

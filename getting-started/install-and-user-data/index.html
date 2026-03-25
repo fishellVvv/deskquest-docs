@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://fishellvvv.github.io/deskquest-docs/getting-started/install-and-user-data/">
+      
       
         <link rel="prev" href="../dev-presets/">
       
@@ -509,10 +511,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-donde-estan-otros-datos-del-usuario" class="md-nav__link">
+  <a href="#4-donde-estan-los-paquetes-de-dimensiones-del-usuario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Donde estan otros datos del usuario
+        4. Donde estan los paquetes de dimensiones del usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-donde-estan-otros-datos-del-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Donde estan otros datos del usuario
       
     </span>
   </a>
@@ -685,6 +698,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -940,6 +959,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../product/public-licensing-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de licencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/public-privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de privacidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../product/beta-release-operations/" class="md-nav__link">
         
   
@@ -948,6 +1023,34 @@
     
   
     Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/beta-share-polish-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polish previo a compartir la beta
   
 
     
@@ -2085,10 +2188,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-donde-estan-otros-datos-del-usuario" class="md-nav__link">
+  <a href="#4-donde-estan-los-paquetes-de-dimensiones-del-usuario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Donde estan otros datos del usuario
+        4. Donde estan los paquetes de dimensiones del usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-donde-estan-otros-datos-del-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Donde estan otros datos del usuario
       
     </span>
   </a>
@@ -2283,15 +2397,35 @@ dentro del almacenamiento local del WebView:</p>
 legacy equivalente seria:</p>
 <pre><code class="language-text">C:\Users\&lt;usuario&gt;\AppData\Local\io.github.fishellvvv.testgame\EBWebView\Default\Local Storage\leveldb
 </code></pre>
-<h2 id="4-donde-estan-otros-datos-del-usuario">4. Donde estan otros datos del usuario<a class="headerlink" href="#4-donde-estan-otros-datos-del-usuario" title="Permanent link">&para;</a></h2>
+<h2 id="4-donde-estan-los-paquetes-de-dimensiones-del-usuario">4. Donde estan los paquetes de dimensiones del usuario<a class="headerlink" href="#4-donde-estan-los-paquetes-de-dimensiones-del-usuario" title="Permanent link">&para;</a></h2>
+<p>Ademas del perfil interno de la app, <code>DeskQuest</code> siembra una carpeta publica
+para paquetes <code>.dimension</code> en:</p>
+<pre><code class="language-text">C:\Users\&lt;usuario&gt;\Documents\DeskQuest\dimensions
+</code></pre>
+<p>Ahí es donde la app deja:</p>
+<ul>
+<li><code>lunar-base.dimension</code></li>
+<li><code>LEEME - dimensiones.txt</code></li>
+<li>y cualquier otro <code>.dimension</code> que el usuario quiera guardar para importarlo</li>
+</ul>
+<p>Notas:</p>
+<ul>
+<li>esta carpeta es la via pensada para compartir e intercambiar dimensiones</li>
+<li>la app no activa <code>Base lunar</code> por si sola: hay que importarla desde
+  <code>Configuracion -&gt; Dimensiones -&gt; Anadir dimension...</code></li>
+<li>si <code>Documents</code> no estuviera disponible, la app puede usar un fallback interno
+  bajo <code>AppData</code></li>
+</ul>
+<h2 id="5-donde-estan-otros-datos-del-usuario">5. Donde estan otros datos del usuario<a class="headerlink" href="#5-donde-estan-otros-datos-del-usuario" title="Permanent link">&para;</a></h2>
 <p>Ademas del perfil local, la app puede usar una carpeta de roaming en:</p>
 <pre><code class="language-text">C:\Users\&lt;usuario&gt;\AppData\Roaming\com.fishellvvv.deskquest
 </code></pre>
 <p>Contenido habitual o esperado:</p>
 <ul>
 <li><code>installed-dimensions</code></li>
+<li><code>dimension-archive-cache</code></li>
 <li><code>telemetry</code></li>
-<li>caches auxiliares de dimensiones</li>
+<li>caches auxiliares de dimensiones ya importadas</li>
 </ul>
 <p>Ruta legacy equivalente:</p>
 <pre><code class="language-text">C:\Users\&lt;usuario&gt;\AppData\Roaming\io.github.fishellvvv.testgame
@@ -2383,6 +2517,10 @@ manuales fuera de <code>AppData</code> es:</p>
 <li>la documentacion sigue yendo aparte</li>
 <li>si compartes una build con testers, conviene darles tambien el enlace o copia
   de la <a href="../tester-guide/">Guia corta para testers</a></li>
+<li>el portal publico activo vive en
+  <a href="https://fishellvvv.github.io/deskquest-docs/">https://fishellvvv.github.io/deskquest-docs/</a></li>
+<li>el canal publico de feedback beta vive en
+  <a href="https://github.com/fishellVvv/deskquest-docs/issues">https://github.com/fishellVvv/deskquest-docs/issues</a></li>
 </ul>
 <h2 id="10-referencias-relacionadas">10. Referencias relacionadas<a class="headerlink" href="#10-referencias-relacionadas" title="Permanent link">&para;</a></h2>
 <ul>

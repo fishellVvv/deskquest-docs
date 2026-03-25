@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://fishellvvv.github.io/deskquest-docs/systems/dimensions/qa-report/">
+      
       
         <link rel="prev" href="../qa-checklist/">
       
@@ -477,6 +479,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -708,6 +716,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../product/public-licensing-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de licencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/public-privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de privacidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../product/beta-release-operations/" class="md-nav__link">
         
   
@@ -716,6 +780,34 @@
     
   
     Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-share-polish-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polish previo a compartir la beta
   
 
     
@@ -1856,10 +1948,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#viaje" class="md-nav__link">
+  <a href="#activacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viaje
+        Activacion
       
     </span>
   </a>
@@ -1882,17 +1974,6 @@
     <span class="md-ellipsis">
       
         Conflicto de nombre visible
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eliminacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eliminacion
       
     </span>
   </a>
@@ -2116,10 +2197,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#viaje" class="md-nav__link">
+  <a href="#activacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viaje
+        Activacion
       
     </span>
   </a>
@@ -2142,17 +2223,6 @@
     <span class="md-ellipsis">
       
         Conflicto de nombre visible
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eliminacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eliminacion
       
     </span>
   </a>
@@ -2294,12 +2364,11 @@ funcional ya validada en los flujos principales.</p>
 <ul>
 <li>arranque base en <code>Medieval</code></li>
 <li>importacion de dimensiones</li>
-<li>viaje entre dimensiones</li>
+<li>activacion de dimensiones instaladas</li>
 <li>sincronizacion <code>idle</code> / <code>dashboard</code></li>
 <li>persistencia de dimensiones instaladas</li>
 <li>fallback parcial a <code>builtin:medieval</code></li>
 <li>idiomas <code>core</code> y tematicos</li>
-<li>eliminacion de dimensiones instaladas</li>
 </ul>
 <p>Todos los casos del checklist pueden considerarse ya <code>validados</code>, aunque algunos
 sean de borde y no formen parte del flujo diario de uso.</p>
@@ -2316,11 +2385,14 @@ sean de borde y no formen parte del flujo diario de uso.</p>
 <li>evidencia: flujo <code>Anadir dimension...</code> comprobado con paquetes <code>.dimension</code>
   reales</li>
 </ul>
-<h3 id="viaje">Viaje<a class="headerlink" href="#viaje" title="Permanent link">&para;</a></h3>
+<h3 id="activacion">Activacion<a class="headerlink" href="#activacion" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>validado manualmente</code></li>
-<li>evidencia: <code>dashboard</code> e <code>idle</code> cambian juntos y la dimension activa se
-  conserva al cerrar y reabrir el dashboard desde el <code>idle</code></li>
+<li>evidencia:</li>
+<li>al pulsar una dimension instalada inactiva, la app pide confirmacion</li>
+<li><code>dashboard</code> e <code>idle</code> cambian juntos</li>
+<li>la dimension activa se conserva al cerrar y reabrir el dashboard desde el
+    <code>idle</code></li>
 </ul>
 <h3 id="sobrescritura-por-id">Sobrescritura por <code>id</code><a class="headerlink" href="#sobrescritura-por-id" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2334,14 +2406,6 @@ sean de borde y no formen parte del flujo diario de uso.</p>
 <li>evidencia:</li>
 <li>al importar una dimension con el mismo <code>label</code> visible y distinto <code>id</code>, la
     app avisa y permite continuar o cancelar</li>
-</ul>
-<h3 id="eliminacion">Eliminacion<a class="headerlink" href="#eliminacion" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>validado en el flujo principal</code></li>
-<li>evidencia:</li>
-<li>quitar dimensiones instaladas funciona</li>
-<li>el runtime vuelve a <code>Medieval</code> cuando la activa deja de existir</li>
-<li>ese fallback esta reforzado en <code>ThemeProvider</code></li>
 </ul>
 <h3 id="fallback-parcial">Fallback parcial<a class="headerlink" href="#fallback-parcial" title="Permanent link">&para;</a></h3>
 <ul>

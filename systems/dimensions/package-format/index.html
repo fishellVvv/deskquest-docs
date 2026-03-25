@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://fishellvvv.github.io/deskquest-docs/systems/dimensions/package-format/">
+      
       
         <link rel="prev" href="../">
       
@@ -479,6 +481,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -710,6 +718,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../product/public-licensing-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de licencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/public-privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de privacidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../product/beta-release-operations/" class="md-nav__link">
         
   
@@ -718,6 +782,34 @@
     
   
     Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-share-polish-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polish previo a compartir la beta
   
 
     
@@ -2318,10 +2410,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#regla-de-eliminacion" class="md-nav__link">
+  <a href="#nota-sobre-eliminacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Regla de eliminacion
+        Nota sobre eliminacion
       
     </span>
   </a>
@@ -3146,10 +3238,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#regla-de-eliminacion" class="md-nav__link">
+  <a href="#nota-sobre-eliminacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Regla de eliminacion
+        Nota sobre eliminacion
       
     </span>
   </a>
@@ -3250,7 +3342,7 @@
 <li><code>builtin:medieval</code> siempre existe</li>
 <li><code>Base lunar</code> se distribuye como <code>.dimension</code> oficial de ejemplo</li>
 <li>el resto de dimensiones opcionales siguen el mismo flujo</li>
-<li>quitar una dimension instalada nunca afecta a <code>builtin:medieval</code></li>
+<li>la beta actual centra la UX visible en <code>importar</code> y <code>activar</code></li>
 </ul>
 <h2 id="reglas-de-identificadores">Reglas de identificadores<a class="headerlink" href="#reglas-de-identificadores" title="Permanent link">&para;</a></h2>
 <h3 id="namespace-reservado">Namespace reservado<a class="headerlink" href="#namespace-reservado" title="Permanent link">&para;</a></h3>
@@ -3264,7 +3356,7 @@
 <h3 id="ejemplos-validos">Ejemplos validos<a class="headerlink" href="#ejemplos-validos" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>io.github.autor.bastion-demo</code></li>
-<li><code>io.github.victor.moon-temple</code></li>
+<li><code>io.github.autor.moon-temple</code></li>
 </ul>
 <h3 id="ejemplos-no-validos">Ejemplos no validos<a class="headerlink" href="#ejemplos-no-validos" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3301,7 +3393,7 @@
   &quot;label&quot;: &quot;Bastion de cobre&quot;,
   &quot;description&quot;: &quot;Un bastion industrial de cobre, humo y remaches.&quot;,
   &quot;version&quot;: &quot;1.0.0&quot;,
-  &quot;author&quot;: &quot;Victor G. V.&quot;,
+  &quot;author&quot;: &quot;DeskQuest Team&quot;,
   &quot;homepage&quot;: &quot;https://ejemplo.dev&quot;,
   &quot;defaultLocale&quot;: &quot;es&quot;,
   &quot;extends&quot;: &quot;builtin:medieval&quot;,
@@ -3615,23 +3707,24 @@
 <li>pulsar <code>Anadir dimension...</code></li>
 <li>elegir el archivo <code>.dimension</code></li>
 <li>si ya existe una con el mismo <code>id</code>, decidir si se sobrescribe</li>
-<li>viajar a la dimension instalada desde la lista vertical</li>
+<li>comprobar que aparece en <code>Instaladas</code></li>
+<li>pulsar su boton para activarla</li>
 </ol>
 <h3 id="regla-de-conflictos">Regla de conflictos<a class="headerlink" href="#regla-de-conflictos" title="Permanent link">&para;</a></h3>
 <ul>
 <li>si coincide <code>manifest.id</code>, la app trata el paquete como la misma dimension y pide confirmacion para sobrescribir</li>
 <li>si el <code>id</code> es distinto pero el nombre visible coincide, la app avisa y permite continuar</li>
 </ul>
-<h3 id="regla-de-eliminacion">Regla de eliminacion<a class="headerlink" href="#regla-de-eliminacion" title="Permanent link">&para;</a></h3>
+<h3 id="nota-sobre-eliminacion">Nota sobre eliminacion<a class="headerlink" href="#nota-sobre-eliminacion" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>builtin:medieval</code> no se puede quitar</li>
-<li>cualquier otra dimension instalada se puede quitar desde la lista</li>
-<li>si se elimina la dimension activa, la app vuelve a <code>builtin:medieval</code></li>
+<li>la beta actual no expone eliminacion desde la UI de configuracion</li>
+<li>el fallback a <code>builtin:medieval</code> sigue siendo la garantia base del runtime</li>
 </ul>
 <h2 id="demo-oficial-de-referencia">Demo oficial de referencia<a class="headerlink" href="#demo-oficial-de-referencia" title="Permanent link">&para;</a></h2>
 <p>La primera dimension de ejemplo mantenida por el proyecto es:</p>
 <ul>
-<li><a href="c:/Users/victo/OneDrive/Documentos/Repositorios/deskquest/examples/skins/io.github.fishellvvv.lunar-base">examples/skins/io.github.fishellvvv.lunar-base</a></li>
+<li><code>examples/skins/io.github.fishellvvv.lunar-base</code></li>
 </ul>
 <p>Esta carpeta debe servir como:</p>
 <ul>

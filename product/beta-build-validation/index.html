@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://fishellvvv.github.io/deskquest-docs/product/beta-build-validation/">
+      
       
         <link rel="prev" href="../beta-qa-checklist/">
       
@@ -481,6 +483,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -884,6 +892,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../public-licensing-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de licencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../public-privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de privacidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../beta-release-operations/" class="md-nav__link">
         
   
@@ -892,6 +956,34 @@
     
   
     Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-share-polish-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polish previo a compartir la beta
   
 
     
@@ -2126,14 +2218,18 @@ se ejecuta como build de escritorio.</p>
 <li>el frontend se compila antes con <code>npm run build</code></li>
 <li>la app se empaqueta bajo <code>src-tauri/target/release/bundle/</code></li>
 </ul>
-<p>Para la linea publica actual, los artefactos esperados son:</p>
+<p>Para la build candidata actual, los artefactos esperados son:</p>
 <ul>
-<li><code>DeskQuest_0.1.0-beta.1_x64_en-US.msi</code></li>
-<li><code>DeskQuest_0.1.0-beta.1_x64-setup.exe</code></li>
+<li><code>DeskQuest_0.1.0-beta.2_x64_en-US.msi</code></li>
+<li><code>DeskQuest_0.1.0-beta.2_x64-setup.exe</code></li>
+</ul>
+<p>Release publica viva:</p>
+<ul>
+<li><a href="https://github.com/fishellVvv/deskquest-docs/releases/tag/v0.1.0-beta.2">https://github.com/fishellVvv/deskquest-docs/releases/tag/v0.1.0-beta.2</a></li>
 </ul>
 <p>Nota para Windows:</p>
 <ul>
-<li>si la version publica usa prereleases tipo <code>0.1.0-beta.1</code>, el target <code>msi</code>
+<li>si la version publica usa prereleases tipo <code>0.1.0-beta.2</code>, el target <code>msi</code>
   necesita una version numerica paralela en <code>bundle.windows.wix.version</code>
   porque WiX no acepta identificadores prerelease textuales en <code>ProductVersion</code></li>
 </ul>
