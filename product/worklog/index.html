@@ -489,6 +489,8 @@
       
         
       
+        
+      
     
     
     
@@ -810,6 +812,34 @@
     
   
     Polish previo a compartir la beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-feedback-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operativa de feedback beta
   
 
     
@@ -3156,6 +3186,28 @@
     <span class="md-ellipsis">
       
         Entrada 197
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-198" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 198
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-199" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 199
       
     </span>
   </a>
@@ -6310,6 +6362,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#entrada-198" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 198
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-199" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 199
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8118,6 +8192,24 @@
 <li><code>detalle</code>: Con la build <code>0.1.0-beta.2</code> ya generada y la smoke test corta superada, el siguiente riesgo ya no estaba en el binario sino en la coherencia publica del proyecto. Mientras la release accesible para testers no existiera, las docs seguian dependiendo de enlaces a <code>deskquest</code> que no servian fuera del repo privado. Este bloque cierra por fin esa brecha: la release publica <code>DeskQuest 0.1.0-beta.2</code> pasa a vivir en <code>deskquest-docs</code>, con <code>setup.exe</code> y <code>.msi</code> descargables sin exponer el repo privado del juego. A partir de ahi, la documentacion fuente se sincroniza para tratar <code>deskquest-docs</code> como canal real de distribucion: <code>README</code>, la portada de docs, la guia corta para testers, <code>Producto</code>, <code>Versioning</code>, <code>Validacion de build beta</code>, <code>Operativa de cierre de beta</code>, <code>STATUS</code> y <code>CHANGELOG</code> dejan ya de hablar de <code>beta.1</code> o del repo privado como si siguieran siendo la puerta publica del proyecto. Con ello la beta queda ya realmente compartible a nivel de infraestructura; el ultimo gesto que falta es republicar el portal para que la web visible recoja estos enlaces y reevaluar despues si la fase ya puede congelarse o abrirse a colegas.</li>
 <li><code>archivos</code>: <code>README.md</code>, <code>CHANGELOG.md</code>, <code>docs/index.md</code>, <code>docs/getting-started/tester-guide.md</code>, <code>docs/product/index.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/beta-build-validation.md</code>, <code>docs/product/beta-release-operations.md</code>, <code>STATUS.md</code>, <code>docs/product/worklog.md</code>, <code>https://github.com/fishellVvv/deskquest-docs/releases/tag/v0.1.0-beta.2</code></li>
 <li><code>siguiente</code>: republicar <code>deskquest-docs</code> con la documentacion ya sincronizada y reevaluar despues si la beta puede compartirse o congelarse</li>
+</ul>
+<h2 id="entrada-198">Entrada 198<a class="headerlink" href="#entrada-198" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>timestamp</code>: 2026-03-25 (hora no registrada)</li>
+<li><code>categorias</code>: <code>beta</code>, <code>release</code>, <code>operativa</code>, <code>docs</code>, <code>producto</code></li>
+<li><code>resumen</code>: La beta <code>0.1.0-beta.2</code> se da ya por compartible y el <code>paso 16</code> de la operativa queda cerrado.</li>
+<li><code>detalle</code>: Tras la smoke test corta, la publicacion de la release accesible en <code>deskquest-docs</code> y la republicacion del portal con los enlaces correctos, ya no quedaba ninguna pieza tecnica o documental importante fuera de sitio. Este bloque hace algo pequeno pero crucial: convierte ese hecho en una verdad escrita del proyecto. <code>Operativa de cierre de beta</code> marca por fin el <code>paso 16</code> como completado y deja de presentar la beta como una preparacion en curso; <code>STATUS</code> pasa a describir el proyecto como <code>beta compartible</code>, <code>Versioning</code> deja el siguiente paso en manos del feedback real y no de mas release work, y la propia checklist de polish deja claro que su mision ya esta cumplida. El resultado no cambia el producto, pero si su estado: <code>DeskQuest 0.1.0-beta.2</code> ya no es solo una build correcta con docs correctas, sino una beta lista para salir a colegas y empezar a generar señal externa sobre onboarding, claridad, pacing y bugs. A partir de aqui el siguiente movimiento ya no es interno, sino escuchar que devuelve esa primera ronda de prueba y decidir despues si toca congelar del todo o abrir el siguiente slice funcional.</li>
+<li><code>archivos</code>: <code>CHANGELOG.md</code>, <code>STATUS.md</code>, <code>docs/product/beta-share-polish-checklist.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/beta-release-operations.md</code>, <code>docs/product/worklog.md</code></li>
+<li><code>siguiente</code>: compartir <code>DeskQuest 0.1.0-beta.2</code> con colegas o testers cercanos y usar ese feedback para decidir el siguiente bloque funcional</li>
+</ul>
+<h2 id="entrada-199">Entrada 199<a class="headerlink" href="#entrada-199" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>timestamp</code>: 2026-03-25 (hora no registrada)</li>
+<li><code>categorias</code>: <code>beta</code>, <code>feedback</code>, <code>docs</code>, <code>operativa</code>, <code>producto</code></li>
+<li><code>resumen</code>: Se fija una operativa interna corta para explotar el feedback beta y decidir el siguiente slice sin reabrir scope a ciegas.</li>
+<li><code>detalle</code>: Una vez cerrados la release publica, la republicacion de <code>deskquest-docs</code> y el <code>paso 16</code>, el siguiente riesgo ya no estaba en la build sino en el foco. La beta era compartible, pero seguia faltando una pieza pequena y muy practica: una regla comun para convertir <code>Issues</code>, notas de testers y comentarios sueltos en una lectura de producto coherente. Este bloque cubre justo ese hueco. Nace <code>Operativa de feedback beta</code> como referencia de producto para la primera ronda externa: fija el canal de verdad (<code>deskquest-docs/issues</code>), separa <code>Bug report</code> de <code>Beta feedback</code>, define una clasificacion corta entre <code>bloqueante beta</code>, <code>friccion fuerte</code>, <code>senal de producto</code> y <code>diferido</code>, y deja por escrito cuando considerar que ya existe senal minima para cerrar una primera lectura. En paralelo, <code>STATUS</code>, <code>Versioning</code>, <code>Producto</code>, <code>README</code> y la <code>Operativa de cierre de beta</code> se resincronizan al nuevo punto real: el foco ya no es cerrar infraestructura de release, sino compartir la build, centralizar la senal y decidir despues si toca congelar la beta, abrir un microbloque correctivo o pasar al siguiente slice funcional. Con ello el proyecto gana un puente limpio entre la beta compartible y la reanudacion del desarrollo funcional, evitando que la siguiente decision dependa solo de intuiciones dispersas.</li>
+<li><code>archivos</code>: <code>mkdocs.yml</code>, <code>README.md</code>, <code>STATUS.md</code>, <code>docs/product/index.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/beta-release-operations.md</code>, <code>docs/product/beta-feedback-operations.md</code>, <code>docs/product/worklog.md</code></li>
+<li><code>siguiente</code>: compartir <code>DeskQuest 0.1.0-beta.2</code> con colegas, centralizar las primeras senales y cerrar una lectura corta antes de decidir congelacion, microbloque correctivo o siguiente slice funcional</li>
 </ul>
 
 

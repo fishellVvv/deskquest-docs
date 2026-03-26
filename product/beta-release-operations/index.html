@@ -489,6 +489,8 @@
       
         
       
+        
+      
     
     
     
@@ -1033,10 +1035,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#16-congelar-la-beta-abierto" class="md-nav__link">
+  <a href="#16-congelar-la-beta-completado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16. Congelar la beta (abierto)
+        16. Congelar la beta (completado)
       
     </span>
   </a>
@@ -1116,6 +1118,34 @@
     
   
     Polish previo a compartir la beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-feedback-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operativa de feedback beta
   
 
     
@@ -2391,10 +2421,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#16-congelar-la-beta-abierto" class="md-nav__link">
+  <a href="#16-congelar-la-beta-completado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16. Congelar la beta (abierto)
+        16. Congelar la beta (completado)
       
     </span>
   </a>
@@ -2496,10 +2526,10 @@
 <li><code>paso 13</code>: completado</li>
 <li><code>paso 14</code>: completado</li>
 <li><code>paso 15</code>: completado</li>
-<li><code>paso 16</code>: abierto</li>
+<li><code>paso 16</code>: completado</li>
 <li>version publica del producto: <code>0.1.0-beta.2</code></li>
 <li>release publica viva: <code>0.1.0-beta.2</code></li>
-<li>hito interno actual: <code>0.0.197a</code></li>
+<li>hito interno actual: <code>0.0.199a</code></li>
 <li><code>save schema version</code>: <code>1</code></li>
 <li>bundles oficiales ya generados:</li>
 <li><code>DeskQuest_0.1.0-beta.2_x64_en-US.msi</code></li>
@@ -2516,6 +2546,8 @@
 <li><a href="https://fishellvvv.github.io/deskquest-docs/">https://fishellvvv.github.io/deskquest-docs/</a></li>
 <li>circuito publico de feedback ya activo:</li>
 <li><a href="https://github.com/fishellVvv/deskquest-docs/issues">https://github.com/fishellVvv/deskquest-docs/issues</a></li>
+<li>operativa interna de feedback ya fijada:</li>
+<li><a href="../beta-feedback-operations/">Operativa de feedback beta</a></li>
 <li><code>DeskQuest Beta</code> ya existe como <code>GitHub Project</code> operativo</li>
 <li>politica publica de licencias ya fijada:</li>
 <li><a href="../public-licensing-policy/">Politica publica de licencias</a></li>
@@ -2523,8 +2555,9 @@
 <li><a href="../public-privacy-policy/">Politica publica de privacidad</a></li>
 <li>ronda principal de polish previo ya cerrada:</li>
 <li><a href="../beta-share-polish-checklist/">Polish previo a compartir la beta</a></li>
-<li>siguiente paso operativo: actualizar los enlaces publicos de descarga dentro
-  del portal, republicarlo y reevaluar despues la congelacion</li>
+<li>siguiente paso operativo: compartir la beta con colegas, centralizar la senal
+  segun la <code>Operativa de feedback beta</code> y decidir despues si conviene
+  congelarla del todo o abrir ya el siguiente slice funcional</li>
 </ul>
 <h2 id="principio-general">Principio general<a class="headerlink" href="#principio-general" title="Permanent link">&para;</a></h2>
 <p>Mientras esta operativa no quede cerrada:</p>
@@ -2795,7 +2828,7 @@ operativa detallada.</p>
 <li><code>worklog</code> reciente corregido para no exponer rutas absolutas del autor</li>
 <li>politica publica de privacidad fijada en <a href="../public-privacy-policy/">Politica publica de privacidad</a></li>
 </ul>
-<h3 id="16-congelar-la-beta-abierto">16. Congelar la beta (<code>abierto</code>)<a class="headerlink" href="#16-congelar-la-beta-abierto" title="Permanent link">&para;</a></h3>
+<h3 id="16-congelar-la-beta-completado">16. Congelar la beta (<code>completado</code>)<a class="headerlink" href="#16-congelar-la-beta-completado" title="Permanent link">&para;</a></h3>
 <p>Una vez cerrados los pasos anteriores:</p>
 <ul>
 <li>no abrir features grandes</li>
@@ -2807,14 +2840,17 @@ operativa detallada.</p>
 <li>la beta ya es operativa y publicable tecnicamente</li>
 <li>la ronda principal de usabilidad, estetica y acceso ya esta cerrada</li>
 <li>la build local <code>0.1.0-beta.2</code> ya se valido con una smoke test corta</li>
-<li>la release publica nueva ya existe, pero la congelacion sigue sin declararse
-  porque aun falta republicar las docs publicas con sus nuevos enlaces y hacer
-  una reevaluacion final del estado</li>
+<li>la release publica nueva ya existe en <code>deskquest-docs</code></li>
+<li>el portal documental publico ya fue republicado con los enlaces correctos a
+  <code>0.1.0-beta.2</code></li>
+<li>la beta ya puede darse por compartible para colegas y testers cercanos</li>
 <li>la referencia de polish ya queda fijada en
   <a href="../beta-share-polish-checklist/">Polish previo a compartir la beta</a></li>
 </ul>
 <h3 id="17-reanudar-desarrollo-funcional">17. Reanudar desarrollo funcional<a class="headerlink" href="#17-reanudar-desarrollo-funcional" title="Permanent link">&para;</a></h3>
 <p>Solo despues de cerrar la beta operativa.</p>
+<p>Antes de abrir cualquiera de estas lineas, conviene cerrar una primera lectura
+de testers siguiendo la <a href="../beta-feedback-operations/">Operativa de feedback beta</a>.</p>
 <p>Posibles siguientes lineas:</p>
 <ul>
 <li><code>Cantera</code> jugable</li>
@@ -2825,9 +2861,10 @@ operativa detallada.</p>
 <h2 id="prioridad-inmediata-recomendada">Prioridad inmediata recomendada<a class="headerlink" href="#prioridad-inmediata-recomendada" title="Permanent link">&para;</a></h2>
 <p>Si hay que empezar ya, este es el orden corto:</p>
 <ol>
-<li>actualizar los enlaces publicos de descarga a <code>0.1.0-beta.2</code></li>
-<li>republicar <code>deskquest-docs</code></li>
-<li>reevaluar la congelacion de beta</li>
+<li>compartir la beta <code>0.1.0-beta.2</code></li>
+<li>recoger feedback real de colegas o testers cercanos</li>
+<li>decidir despues si la beta queda ya definitivamente congelada o si se abre
+   el siguiente bloque funcional</li>
 </ol>
 <h2 id="lo-que-no-conviene-hacer-aun">Lo que no conviene hacer aun<a class="headerlink" href="#lo-que-no-conviene-hacer-aun" title="Permanent link">&para;</a></h2>
 <ul>
