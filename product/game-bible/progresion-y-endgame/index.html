@@ -1,0 +1,4170 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentacion viva del proyecto DeskQuest">
+      
+      
+      
+        <link rel="canonical" href="https://fishellvvv.github.io/deskquest-docs/product/game-bible/progresion-y-endgame/">
+      
+      
+        <link rel="prev" href="../bucles-nucleares/">
+      
+      
+        <link rel="next" href="../sistemas-y-contenido/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Progresion y endgame - DeskQuest</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#progresion-y-endgame" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="DeskQuest" class="md-header__button md-logo" aria-label="DeskQuest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DeskQuest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Progresion y endgame
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DeskQuest" class="md-nav__button md-logo" aria-label="DeskQuest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DeskQuest
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empezar
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Empezar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/repo-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapa del repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/reading-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ruta de lectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/dev-presets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets de desarrollo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/install-and-user-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalacion y datos de usuario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/tester-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia corta para testers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Producto
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Producto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dii-vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision DII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biblia del juego
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Biblia del juego
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fantasia-y-pilares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fantasia y pilares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bucles-nucleares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bucles nucleares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresion y endgame
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresion y endgame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estado-del-documento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado del documento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canon-heredado-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canon heredado del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-de-lectura-de-esta-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla de lectura de esta pagina
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapa-de-progresion-consolidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapa de progresion consolidado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-1-fundacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 1. Fundacion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-2-reino-temprano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 2. Reino temprano
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 2. Reino temprano">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-ya-esta-realmente-en-juego" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que ya esta realmente en juego
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-3-puente-entre-early-y-actividad-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 3. Puente entre early y actividad manual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 3. Puente entre early y actividad manual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-concrecion-real-ya-cerrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primera concrecion real ya cerrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-4-midgame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 4. Midgame
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 4. Midgame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#senal-ya-consolidada-por-la-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Senal ya consolidada por la documentacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primer-arco-ya-fijado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primer arco ya fijado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tension-principal-del-primer-arco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tension principal del primer arco
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tension-de-progreso-segun-la-hipotesis-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tension de progreso segun la hipotesis actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-repetido-del-primer-midgame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop repetido del primer midgame
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcion-exacta-de-la-capa-game-segun-la-vision-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcion exacta de la capa game segun la vision actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punto-de-entrada-y-salida-del-primer-arco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punto de entrada y salida del primer arco
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-45-culminacion-del-arranque-narrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 4.5. Culminacion del arranque narrativo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 4.5. Culminacion del arranque narrativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implicacion-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implicacion importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-5-reino-maduro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 5. Reino maduro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 5. Reino maduro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pistas-ya-presentes-en-la-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pistas ya presentes en la documentacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-6-endgame-y-prestigio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 6. Endgame y prestigio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 6. Endgame y prestigio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-ejecucion-ya-registradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones de ejecucion ya registradas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direccion-ya-fijada-para-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direccion ya fijada para v1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Direccion ya fijada para v1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-se-reinicia-en-el-primer-prestigio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que se reinicia en el primer prestigio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-se-conserva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que se conserva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forma-territorial-recomendada-para-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forma territorial recomendada para v1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencia-entre-beta-y-juego-largo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencia entre beta y juego largo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones-grandes-pendientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisiones grandes pendientes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-para-esta-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla para esta pagina
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sistemas-y-contenido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas y contenido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primer-slice-midgame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primer slice de midgame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mundo-y-lore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mundo y lore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lineas-rojas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lineas rojas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preguntas-abiertas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preguntas abiertas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideas-descartadas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideas descartadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../early-game-onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding temprano
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beta-0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ruta a beta 0.1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beta-qa-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist QA beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beta-build-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validacion de build beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beta-distribution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrategia de distribucion beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../public-licensing-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de licencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../public-privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de privacidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beta-release-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beta-share-polish-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polish previo a compartir la beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beta-feedback-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operativa de feedback beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deferred-improvements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendientes diferidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../worklog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worklog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arquitectura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/current-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura actual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/system-entry-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reglas de entrada de nuevos sistemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vista general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/application-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidad de aplicacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/application-identity-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan de migracion a DeskQuest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/idle-window-sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibracion del idle raster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/dimension-naming-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nomenclatura de dimensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../architecture/adrs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ADR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/adrs/adr-0001-modular-layered-monolith/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-0001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/adrs/adr-0002-world-first-milestone-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-0002
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../architecture/refactor-program/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programa de refactor
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programa de refactor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/milestone-0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/smoke-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smoke test base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/hotspot-baseline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baseline de hotspots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/milestone-1-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 1 - world-first
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/transitional-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventario transicional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/milestone-2-runtime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 2 - world runtime and session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/milestone-3-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 3 - dashboard surfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/milestone-4-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparacion de M4 - persistencia, sync y legacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/milestone-4b-legacy-cleanup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparacion de M4b - cleanup residual de legacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/milestone-5-midgame-readiness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 5 - architecture consolidation and first midgame slice readiness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/refactor-program/legacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica de legacy para M4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/typescript-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia TypeScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../maintenance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maintenance/documentation-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica documental
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/balance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balance
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Balance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/game/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/game/dirigir-tala-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dirigir tala v1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/dimensions/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensiones
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dimensiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/package-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato de paquete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/official-lunar-demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo oficial lunar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/modding-quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/qa-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/qa-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estado-del-documento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado del documento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canon-heredado-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canon heredado del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-de-lectura-de-esta-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla de lectura de esta pagina
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapa-de-progresion-consolidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapa de progresion consolidado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-1-fundacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 1. Fundacion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-2-reino-temprano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 2. Reino temprano
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 2. Reino temprano">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-ya-esta-realmente-en-juego" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que ya esta realmente en juego
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-3-puente-entre-early-y-actividad-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 3. Puente entre early y actividad manual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 3. Puente entre early y actividad manual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-concrecion-real-ya-cerrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primera concrecion real ya cerrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-4-midgame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 4. Midgame
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 4. Midgame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#senal-ya-consolidada-por-la-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Senal ya consolidada por la documentacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primer-arco-ya-fijado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primer arco ya fijado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tension-principal-del-primer-arco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tension principal del primer arco
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tension-de-progreso-segun-la-hipotesis-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tension de progreso segun la hipotesis actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-repetido-del-primer-midgame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop repetido del primer midgame
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcion-exacta-de-la-capa-game-segun-la-vision-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcion exacta de la capa game segun la vision actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punto-de-entrada-y-salida-del-primer-arco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punto de entrada y salida del primer arco
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-45-culminacion-del-arranque-narrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 4.5. Culminacion del arranque narrativo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 4.5. Culminacion del arranque narrativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implicacion-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implicacion importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-5-reino-maduro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 5. Reino maduro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 5. Reino maduro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pistas-ya-presentes-en-la-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pistas ya presentes en la documentacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tramo-6-endgame-y-prestigio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tramo 6. Endgame y prestigio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tramo 6. Endgame y prestigio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-ejecucion-ya-registradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones de ejecucion ya registradas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direccion-ya-fijada-para-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direccion ya fijada para v1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Direccion ya fijada para v1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-se-reinicia-en-el-primer-prestigio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que se reinicia en el primer prestigio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-se-conserva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que se conserva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forma-territorial-recomendada-para-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forma territorial recomendada para v1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencia-entre-beta-y-juego-largo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencia entre beta y juego largo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones-grandes-pendientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisiones grandes pendientes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-para-esta-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla para esta pagina
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="progresion-y-endgame">Progresion y endgame<a class="headerlink" href="#progresion-y-endgame" title="Permanent link">&para;</a></h1>
+<h2 id="estado-del-documento">Estado del documento<a class="headerlink" href="#estado-del-documento" title="Permanent link">&para;</a></h2>
+<ul>
+<li>estado actual: <code>provisional</code></li>
+<li>objetivo: <code>dibujar el arco completo del juego desde el onboarding hasta el loop meta</code></li>
+<li>criterio de cierre: <code>tener una secuencia clara de early, midgame, lategame y prestigio</code></li>
+</ul>
+<h2 id="canon-heredado-del-proyecto">Canon heredado del proyecto<a class="headerlink" href="#canon-heredado-del-proyecto" title="Permanent link">&para;</a></h2>
+<p>La documentacion actual ya fija bastante bien estas capas:</p>
+<ul>
+<li>onboarding fundacional</li>
+<li><code>oro</code> como recurso de arranque</li>
+<li><code>madera</code>, <code>piedra</code> y <code>poblacion</code> como economia temprana</li>
+<li><code>Dirigir tala</code> como primera actividad manual</li>
+<li><code>prestigio</code> como recurso meta futuro</li>
+<li><code>comida</code>, <code>hierro</code>, <code>pieles</code> y <code>fe</code> como direcciones ya insinuadas para
+  etapas posteriores</li>
+</ul>
+<h2 id="regla-de-lectura-de-esta-pagina">Regla de lectura de esta pagina<a class="headerlink" href="#regla-de-lectura-de-esta-pagina" title="Permanent link">&para;</a></h2>
+<p>Aqui conviene distinguir dos cosas:</p>
+<ul>
+<li><code>direccion fijada</code>: hacia donde apuntan ya <code>Vision DII</code> y el resto de docs</li>
+<li><code>estado actual del runtime</code>: hasta donde ha llegado hoy el juego real</li>
+</ul>
+<p>Eso evita mezclar una beta temprana ya jugable con promesas de largo plazo que
+todavia no estan cerradas.</p>
+<h2 id="mapa-de-progresion-consolidado">Mapa de progresion consolidado<a class="headerlink" href="#mapa-de-progresion-consolidado" title="Permanent link">&para;</a></h2>
+<p>Esta es la secuencia que mejor sintetiza la documentacion actual:</p>
+<ol>
+<li><code>actividad real -&gt; pulsaciones -&gt; oro</code></li>
+<li><code>journey -&gt; founding -&gt; stronghold</code></li>
+<li><code>primer acceso al patio + nombre del asentamiento</code></li>
+<li><code>puesto maderero</code>, <code>viviendas</code> y <code>cantera</code> como primera expansion visible</li>
+<li><code>madera</code>, <code>piedra</code> y <code>poblacion</code> como economia gestionable del reino</li>
+<li><code>templo</code>, revelacion de la anomalia local y desbloqueo de <code>dimensiones</code></li>
+<li><code>mejoras reutilizables</code> y capas activas de <code>game</code> para combatir las mesetas</li>
+<li><code>midgame</code> social y territorial con recursos e instituciones mas ricas</li>
+<li><code>prestigio</code>, nuevas tierras y legado de largo plazo</li>
+</ol>
+<h2 id="tramo-1-fundacion">Tramo 1. Fundacion<a class="headerlink" href="#tramo-1-fundacion" title="Permanent link">&para;</a></h2>
+<p>Estado deseado:</p>
+<ul>
+<li>viaje</li>
+<li>fundacion</li>
+<li>primer nombre del reino</li>
+<li>primeras obras</li>
+</ul>
+<p>Estado actual:</p>
+<ul>
+<li><code>canon</code></li>
+<li><code>ya alcanzado en runtime</code></li>
+</ul>
+<h2 id="tramo-2-reino-temprano">Tramo 2. Reino temprano<a class="headerlink" href="#tramo-2-reino-temprano" title="Permanent link">&para;</a></h2>
+<p>Estado deseado:</p>
+<ul>
+<li>varias obras visibles en el patio</li>
+<li><code>oro</code>, <code>madera</code>, <code>piedra</code> y <code>poblacion</code> como base del reino</li>
+<li>mano de obra como cuello de botella temprano</li>
+<li>primeras mejoras de edificio</li>
+<li>primer guidance interno del <code>Asentamiento</code></li>
+</ul>
+<p>Estado actual:</p>
+<ul>
+<li><code>canon</code></li>
+<li><code>ya alcanzado en runtime</code> en una primera version</li>
+</ul>
+<h3 id="lo-que-ya-esta-realmente-en-juego">Lo que ya esta realmente en juego<a class="headerlink" href="#lo-que-ya-esta-realmente-en-juego" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Puesto maderero</code> como primera rama productiva pasiva</li>
+<li><code>Viviendas</code> como ampliacion de aforo y crecimiento gradual de poblacion</li>
+<li><code>Cantera</code> como segunda rama que compite por mano de obra</li>
+<li><code>poblacion</code> libre frente a ocupada</li>
+<li>construcciones y mejoras con costes, tiempo y persistencia</li>
+<li>progreso visible mediante sombras y desbloqueos en el patio</li>
+</ul>
+<h2 id="tramo-3-puente-entre-early-y-actividad-manual">Tramo 3. Puente entre early y actividad manual<a class="headerlink" href="#tramo-3-puente-entre-early-y-actividad-manual" title="Permanent link">&para;</a></h2>
+<p>Estado deseado:</p>
+<ul>
+<li>que el reino deje de ser solo produccion pasiva basica</li>
+<li>que aparezca una primera decision fuerte de intervencion manual</li>
+<li>que la tercera capa del DII quede justificada sin romper la base <code>idle</code></li>
+</ul>
+<p>Estado actual:</p>
+<ul>
+<li><code>canon</code></li>
+<li><code>ya alcanzado en runtime</code> con el primer caso</li>
+</ul>
+<h3 id="primera-concrecion-real-ya-cerrada">Primera concrecion real ya cerrada<a class="headerlink" href="#primera-concrecion-real-ya-cerrada" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Dirigir tala v1</code></li>
+<li>entrada desde <code>Puesto maderero</code></li>
+<li>requisito de <code>nivel 2</code> y <code>10</code> trabajadores</li>
+<li>ejecucion dentro de <code>mapa + pergamino</code></li>
+<li>economia de expedicion separada entre <code>obtenido</code> y <code>acumulado</code></li>
+<li>entrega real de recursos solo al volver al reino</li>
+</ul>
+<h2 id="tramo-4-midgame">Tramo 4. Midgame<a class="headerlink" href="#tramo-4-midgame" title="Permanent link">&para;</a></h2>
+<p>Aqui deberia pasar algo importante: el juego deja de ser solo patio temprano y
+empieza a sentirse como sociedad, territorio y especializacion.</p>
+<p>Candidatos ya insinuados en docs y repetidos con suficiente fuerza:</p>
+<ul>
+<li><code>comida</code></li>
+<li><code>hierro</code></li>
+<li><code>pieles</code></li>
+<li><code>fe</code></li>
+<li>roles de poblacion</li>
+<li>misiones</li>
+<li>nuevas zonas</li>
+</ul>
+<p>Estado:</p>
+<ul>
+<li><code>canon operativo</code> para su primer arco jugable</li>
+</ul>
+<h3 id="senal-ya-consolidada-por-la-documentacion">Senal ya consolidada por la documentacion<a class="headerlink" href="#senal-ya-consolidada-por-la-documentacion" title="Permanent link">&para;</a></h3>
+<p><code>Vision DII</code> deja bastante claro que el salto importante del juego deberia ser
+este:</p>
+<ul>
+<li>pasar de "asentamiento que produce" a "sociedad que se organiza"</li>
+</ul>
+<p>Eso sugiere que el <code>midgame</code> no deberia definirse solo por mas edificios, sino
+por una mezcla de:</p>
+<ul>
+<li>nuevos cuellos de botella</li>
+<li>especializacion de poblacion</li>
+<li>nuevas razones para abrir actividades manuales o misiones</li>
+<li>una forma mas amplia de pensar el reino que el patio inicial</li>
+</ul>
+<h3 id="primer-arco-ya-fijado">Primer arco ya fijado<a class="headerlink" href="#primer-arco-ya-fijado" title="Permanent link">&para;</a></h3>
+<p>La mesa de diseno fija ya esta formulacion como direccion operativa:</p>
+<blockquote>
+<p><code>Gobernar un reino que ya camina solo y volver para corregir sus tensiones
+antes de que pueda expandirse.</code></p>
+</blockquote>
+<p>Eso confirma varias cosas:</p>
+<ul>
+<li>el <code>midgame</code> no sustituye al <code>idle</code></li>
+<li>el valor de volver no es solo recoger produccion</li>
+<li>el jugador entra para leer el estado del reino y decidir que tension corregir</li>
+<li>el <code>midgame</code> se define por gobernar tensiones, no por construir en cadena sin
+  lectura</li>
+</ul>
+<p>Lectura de trabajo consolidada:</p>
+<ul>
+<li><code>early game</code>: fundar y poner en marcha el reino</li>
+<li><code>primer midgame</code>: sostener, organizar y preparar la futura delegacion</li>
+</ul>
+<h3 id="tension-principal-del-primer-arco">Tension principal del primer arco<a class="headerlink" href="#tension-principal-del-primer-arco" title="Permanent link">&para;</a></h3>
+<p>La tension rectora del primer <code>midgame</code> pasa a ser:</p>
+<blockquote>
+<p><code>bienestar</code></p>
+</blockquote>
+<p>No como barra punitiva tipo city builder generico, sino como sistema
+estructural que agrupa:</p>
+<ul>
+<li><code>comida</code></li>
+<li>soporte basico del reino</li>
+<li>prosperidad minima</li>
+<li>primeras mejoras reales de productividad</li>
+<li>posibilidad de ascenso social ligero</li>
+</ul>
+<p>Lectura de trabajo:</p>
+<ul>
+<li>si el reino sostiene <code>bienestar</code>, rinde mejor</li>
+<li>si rinde mejor, se organiza mejor</li>
+<li>si se organiza mejor, puede abrir instituciones y preparar la futura
+  <code>delegacion</code></li>
+</ul>
+<h3 id="tension-de-progreso-segun-la-hipotesis-actual">Tension de progreso segun la hipotesis actual<a class="headerlink" href="#tension-de-progreso-segun-la-hipotesis-actual" title="Permanent link">&para;</a></h3>
+<p>La idea ya fijada no es que el <code>prestigio</code> sea la tension principal del
+<code>midgame</code>, sino su valvula de escape.</p>
+<p>Lectura de trabajo:</p>
+<ul>
+<li>el reino crece</li>
+<li>llega a una meseta</li>
+<li>el jugador la sostiene y la optimiza</li>
+<li>cuando esa meseta queda suficientemente exprimida, el <code>prestigio</code> abre el
+  siguiente salto tecnologico o estructural</li>
+</ul>
+<p>Direccion ya consolidada:</p>
+<ul>
+<li>el <code>prestigio</code> debe destensar la curva, no sustituir por si solo el contenido
+  intermedio</li>
+<li>el primer <code>midgame</code> debe abrirse antes de que el <code>prestigio</code> completo sea ya
+  jugable</li>
+</ul>
+<h3 id="loop-repetido-del-primer-midgame">Loop repetido del primer <code>midgame</code><a class="headerlink" href="#loop-repetido-del-primer-midgame" title="Permanent link">&para;</a></h3>
+<p>La mesa de diseno deja tambien un loop de trabajo bastante claro:</p>
+<ol>
+<li>el jugador reentra al reino</li>
+<li>lee el estado actual</li>
+<li>detecta el cuello de botella dominante</li>
+<li>decide si corrige produccion, <code>bienestar</code> o una oportunidad activa</li>
+<li>reasigna poblacion o prioridades</li>
+<li>acepta o ignora una mision/oportunidad</li>
+<li>deja que el reino procese esa decision</li>
+<li>vuelve mas tarde para reevaluar el nuevo estado</li>
+</ol>
+<p>Esto fija una regla importante:</p>
+<ul>
+<li>el <code>midgame</code> no se abre cuando hay mas edificios</li>
+<li>se abre cuando el jugador ya gobierna tensiones del reino</li>
+</ul>
+<h3 id="funcion-exacta-de-la-capa-game-segun-la-vision-actual">Funcion exacta de la capa <code>game</code> segun la vision actual<a class="headerlink" href="#funcion-exacta-de-la-capa-game-segun-la-vision-actual" title="Permanent link">&para;</a></h3>
+<p>La nueva aclaracion del proyecto fija mucho mejor para que existe esta capa:</p>
+<ul>
+<li>las mesetas largas de los incrementales pueden llevar al abandono por
+  desesperanza</li>
+<li>la capa <code>game</code> aparece para acortar de forma notable el tiempo hasta el
+  siguiente hito cuando el jugador decide intervenir</li>
+<li>tambien abre espacio para misiones diarias, encargos o picos regulares de
+  actividad</li>
+<li>su diseño debe impedir que el jugador sienta que lo correcto es abrir los
+  minijuegos una vez al dia y cerrar el <code>idle</code> porque ya molesta</li>
+</ul>
+<p>Estado:</p>
+<ul>
+<li><code>canon</code> como funcion de sistema</li>
+</ul>
+<h3 id="punto-de-entrada-y-salida-del-primer-arco">Punto de entrada y salida del primer arco<a class="headerlink" href="#punto-de-entrada-y-salida-del-primer-arco" title="Permanent link">&para;</a></h3>
+<p>El primer <code>midgame</code> implementable queda ya acotado asi:</p>
+<p>Empieza cuando:</p>
+<ul>
+<li>el <code>early game</code> ya esta estable</li>
+<li>el jugador ya entiende la economia base</li>
+<li>existe al menos una actividad manual validada como precedente</li>
+<li>se abre una primera institucion y un primer recurso de sosten del reino mas
+  alla de <code>oro / madera / piedra / poblacion</code></li>
+</ul>
+<p>Termina, en esta primera version, cuando:</p>
+<ul>
+<li>el jugador puede declarar el reino <code>listo para delegar</code></li>
+<li>la idea de expansion futura queda abierta y entendible</li>
+<li>todavia no es obligatorio que la <code>delegacion</code> completa ya sea jugable</li>
+</ul>
+<h2 id="tramo-45-culminacion-del-arranque-narrativo">Tramo 4.5. Culminacion del arranque narrativo<a class="headerlink" href="#tramo-45-culminacion-del-arranque-narrativo" title="Permanent link">&para;</a></h2>
+<p>La conversacion actual convierte en decision mucho mas clara algo que antes solo
+estaba insinuado:</p>
+<ul>
+<li>la gran mayoria de la narrativa del juego base debe concentrarse en el
+  arranque</li>
+<li>esa mini-trama culmina con la construccion del <code>Templo</code></li>
+<li>hasta ese momento, el jugador sigue jugando dentro del marco medieval y del
+  misterio inicial del asentamiento</li>
+<li>tras ese punto, el juego puede dejar mas de lado la trama principal y abrir
+  otras <code>dimensiones</code> sin exigirles traducir toda esa carga narrativa</li>
+</ul>
+<p>Lectura de trabajo del arco:</p>
+<ol>
+<li>viaje y fundacion</li>
+<li>asentamiento base y producciones primeras</li>
+<li>indicios de que el lugar tiene algo especial</li>
+<li>construccion del <code>Templo</code></li>
+<li>aparicion del <code>sabio</code></li>
+<li>revelacion controlada de la anomalia</li>
+<li>desbloqueo del cambio de <code>dimension</code></li>
+</ol>
+<p>Estado:</p>
+<ul>
+<li><code>canon</code> como direccion de progresion</li>
+</ul>
+<h3 id="implicacion-importante">Implicacion importante<a class="headerlink" href="#implicacion-importante" title="Permanent link">&para;</a></h3>
+<p>El cambio de <code>dimension</code> deja de ser solo una capa de presentacion disponible
+desde el minuto uno y pasa a ser un desbloqueo ligado al arranque narrativo y a
+la construccion del <code>Templo</code>.</p>
+<h2 id="tramo-5-reino-maduro">Tramo 5. Reino maduro<a class="headerlink" href="#tramo-5-reino-maduro" title="Permanent link">&para;</a></h2>
+<p>Preguntas que esta fase debe responder:</p>
+<ul>
+<li>que forma tiene un reino ya consolidado</li>
+<li>que tensiones existen mas alla de producir mas</li>
+<li>que sistemas compiten por poblacion, tiempo y prestigio</li>
+<li>como se expresa la expansion fuera del patio inicial</li>
+</ul>
+<p>Estado:</p>
+<ul>
+<li><code>canon operativo</code> para direccion de <code>v1</code></li>
+</ul>
+<h3 id="pistas-ya-presentes-en-la-documentacion">Pistas ya presentes en la documentacion<a class="headerlink" href="#pistas-ya-presentes-en-la-documentacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>la <code>taberna</code> aparece como punto natural para misiones, rumores y oportunidades</li>
+<li><code>Dirigir tala</code> introduce ya la idea de <code>zonas</code> y <code>niveles ancla</code></li>
+<li>el <code>prestigio</code> ya asoma en el pergamino del patio como hueco reservado a
+  futuro</li>
+<li><code>Roadmap</code> y <code>Vision DII</code> insisten en que la progresion debe abrir capas y no
+  solo inflar numeros</li>
+</ul>
+<h2 id="tramo-6-endgame-y-prestigio">Tramo 6. Endgame y prestigio<a class="headerlink" href="#tramo-6-endgame-y-prestigio" title="Permanent link">&para;</a></h2>
+<p>La documentacion sugiere:</p>
+<ul>
+<li>reset incremental</li>
+<li>nuevas tierras</li>
+<li>conservar avances estructurales o multiplicadores</li>
+</ul>
+<p>Eso ya fija una direccion minima bastante fuerte:</p>
+<ul>
+<li>el <code>prestigio</code> no deberia ser solo una barra o moneda abstracta</li>
+<li>deberia justificar una nueva expansion del mundo</li>
+<li>el reset deberia limpiar recursos brutos, pero no borrar por completo el
+  legado del jugador</li>
+</ul>
+<p>Pero aun falta decidir:</p>
+<ul>
+<li>que se reinicia exactamente</li>
+<li>que se conserva exactamente</li>
+<li>si el jugador funda otro reino, otra frontera o una capa superior del mismo mapa</li>
+</ul>
+<p>Estado:</p>
+<ul>
+<li><code>provisional</code></li>
+</ul>
+<h3 id="opciones-de-ejecucion-ya-registradas">Opciones de ejecucion ya registradas<a class="headerlink" href="#opciones-de-ejecucion-ya-registradas" title="Permanent link">&para;</a></h3>
+<p>La conversacion actual deja cuatro maneras candidatas de convertir el reset en
+una ficcion jugable:</p>
+<table>
+<thead>
+<tr>
+<th>opcion</th>
+<th>idea base</th>
+<th>ventaja principal</th>
+<th>riesgo principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reset real</code></td>
+<td>el asentamiento actual desaparece y se empieza otro manteniendo aceleradores</td>
+<td>es la lectura incremental mas pura</td>
+<td>rompe la vinculacion emocional con el <code>idle</code> y con la fortaleza ya personalizada</td>
+</tr>
+<tr>
+<td><code>mudanza</code></td>
+<td>el jugador se traslada a otro asentamiento y el anterior pasa a sostener aceleradores</td>
+<td>conserva continuidad narrativa mejor que el reset duro</td>
+<td>sigue implicando abandonar el foco visual construido hasta ahora</td>
+</tr>
+<tr>
+<td><code>imperio</code></td>
+<td>se funda un nuevo asentamiento sin perder acceso a los anteriores, compartiendo aceleradores comunes</td>
+<td>refuerza la fantasia de red de reinos y crecimiento estructural</td>
+<td>puede disparar complejidad demasiado pronto si todos los asentamientos quedan activos a la vez</td>
+</tr>
+<tr>
+<td><code>delegaciones</code></td>
+<td>el reino original envia una delegacion fundadora; se conserva la fortaleza principal y el nuevo asentamiento nace en su nombre</td>
+<td>mantiene el <code>idle</code> original, reduce friccion emocional y deja crecer el mundo por capas</td>
+<td>necesita concretar bien cuanto control se conserva sobre el asentamiento inicial y como se expresa el salto de foco</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direccion-ya-fijada-para-v1">Direccion ya fijada para <code>v1</code><a class="headerlink" href="#direccion-ya-fijada-para-v1" title="Permanent link">&para;</a></h3>
+<p>La opcion que pasa a direccion canonica de <code>v1</code> es <code>delegaciones</code>.</p>
+<p>Motivos:</p>
+<ul>
+<li>conserva el valor emocional y visual de la fortaleza original</li>
+<li>evita que el <code>prestigio</code> se sienta como borrado de lo construido</li>
+<li>permite que el primer asentamiento se convierta en <code>capital</code> o cabecera de
+  reino</li>
+<li>abre la puerta a una evolucion futura hacia algo parecido a <code>imperio</code> sin
+  exigir toda esa complejidad desde el primer salto</li>
+</ul>
+<p>Lectura de trabajo ya consolidada:</p>
+<ul>
+<li>el primer asentamiento madura</li>
+<li>alcanza una meseta de prestigio</li>
+<li>envia una delegacion fundadora</li>
+<li>el nuevo asentamiento pasa a ser el siguiente foco de crecimiento</li>
+<li>la capital original aporta soporte, ventajas o aceleradores estructurales</li>
+</ul>
+<h4 id="que-se-reinicia-en-el-primer-prestigio">Que se reinicia en el primer prestigio<a class="headerlink" href="#que-se-reinicia-en-el-primer-prestigio" title="Permanent link">&para;</a></h4>
+<p>No se recomienda un reset duro clasico.</p>
+<p>Lo que se reinicia es sobre todo el <code>foco local</code> del nuevo asentamiento:</p>
+<ul>
+<li>recursos operativos locales</li>
+<li>edificios de arranque del nuevo foco</li>
+<li>ritmo de frontera del nuevo asentamiento</li>
+</ul>
+<h4 id="que-se-conserva">Que se conserva<a class="headerlink" href="#que-se-conserva" title="Permanent link">&para;</a></h4>
+<p>Se conserva:</p>
+<ul>
+<li>la <code>capital</code></li>
+<li>desbloqueos meta</li>
+<li>aceleradores estructurales</li>
+<li>identidad del reino</li>
+<li>legado de progreso</li>
+<li>dimensiones desbloqueadas</li>
+<li>posibles bonificaciones permanentes de prestigio</li>
+</ul>
+<p>La sensacion buscada no es <code>empiezo de cero</code>, sino:</p>
+<blockquote>
+<p><code>abro una nueva etapa sobre una base que mi reino anterior ha hecho posible</code></p>
+</blockquote>
+<h4 id="forma-territorial-recomendada-para-v1">Forma territorial recomendada para <code>v1</code><a class="headerlink" href="#forma-territorial-recomendada-para-v1" title="Permanent link">&para;</a></h4>
+<p>La forma territorial recomendada para la primera iteracion es:</p>
+<blockquote>
+<p><code>capital + nuevo asentamiento</code></p>
+</blockquote>
+<p>Lectura de escala:</p>
+<ul>
+<li>antes del primer <code>prestigio</code> entra el <code>territorio local</code></li>
+<li>despues del primer <code>prestigio</code> entra el <code>territorio multi-asentamiento</code></li>
+</ul>
+<p>Eso significa:</p>
+<ul>
+<li>antes del primer salto importan zonas cercanas, enclaves, puntos de
+  expedicion y oportunidades situacionales</li>
+<li>despues del primer salto la capa politica y productiva puede crecer hacia la
+  relacion <code>capital / delegacion</code></li>
+</ul>
+<h2 id="diferencia-entre-beta-y-juego-largo">Diferencia entre beta y juego largo<a class="headerlink" href="#diferencia-entre-beta-y-juego-largo" title="Permanent link">&para;</a></h2>
+<p>La <code>0.1.0-beta.2</code> ya cierra bien la base temprana, pero la propia documentacion
+de producto deja claro que aun no intenta cerrar:</p>
+<ul>
+<li>sistema completo de misiones</li>
+<li><code>midgame</code> social</li>
+<li>mapa territorial</li>
+<li><code>prestigio</code> jugable</li>
+<li>endgame profundo</li>
+</ul>
+<p>Eso significa que la beta no contradice la vision larga; simplemente se detiene
+antes.</p>
+<h2 id="decisiones-grandes-pendientes">Decisiones grandes pendientes<a class="headerlink" href="#decisiones-grandes-pendientes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>formula exacta de <code>bienestar</code></li>
+<li>condicion exacta de desbloqueo de la <code>Taberna</code></li>
+<li>si <code>pieles</code> entra ya en el primer slice o queda como sabor secundario</li>
+<li>efecto concreto de la primera capa de <code>burguesia</code></li>
+<li>cuanto contenido jugable debe existir entre el <code>Templo</code> y el primer salto de
+  <code>prestigio</code></li>
+</ul>
+<h2 id="regla-para-esta-pagina">Regla para esta pagina<a class="headerlink" href="#regla-para-esta-pagina" title="Permanent link">&para;</a></h2>
+<p>No bajar aun a numeros finos.</p>
+<p>Esta pagina debe definir:</p>
+<ul>
+<li>orden</li>
+<li>sentido</li>
+<li>puertas de entrada y salida de cada fase</li>
+</ul>
+<p>Los valores concretos siguen perteneciendo a:</p>
+<ul>
+<li><a href="../../../systems/balance/">Balance</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

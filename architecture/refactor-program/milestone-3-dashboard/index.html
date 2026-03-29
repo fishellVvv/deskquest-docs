@@ -1,0 +1,3691 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentacion viva del proyecto DeskQuest">
+      
+      
+      
+        <link rel="canonical" href="https://fishellvvv.github.io/deskquest-docs/architecture/refactor-program/milestone-3-dashboard/">
+      
+      
+        <link rel="prev" href="../milestone-2-runtime/">
+      
+      
+        <link rel="next" href="../milestone-4-preparation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Milestone 3 - dashboard surfaces - DeskQuest</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#milestone-3-dashboard-surfaces" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="DeskQuest" class="md-header__button md-logo" aria-label="DeskQuest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DeskQuest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Milestone 3 - dashboard surfaces
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DeskQuest" class="md-nav__button md-logo" aria-label="DeskQuest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DeskQuest
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empezar
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Empezar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/repo-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapa del repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/reading-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ruta de lectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/dev-presets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets de desarrollo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/install-and-user-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalacion y datos de usuario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/tester-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia corta para testers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../product/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Producto
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Producto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/dii-vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision DII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../product/game-bible/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biblia del juego
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Biblia del juego
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/fantasia-y-pilares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fantasia y pilares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/bucles-nucleares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bucles nucleares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/progresion-y-endgame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progresion y endgame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/sistemas-y-contenido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas y contenido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/primer-slice-midgame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primer slice de midgame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/mundo-y-lore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mundo y lore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/lineas-rojas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lineas rojas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/preguntas-abiertas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preguntas abiertas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/game-bible/ideas-descartadas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideas descartadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/early-game-onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding temprano
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ruta a beta 0.1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-qa-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist QA beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-build-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validacion de build beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-distribution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrategia de distribucion beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/public-licensing-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de licencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/public-privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica publica de privacidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-release-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operativa de cierre de beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-share-polish-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polish previo a compartir la beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/beta-feedback-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operativa de feedback beta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/deferred-improvements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendientes diferidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/worklog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worklog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arquitectura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../current-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura actual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-entry-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reglas de entrada de nuevos sistemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vista general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../application-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidad de aplicacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../application-identity-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan de migracion a DeskQuest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idle-window-sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibracion del idle raster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dimension-naming-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nomenclatura de dimensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../adrs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ADR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adrs/adr-0001-modular-layered-monolith/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-0001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adrs/adr-0002-world-first-milestone-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-0002
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programa de refactor
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programa de refactor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone-0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smoke-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smoke test base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hotspot-baseline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baseline de hotspots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone-1-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 1 - world-first
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transitional-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventario transicional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone-2-runtime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 2 - world runtime and session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 3 - dashboard surfaces
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 3 - dashboard surfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotspots-actuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hotspots actuales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hotspots actuales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboardcourtyardtsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DashboardCourtyard.tsx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboardsettingsroomtsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DashboardSettingsRoom.tsx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboardwindowviewtsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DashboardWindowView.tsx
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-si-entra-en-m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que si entra en M3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-no-entra-en-m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que no entra en M3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden recomendado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primer-corte-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primer corte recomendado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-1-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 1 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-2-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 2 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-3-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 3 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-4-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 4 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-5-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 5 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-6-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 6 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-7-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 7 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-8-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 8 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-9-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 9 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cierre-validado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cierre validado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterio-de-cierre-de-m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterio de cierre de M3
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone-4-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparacion de M4 - persistencia, sync y legacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone-4b-legacy-cleanup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparacion de M4b - cleanup residual de legacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone-5-midgame-readiness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestone 5 - architecture consolidation and first midgame slice readiness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica de legacy para M4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/typescript-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia TypeScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../maintenance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maintenance/documentation-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Politica documental
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/balance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balance
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Balance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/game/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/game/dirigir-tala-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dirigir tala v1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/dimensions/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensiones
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dimensiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/package-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato de paquete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/official-lunar-demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo oficial lunar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/modding-quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/qa-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/dimensions/qa-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotspots-actuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hotspots actuales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hotspots actuales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboardcourtyardtsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DashboardCourtyard.tsx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboardsettingsroomtsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DashboardSettingsRoom.tsx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboardwindowviewtsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DashboardWindowView.tsx
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-si-entra-en-m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que si entra en M3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-no-entra-en-m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que no entra en M3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden recomendado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primer-corte-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primer corte recomendado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-1-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 1 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-2-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 2 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-3-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 3 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-4-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 4 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-5-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 5 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-6-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 6 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-7-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 7 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-8-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 8 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-9-ya-ejecutado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 9 ya ejecutado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cierre-validado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cierre validado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterio-de-cierre-de-m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterio de cierre de M3
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="milestone-3-dashboard-surfaces">Milestone 3 - Dashboard surfaces<a class="headerlink" href="#milestone-3-dashboard-surfaces" title="Permanent link">&para;</a></h1>
+<h2 id="estado">Estado<a class="headerlink" href="#estado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>estado: <code>cerrado</code></li>
+<li>depende de: <code>M2</code> ya cerrado</li>
+<li>foco: <code>DashboardCourtyard</code> y <code>DashboardSettingsRoom</code></li>
+<li>situacion actual: <code>DashboardSettingsRoom ya delega integraciones pesadas y el patio ya externaliza seleccion local, wiring de Dirigir tala, overview ledger, ledger del edificio principal, ledger del edificio seleccionado, hoja de nombrado inicial y overlay de QA; ademas, el dashboard ya no enruta sus lecturas de world por la fachada world-state; el smoke test final del milestone ya ha pasado sin regresiones visibles</code></li>
+</ul>
+<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
+<p>Partir las superficies grandes del dashboard para que dejen de concentrar
+demasiada coordinacion visual, wiring y pequenas reglas operativas en el mismo
+archivo.</p>
+<p><code>M3</code> no busca rehacer el dashboard ni redisenar sus flujos. Su objetivo es:</p>
+<ul>
+<li>convertir <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  en una shell de composicion mas clara</li>
+<li>convertir <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardSettingsRoom.tsx">DashboardSettingsRoom.tsx</a>
+  en una superficie de settings mas modular</li>
+<li>extraer integraciones y coordinacion donde ya no pertenezcan al componente visual</li>
+<li>preparar el terreno para que <code>M4</code> no tenga que convivir con hotspots de UI
+  que sigan creciendo</li>
+</ul>
+<h2 id="hotspots-actuales">Hotspots actuales<a class="headerlink" href="#hotspots-actuales" title="Permanent link">&para;</a></h2>
+<h3 id="dashboardcourtyardtsx"><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a><a class="headerlink" href="#dashboardcourtyardtsx" title="Permanent link">&para;</a></h3>
+<p>Hoy mezcla al mismo tiempo:</p>
+<ul>
+<li>shell visual del patio y el pergamino</li>
+<li>seleccion de plots y alternancia con <code>settings</code></li>
+<li>flujo de nombrado inicial del asentamiento</li>
+<li>herramientas QA y shortcuts ocultos</li>
+<li>wiring completo del slice <code>Dirigir tala</code></li>
+<li>ledger del overview, del edificio seleccionado y del edificio principal</li>
+</ul>
+<p>No es solo un archivo grande: es una superficie que hoy contiene varias
+subexperiencias del dashboard.</p>
+<h3 id="dashboardsettingsroomtsx"><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardSettingsRoom.tsx">DashboardSettingsRoom.tsx</a><a class="headerlink" href="#dashboardsettingsroomtsx" title="Permanent link">&para;</a></h3>
+<p>Hoy mezcla:</p>
+<ul>
+<li>shell de configuracion en modo <code>full</code> y <code>embedded</code></li>
+<li>catalogo de secciones y controles</li>
+<li>integracion Tauri para monitores</li>
+<li>importacion, activacion y eliminacion de dimensiones</li>
+<li>apertura de documentacion publica</li>
+<li>acciones destructivas de <code>Danger Zone</code></li>
+</ul>
+<p>Su forma es mas modular que la del patio, pero sigue concentrando demasiadas
+integraciones en la misma superficie.</p>
+<h3 id="dashboardwindowviewtsx"><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/views/DashboardWindowView.tsx">DashboardWindowView.tsx</a><a class="headerlink" href="#dashboardwindowviewtsx" title="Permanent link">&para;</a></h3>
+<p>Hoy no es un hotspot prioritario.</p>
+<p>Su papel actual como shell de ventana es suficientemente claro, asi que <code>M3</code>
+no deberia repartirlo sin necesidad.</p>
+<h2 id="que-si-entra-en-m3">Que si entra en <code>M3</code><a class="headerlink" href="#que-si-entra-en-m3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>extraer integraciones y acciones de <code>DashboardSettingsRoom</code></li>
+<li>extraer el estado de seleccion del patio y su wiring de navegacion local</li>
+<li>extraer la coordinacion del slice <code>Dirigir tala</code> fuera del patio</li>
+<li>partir los distintos ledgers del patio en piezas de composicion mas pequenas</li>
+<li>reducir dependencias de dashboard contra la fachada temporal
+  <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/domain/world/world-state.ts">world-state.ts</a></li>
+</ul>
+<h2 id="que-no-entra-en-m3">Que no entra en <code>M3</code><a class="headerlink" href="#que-no-entra-en-m3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>rehacer <code>WorldProvider</code></li>
+<li>abrir <code>platform/world/</code></li>
+<li>rehacer persistencia o sincronizacion</li>
+<li>redisenar <code>Dirigir tala</code></li>
+<li>introducir sistemas nuevos de producto</li>
+<li>tocar <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/views/DashboardWindowView.tsx">DashboardWindowView.tsx</a>
+  salvo wiring minimo si una extraccion lo exige</li>
+</ul>
+<h2 id="orden-recomendado">Orden recomendado<a class="headerlink" href="#orden-recomendado" title="Permanent link">&para;</a></h2>
+<ol>
+<li>descargar primero <code>DashboardSettingsRoom</code> por integraciones, no por JSX</li>
+<li>extraer despues la seleccion local del patio</li>
+<li>extraer luego la coordinacion del slice <code>Dirigir tala</code></li>
+<li>partir por ultimo los distintos ledgers y overlays del patio</li>
+<li>cerrar el milestone con limpieza de imports y validacion final</li>
+</ol>
+<h2 id="primer-corte-recomendado">Primer corte recomendado<a class="headerlink" href="#primer-corte-recomendado" title="Permanent link">&para;</a></h2>
+<p>El primer bloque real de <code>M3</code> deberia ser:</p>
+<ol>
+<li>abrir rutas auxiliares para <code>DashboardSettingsRoom</code></li>
+<li>sacar de ahi:</li>
+<li>carga de monitores del idle</li>
+<li>acciones de documentacion y <code>Danger Zone</code></li>
+<li>acciones de importacion, activacion y eliminacion de dimensiones</li>
+<li>dejar <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardSettingsRoom.tsx">DashboardSettingsRoom.tsx</a>
+   como composicion de secciones y controles</li>
+<li>validar <code>npm run build</code></li>
+</ol>
+<h2 id="bloque-1-ya-ejecutado">Bloque 1 ya ejecutado<a class="headerlink" href="#bloque-1-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardSettingsRoom.tsx">DashboardSettingsRoom.tsx</a>
+  deja de contener la mayor parte de sus integraciones y handlers pesados</li>
+<li>nacen:</li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/hooks/useDashboardIdleMonitorOptions.ts">useDashboardIdleMonitorOptions.ts</a></li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/hooks/useDashboardDocumentationActions.ts">useDashboardDocumentationActions.ts</a></li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/hooks/useDashboardDimensionActions.ts">useDashboardDimensionActions.ts</a></li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/hooks/useDashboardDangerZoneActions.ts">useDashboardDangerZoneActions.ts</a></li>
+<li>el componente principal ya se parece mas a una composicion de secciones que a
+  una superficie que mezcla shell, Tauri, dimensiones, documentacion y acciones
+  destructivas</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este primer corte real de <code>M3</code></li>
+</ul>
+<h2 id="bloque-2-ya-ejecutado">Bloque 2 ya ejecutado<a class="headerlink" href="#bloque-2-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>nace <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/hooks/useCourtyardSelection.ts">useCourtyardSelection.ts</a>
+  para encapsular la seleccion local del patio, la memoria del ultimo plot no-settings
+  y el reseteo de seleccion por fase</li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  deja de gobernar directamente esa memoria local y el retorno al plot por defecto</li>
+<li>el patio sigue siendo un hotspot grande, pero ya pierde una pieza de coordinacion
+  de navegacion que no necesitaba vivir en el componente principal</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este segundo corte real de <code>M3</code></li>
+</ul>
+<h2 id="bloque-3-ya-ejecutado">Bloque 3 ya ejecutado<a class="headerlink" href="#bloque-3-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>nace <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/hooks/useCourtyardLoggingMission.ts">useCourtyardLoggingMission.ts</a>
+  para encapsular setup, mission state, timer, atajos, settle, avance de nivel y
+  coordinacion del slice <code>Dirigir tala</code></li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  deja de gobernar directamente el wiring de mission y pasa a consumir ese flujo
+  desde un controller local de <code>features/dashboard</code></li>
+<li>el patio sigue siendo un hotspot grande, pero ya pierde otra responsabilidad
+  transversal que mezclaba UI, atajos, estado transitorio y progreso del slice
+  activo en el mismo archivo</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este tercer corte real de <code>M3</code></li>
+</ul>
+<h2 id="bloque-4-ya-ejecutado">Bloque 4 ya ejecutado<a class="headerlink" href="#bloque-4-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>nace <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/CourtyardOverviewLedger.tsx">CourtyardOverviewLedger.tsx</a>
+  para encapsular el overview del patio, sus recursos, acciones disponibles y el
+  footer de progreso de prestigio</li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  deja de renderizar directamente ese ledger y gana un corte de composicion mucho
+  mas claro en su rama principal</li>
+<li>el overview queda ya separado sin cambiar comportamiento ni clases visuales,
+  lo que permite seguir troceando el patio por superficies del pergamino y no
+  por helpers sueltos</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este cuarto corte real de <code>M3</code></li>
+</ul>
+<h2 id="bloque-5-ya-ejecutado">Bloque 5 ya ejecutado<a class="headerlink" href="#bloque-5-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>nace <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/CourtyardPrimaryStructureLedger.tsx">CourtyardPrimaryStructureLedger.tsx</a>
+  para encapsular la rama del edificio principal en <code>journey</code>, <code>founding</code> y
+  <code>stronghold</code></li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  deja de renderizar directamente ese ledger y pierde otra superficie grande del
+  pergamino sin cambiar comportamiento visible</li>
+<li>el patio empieza ya a quedarse con ramas mas pequenas y reconocibles en vez de
+  grandes bloques de JSX incrustados en el mismo componente</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este quinto corte real de <code>M3</code></li>
+</ul>
+<h2 id="bloque-6-ya-ejecutado">Bloque 6 ya ejecutado<a class="headerlink" href="#bloque-6-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>nace <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/CourtyardSelectedBuildingLedger.tsx">CourtyardSelectedBuildingLedger.tsx</a>
+  para encapsular la ficha del edificio seleccionado, incluyendo resumen,
+  controles de trabajadores, acciones de construccion o mejora y placeholders
+  manuales</li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  deja de renderizar directamente la rama mas pesada que quedaba en el pergamino
+  del patio</li>
+<li>el patio gana otra bajada fuerte de peso y se acerca mucho mas a shell de
+  composicion real, con la mayor parte de sus ledgers ya fuera</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este sexto corte real de <code>M3</code></li>
+</ul>
+<h2 id="bloque-7-ya-ejecutado">Bloque 7 ya ejecutado<a class="headerlink" href="#bloque-7-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>nace <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/CourtyardSettlementNamingLedger.tsx">CourtyardSettlementNamingLedger.tsx</a>
+  para encapsular la hoja de nombrado inicial del asentamiento, incluyendo copy,
+  validacion del nombre, accion principal y estados de guardado</li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  deja de renderizar directamente esa rama residual del pergamino y se acerca
+  todavia mas a una shell de composicion real</li>
+<li>el patio pierde otra superficie autocontenida sin cambiar comportamiento
+  visible y deja ya muy pocas ramas residuales grandes dentro del componente
+  principal</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este septimo corte real de <code>M3</code></li>
+</ul>
+<h2 id="bloque-8-ya-ejecutado">Bloque 8 ya ejecutado<a class="headerlink" href="#bloque-8-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>nace <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/CourtyardTestingToolsOverlay.tsx">CourtyardTestingToolsOverlay.tsx</a>
+  para encapsular la superficie visual de las herramientas internas de QA,
+  incluyendo acciones rapidas, cierre y ayudas de atajos</li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  deja de renderizar directamente ese overlay y se acerca un paso mas a una
+  shell de composicion real</li>
+<li>la logica de atajos, estado y acciones QA sigue viva en el patio por ahora,
+  pero la superficie visual ya queda separada en un componente propio sin
+  cambiar comportamiento</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este octavo corte real de <code>M3</code></li>
+</ul>
+<h2 id="bloque-9-ya-ejecutado">Bloque 9 ya ejecutado<a class="headerlink" href="#bloque-9-ya-ejecutado" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  deja de leer <code>world</code> a traves de la fachada
+  <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/domain/world/world-state.ts">world-state.ts</a>
+  y pasa a importar desde <code>world-model</code>, <code>world-selectors</code>, <code>world-commands</code>
+  y <code>world-simulation</code></li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/CourtyardOverviewLedger.tsx">CourtyardOverviewLedger.tsx</a>
+  y <a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/hooks/useCourtyardLoggingMission.ts">useCourtyardLoggingMission.ts</a>
+  tambien dejan de depender de esa fachada temporal</li>
+<li>el dashboard queda asi mucho mejor alineado con las fronteras abiertas en <code>M1</code>
+  y <code>M2</code>, sin cambiar comportamiento visible ni abrir mas componentes por abrir</li>
+<li><code>npm run build</code> vuelve a salir limpio tras este noveno corte real de <code>M3</code></li>
+</ul>
+<h2 id="cierre-validado">Cierre validado<a class="headerlink" href="#cierre-validado" title="Permanent link">&para;</a></h2>
+<p><code>M3</code> queda ya formalmente cerrado porque:</p>
+<ol>
+<li><code>DashboardSettingsRoom</code> ya no mezcla la mayor parte de sus integraciones pesadas</li>
+<li><code>DashboardCourtyard</code> ya no concentra seleccion local, wiring del slice activo,
+   ledgers, nombrado inicial ni overlay de QA</li>
+<li>el dashboard ya no depende de la fachada temporal <code>world-state</code></li>
+<li><code>npm run build</code> siguio limpio durante los cortes finales</li>
+<li>el smoke test base final ha pasado sin regresiones visibles en onboarding,
+   dashboard, persistencia base ni <code>Dirigir tala</code></li>
+</ol>
+<p>El siguiente paso ya no pertenece a <code>M3</code>, sino a decidir como abrir <code>M4</code> o si
+conviene una preparacion tecnica corta previa.</p>
+<h2 id="criterio-de-cierre-de-m3">Criterio de cierre de <code>M3</code><a class="headerlink" href="#criterio-de-cierre-de-m3" title="Permanent link">&para;</a></h2>
+<p><code>M3</code> se podra dar por cerrado cuando:</p>
+<ul>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardCourtyard.tsx">DashboardCourtyard.tsx</a>
+  ya no gobierne directamente el wiring temporal de <code>Dirigir tala</code></li>
+<li><a href="/C:/Users/victo/Documents/Repositorios/deskquest/src/features/dashboard/components/DashboardSettingsRoom.tsx">DashboardSettingsRoom.tsx</a>
+  ya no mezcle shell visual con integraciones Tauri, dimensiones y acciones destructivas</li>
+<li>ambos archivos queden como superficies de composicion razonables</li>
+<li><code>npm run build</code> siga limpio</li>
+<li>el smoke test base siga pasando</li>
+<li>toda pieza transicional nueva quede inventariada</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
