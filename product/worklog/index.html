@@ -4121,6 +4121,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#entrada-251" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 251
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8454,6 +8465,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#entrada-251" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 251
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -10739,6 +10761,15 @@
 <li><code>detalle</code>: El quinto y ultimo bloque de <code>M5</code> no anade una direccion nueva, sino que cierra el milestone con la foto completa ya consolidada. La arquitectura actual queda explicada sin depender del historial del refactor, existen reglas cortas para introducir sistemas nuevos, el primer arco de <code>midgame</code> ya esta canonizado en la <code>game bible</code> y el primer slice post-refactor ya dispone de un blueprint operativo con alcance, no-alcance y bloques recomendados de implementacion. Con ello, el programa de refactor deja de necesitar mas milestones de consolidacion documental y el foco del proyecto vuelve a producto: el siguiente paso real pasa a ser abrir el bloque <code>Puesto de caza + comida + bienestar</code> como primer desarrollo del nuevo <code>midgame</code>.</li>
 <li><code>archivos</code>: <code>docs/architecture/refactor-program/milestone-5-midgame-readiness.md</code>, <code>docs/architecture/refactor-program/index.md</code>, <code>STATUS.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/worklog.md</code></li>
 <li><code>siguiente</code>: preparar el desglose operativo del bloque <code>Puesto de caza + comida + bienestar</code></li>
+</ul>
+<h2 id="entrada-251">Entrada 251<a class="headerlink" href="#entrada-251" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>timestamp</code>: 2026-03-30 (hora no registrada)</li>
+<li><code>categorias</code>: <code>product</code>, <code>midgame</code>, <code>world</code>, <code>dashboard</code>, <code>balance</code>, <code>docs</code></li>
+<li><code>resumen</code>: <code>A1 del Bloque A abre Puesto de caza + comida como nueva base real del reino.</code></li>
+<li><code>detalle</code>: El primer corte real del slice inicial de <code>midgame</code> ya no se queda en blueprint y entra por fin en runtime. <code>balance/economy.csv</code> y <code>balance/buildings.csv</code> se amplian para incluir el <code>Puesto de caza</code> y una tasa base de <code>comida/min</code>, mientras <code>domain/world</code> y <code>platform/world</code> extienden <code>WorldState</code>, produccion pasiva, asignacion de trabajadores, persistencia y compatibilidad de snapshots para aceptar la nueva rama sin romper guardados actuales ni reabrir el schema. En paralelo, el <code>dashboard</code> deja de leer solo <code>madera</code> y <code>piedra</code>: el overview suma <code>comida</code>, el patio muestra ya el <code>Puesto de caza</code> tras consolidar <code>Viviendas</code>, la ficha del edificio permite construirlo y asignarle mano de obra, y la lectura de guidance del reino lo presenta como siguiente paso natural del primer <code>midgame</code>. El corte no abre todavia <code>bienestar</code>, <code>Taberna</code> ni actividad manual nueva, pero si deja una entrega visible y jugable: el reino ya tiene una cuarta obra real, una tercera rama productiva persistente y un puente claro hacia el siguiente tramo del bloque. La documentacion activa se sincroniza para reflejar ese nuevo estado en <code>STATUS</code>, <code>Versioning</code>, <code>Balance</code> y el propio <code>worklog</code>.</li>
+<li><code>archivos</code>: <code>balance/economy.csv</code>, <code>balance/buildings.csv</code>, <code>src/domain/balance/balance-types.ts</code>, <code>src/domain/balance/balance-registry.ts</code>, <code>src/domain/world/world-model.ts</code>, <code>src/domain/world/world-selectors.ts</code>, <code>src/domain/world/world-commands.ts</code>, <code>src/domain/world/world-simulation.ts</code>, <code>src/domain/world/dev-world-presets.ts</code>, <code>src/platform/world/world-snapshot-storage.ts</code>, <code>src/features/dashboard/components/DashboardCourtyard.tsx</code>, <code>src/locales/core/core-locale.ts</code>, <code>src/locales/core/es.ts</code>, <code>src/locales/core/en.ts</code>, <code>docs/systems/balance/index.md</code>, <code>STATUS.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/worklog.md</code></li>
+<li><code>siguiente</code>: abrir <code>A2</code> del bloque para introducir <code>bienestar v1</code> como nueva lectura visible del reino</li>
 </ul>
 
 
