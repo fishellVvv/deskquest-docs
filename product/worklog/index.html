@@ -4132,6 +4132,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#entrada-252" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 252
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-253" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 253
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-254" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 254
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-255" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 255
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8476,6 +8520,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#entrada-252" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 252
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-253" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 253
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-254" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 254
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-255" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada 255
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -10770,6 +10858,42 @@
 <li><code>detalle</code>: El primer corte real del slice inicial de <code>midgame</code> ya no se queda en blueprint y entra por fin en runtime. <code>balance/economy.csv</code> y <code>balance/buildings.csv</code> se amplian para incluir el <code>Puesto de caza</code> y una tasa base de <code>comida/min</code>, mientras <code>domain/world</code> y <code>platform/world</code> extienden <code>WorldState</code>, produccion pasiva, asignacion de trabajadores, persistencia y compatibilidad de snapshots para aceptar la nueva rama sin romper guardados actuales ni reabrir el schema. En paralelo, el <code>dashboard</code> deja de leer solo <code>madera</code> y <code>piedra</code>: el overview suma <code>comida</code>, el patio muestra ya el <code>Puesto de caza</code> tras consolidar <code>Viviendas</code>, la ficha del edificio permite construirlo y asignarle mano de obra, y la lectura de guidance del reino lo presenta como siguiente paso natural del primer <code>midgame</code>. El corte no abre todavia <code>bienestar</code>, <code>Taberna</code> ni actividad manual nueva, pero si deja una entrega visible y jugable: el reino ya tiene una cuarta obra real, una tercera rama productiva persistente y un puente claro hacia el siguiente tramo del bloque. La documentacion activa se sincroniza para reflejar ese nuevo estado en <code>STATUS</code>, <code>Versioning</code>, <code>Balance</code> y el propio <code>worklog</code>.</li>
 <li><code>archivos</code>: <code>balance/economy.csv</code>, <code>balance/buildings.csv</code>, <code>src/domain/balance/balance-types.ts</code>, <code>src/domain/balance/balance-registry.ts</code>, <code>src/domain/world/world-model.ts</code>, <code>src/domain/world/world-selectors.ts</code>, <code>src/domain/world/world-commands.ts</code>, <code>src/domain/world/world-simulation.ts</code>, <code>src/domain/world/dev-world-presets.ts</code>, <code>src/platform/world/world-snapshot-storage.ts</code>, <code>src/features/dashboard/components/DashboardCourtyard.tsx</code>, <code>src/locales/core/core-locale.ts</code>, <code>src/locales/core/es.ts</code>, <code>src/locales/core/en.ts</code>, <code>docs/systems/balance/index.md</code>, <code>STATUS.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/worklog.md</code></li>
 <li><code>siguiente</code>: abrir <code>A2</code> del bloque para introducir <code>bienestar v1</code> como nueva lectura visible del reino</li>
+</ul>
+<h2 id="entrada-252">Entrada 252<a class="headerlink" href="#entrada-252" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>timestamp</code>: 2026-03-31 (hora no registrada)</li>
+<li><code>categorias</code>: <code>product</code>, <code>midgame</code>, <code>world</code>, <code>dashboard</code>, <code>balance</code>, <code>docs</code></li>
+<li><code>resumen</code>: <code>A2 del Bloque A introduce bienestar v1 como primera tension visible del reino.</code></li>
+<li><code>detalle</code>: El segundo corte real del slice inicial de <code>midgame</code> aprovecha la nueva base de <code>comida</code> para convertirla en una presion jugable real. <code>balance/economy.csv</code> suma ya consumo de <code>comida</code> por <code>poblacion</code>, umbrales de <code>bienestar</code> y un bonus corto de produccion para estados <code>solidos</code>. En <code>domain/world</code>, <code>wellbeing</code> entra como lectura derivada y no como dato persistido nuevo: el runtime calcula ya una banda <code>fragil / estable / solido</code> a partir de cobertura de comida y presion de <code>viviendas</code>, consume <code>comida</code> con el paso del tiempo, pausa el crecimiento de <code>poblacion</code> cuando el reino cae a <code>fragil</code> y aplica un pequeno impulso a <code>madera</code> y <code>piedra</code> cuando el estado sube a <code>solido</code>. En paralelo, el <code>dashboard</code> deja de mostrar <code>comida</code> como simple stock: el overview expone el balance neto, aparece una nueva lectura visible de <code>bienestar</code>, y la mesa del consejo pasa a reaccionar a hambre y aforo antes de recomendar el siguiente paso de expansion. El corte sigue sin abrir <code>Taberna</code>, <code>tablon</code>, misiones ni <code>site</code>, pero ya deja el <code>midgame</code> inicial apoyado sobre una tension sistemica reconocible y jugable.</li>
+<li><code>archivos</code>: <code>balance/economy.csv</code>, <code>src/domain/balance/balance-types.ts</code>, <code>src/domain/balance/balance-registry.ts</code>, <code>src/domain/world/world-selectors.ts</code>, <code>src/domain/world/world-simulation.ts</code>, <code>src/features/dashboard/components/CourtyardPrimaryStructureLedger.tsx</code>, <code>src/features/dashboard/components/DashboardCourtyard.tsx</code>, <code>src/locales/core/core-locale.ts</code>, <code>src/locales/core/es.ts</code>, <code>src/locales/core/en.ts</code>, <code>docs/systems/balance/index.md</code>, <code>STATUS.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/worklog.md</code></li>
+<li><code>siguiente</code>: decidir el remate corto de <code>Bloque A</code> antes de abrir <code>Taberna + tablon + primeras misiones</code></li>
+</ul>
+<h2 id="entrada-253">Entrada 253<a class="headerlink" href="#entrada-253" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>timestamp</code>: 2026-04-01 (hora no registrada)</li>
+<li><code>categorias</code>: <code>product</code>, <code>midgame</code>, <code>world</code>, <code>dashboard</code>, <code>docs</code></li>
+<li><code>resumen</code>: <code>A3.1 del Bloque A corrige la pausa de crecimiento y remata la lectura frontera de comida.</code></li>
+<li><code>detalle</code>: El primer remate corto del <code>Bloque A</code> no abre sistemas nuevos, pero si corrige un comportamiento importante del runtime: <code>bienestar fragil</code> ya no reinicia de facto el crecimiento de <code>poblacion</code> en cada tick, sino que congela el progreso acumulado hasta que el reino recupere condiciones suficientes. Con ello, la lectura jugable pasa a ser realmente de <code>pausa</code> y no de castigo encubierto. En paralelo, el patio afina dos bordes de lectura utiles para QA y producto: el balance neto de <code>comida</code> ya se muestra como <code>0.0/min</code> cuando queda neutro, y la reserva visible de <code>wellbeing</code> pasa a leerse como <code>--</code> mientras aun no existe consumo activo. El corte sigue siendo estrecho y no reabre <code>balance</code>, <code>Taberna</code> ni <code>site</code>, pero deja mas robusta la base sobre la que rematar el cierre UX/QA del bloque.</li>
+<li><code>archivos</code>: <code>src/domain/world/world-simulation.ts</code>, <code>src/features/dashboard/components/DashboardCourtyard.tsx</code>, <code>STATUS.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/worklog.md</code></li>
+<li><code>siguiente</code>: abrir <code>A3.2</code> para pulir cierre UX y QA del <code>Bloque A</code></li>
+</ul>
+<h2 id="entrada-254">Entrada 254<a class="headerlink" href="#entrada-254" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>timestamp</code>: 2026-04-01 (hora no registrada)</li>
+<li><code>categorias</code>: <code>product</code>, <code>midgame</code>, <code>dashboard</code>, <code>qa</code>, <code>docs</code></li>
+<li><code>resumen</code>: <code>A3.2 del Bloque A refuerza la lectura del patio y suma una palanca minima de QA para hambre.</code></li>
+<li><code>detalle</code>: El segundo remate corto del <code>Bloque A</code> se centra en comprension y verificabilidad. En <code>DashboardCourtyard</code>, <code>Viviendas</code> y <code>Puesto de caza</code> dejan de apoyarse solo en descripciones genericas: la ficha de <code>Viviendas</code> ya muestra si la siguiente llegada esta en marcha o en pausa, mientras la del <code>Puesto de caza</code> explica mejor el balance neto de <code>comida</code> y su impacto sobre <code>wellbeing</code>. En paralelo, la capa interna de pruebas gana una ayuda pequena pero muy util para este bloque: las <code>testing tools</code> pueden vaciar <code>comida</code> al instante, permitiendo comprobar rapido el paso a <code>fragil</code> sin montar todo el escenario a mano. El corte no toca <code>site</code> ni abre <code>Taberna</code>, pero deja el <code>Bloque A</code> mucho mejor preparado para el remate documental final y la publicacion posterior del portal.</li>
+<li><code>archivos</code>: <code>src/domain/world/world-commands.ts</code>, <code>src/features/dashboard/components/CourtyardTestingToolsOverlay.tsx</code>, <code>src/features/dashboard/components/DashboardCourtyard.tsx</code>, <code>src/locales/core/core-locale.ts</code>, <code>src/locales/core/es.ts</code>, <code>src/locales/core/en.ts</code>, <code>STATUS.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/worklog.md</code></li>
+<li><code>siguiente</code>: abrir <code>A3.3</code> para rematar el cierre documental final del <code>Bloque A</code> y publicar <code>site</code></li>
+</ul>
+<h2 id="entrada-255">Entrada 255<a class="headerlink" href="#entrada-255" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>timestamp</code>: 2026-04-01 (hora no registrada)</li>
+<li><code>categorias</code>: <code>docs</code>, <code>product</code>, <code>midgame</code>, <code>portal</code></li>
+<li><code>resumen</code>: <code>A3.3 cierra el Bloque A en documentacion fuente y deja publicado el portal actualizado.</code></li>
+<li><code>detalle</code>: El remate final del <code>Bloque A</code> ya no toca runtime jugable, sino la coherencia documental del slice. <code>STATUS</code>, <code>Versioning</code>, la <code>game bible</code> y el programa de refactor se resincronizan para reflejar que <code>Puesto de caza + comida + bienestar</code> queda cerrado como primer bloque real del <code>midgame</code>, y que el siguiente frente pasa a ser <code>Taberna + tablon + primeras misiones</code>. Con la fuente ya cerrada, se vuelve a regenerar el portal y el repo publico de <code>site</code> queda listo con la misma foto, respetando la regla de no publicar durante cortes intermedios. El resultado es una frontera limpia entre bloques: <code>Bloque A</code> deja de estar "en ejecucion" y pasa a ser base cerrada del slice inicial, mientras <code>Bloque B</code> queda ya preparado como siguiente apertura de producto.</li>
+<li><code>archivos</code>: <code>STATUS.md</code>, <code>docs/product/versioning.md</code>, <code>docs/product/worklog.md</code>, <code>docs/product/game-bible/primer-slice-midgame.md</code>, <code>docs/architecture/refactor-program/index.md</code>, <code>site/</code></li>
+<li><code>siguiente</code>: abrir el desglose operativo de <code>Taberna + tablon + primeras misiones</code></li>
 </ul>
 
 

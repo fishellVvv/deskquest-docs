@@ -2998,6 +2998,9 @@ constantes dispersas dentro del codigo.</p>
 <li>costes mixtos de <code>oro</code>, <code>madera</code> y <code>piedra</code> para las obras del patio</li>
 <li>tasas base de <code>madera/min</code>, <code>piedra/min</code> y <code>comida/min</code> para las primeras ramas productivas del reino</li>
 <li>crecimiento temporal de <code>poblacion</code> cuando el aforo del feudo aumenta</li>
+<li>consumo ligero de <code>comida/min</code> por <code>poblacion</code> una vez entran <code>Viviendas</code></li>
+<li>umbrales de <code>bienestar</code> para pasar entre <code>fragil</code>, <code>estable</code> y <code>solido</code></li>
+<li>bonus corto de produccion para <code>madera</code> y <code>piedra</code> cuando el reino mantiene un <code>bienestar</code> solido</li>
 </ul>
 <h2 id="regla-de-trabajo">Regla de trabajo<a class="headerlink" href="#regla-de-trabajo" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3075,6 +3078,7 @@ presentacion visible no son exactamente la misma cosa.</p>
 <li>la UI principal muestra esos acumulados como enteros</li>
 <li>las tasas o metricas de produccion (<code>madera/min</code>, <code>comida/min</code>) pueden mostrarse con una
   sola cifra decimal</li>
+<li>las tasas netas como <code>comida</code> pueden mostrarse con signo cuando la lectura real del sistema lo necesita</li>
 <li>los costes de construccion se mantienen en enteros</li>
 </ul>
 <p>Motivo:</p>
